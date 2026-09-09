@@ -1371,6 +1371,19 @@
           flex-direction: column;
           align-items: flex-start;
         }
+        .scope-items {
+          grid-template-columns: 1fr;
+        }
+        .scope-item {
+          min-width: 0;
+        }
+        .scope-columns {
+          flex-direction: column;
+        }
+        .scope-columns > .not-included {
+          min-width: 0;
+          flex-basis: auto;
+        }
 
         .opp-grid {
           flex-direction: column;
@@ -1409,14 +1422,26 @@
           align-items: flex-start;
           gap: 12px;
         }
+        .pricing-total .price {
+          font-size: clamp(28px, 9vw, 40px);
+        }
 
         .cta {
           padding: 56px 20px;
           margin: 0 -20px;
         }
         .portfolio-banner {
+          padding: 32px 0;
+        }
+        .portfolio-banner-inner {
           padding: 32px 20px;
           margin: 0 -20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+        }
+        .portfolio-banner .btn {
+          width: 100%;
         }
 
         .nav-wrap {
@@ -1484,13 +1509,12 @@
         <span class="badge-pill"><span class="dot"></span>Proposta Comercial</span>
 
         <h1 class="hero-title">
-          <!-- EDITAR: [Nome do Projeto] -->
-          <span class="edit">[Nome do Projeto]</span>
+          <span class="h1">[Nome do Projeto]</span>
         </h1>
 
         <p class="hero-for">
           <span class="word">para</span>
-          <!-- EDITAR: [Nome do Cliente] --><span class="edit">[Nome do Cliente]</span>
+          <span>[Nome do Cliente]</span>
         </p>
 
         <div class="hero-meta">
@@ -1501,14 +1525,14 @@
           <div class="col">
             <span class="mono-label">Vigência &amp; Prazo</span>
             <span class="mono-value">
-              <!-- EDITAR: [Data de Envio] --><span class="edit">[Data de Envio]</span> · Válida até
-              <!-- EDITAR: [Data] --><span class="edit">[Data]</span>
+              <span>[Data de envio]</span> · Válida até
+              <span>[Data de validade]</span>
             </span>
           </div>
           <div class="col">
             <span class="mono-label">Canal de Contato</span>
             <span class="mono-value"
-              ><a href="https://wa.me/5511930499095" target="_blank" rel="noopener" class="edit"
+              ><a href="https://wa.me/5511930499095" target="_blank" rel="noopener"
                 >WhatsApp</a
               ></span
             >
@@ -1526,24 +1550,17 @@
         <h2 class="h2" data-reveal data-reveal-delay="0.1">Por que esse projeto importa agora</h2>
 
         <div class="context-card" data-reveal data-reveal-delay="0.2">
-          <p class="tag">[Nota para o cliente / contexto de negócio]:</p>
+          <p class="tag">Contexto atual:</p>
 
-          <!-- EDITAR: contexto/diagnóstico do cliente -->
           <p class="big">
-            <span class="edit"
-              >[Insira aqui o contexto do cliente: atualmente a marca/empresa enfrenta gargalos com
-              a experiência anterior, gerando perda de conversão e desalinhamento de percepção de
-              valor. Resolver isso agora posiciona o cliente com autoridade máxima no seu nicho e
-              garante uma base escalável para as próximas fases de crescimento.]</span
+            <span
+              >[Insira aqui o contexto do cliente: qual dor/oportunidade motivou o projeto]</span
             >
           </p>
 
-          <!-- EDITAR: impacto mensurável esperado -->
           <p class="small">
-            <span class="edit"
-              >[Descreva o impacto mensurável esperado: ex: maior velocidade de carregamento,
-              clareza na apresentação dos serviços premium, redução de atrito no onboarding de novos
-              clientes e independência técnica total após a entrega.]</span
+            <span
+              >[Descreva o impacto esperado: o que muda pro negócio dele depois de pronto]</span
             >
           </p>
         </div>
@@ -1565,12 +1582,7 @@
               e outras soluções que também posso resolver pro seu negócio.
             </p>
           </div>
-          <!-- EDITAR: link do portfólio -->
-          <a
-            class="btn"
-            href="https://paola-portfolio-delta.vercel.app/"
-            target="_blank"
-            rel="noopener"
+          <a class="btn" href="https://paolaassis.com" target="_blank" rel="noopener"
             ><span>Ver portfólio completo</span
             ><span class="material-symbols-outlined fs-16">arrow_outward</span></a
           >
@@ -1591,76 +1603,58 @@
         </div>
 
         <div class="scope-items">
-          <!-- EDITAR: Entregável 01 — título, tag e descrição -->
           <div class="scope-item" data-reveal data-reveal-delay="0.15">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span class="edit"
-                  >[Entregável 01: Arquitetura &amp; Design de Interface Exclusivo]</span
-                >
+                <span>[Entregável 01: título]</span>
               </h3>
-              <span class="tag"><span class="edit">[Figma + protótipo navegável]</span></span>
+              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
             </div>
             <p>
-              <span class="edit"
-                >[Wireframes, fluxo de usuário, direção visual autoral alinhada ao posicionamento do
-                cliente, guia de estilos com tokens de cor, tipografia e componentes responsivos
-                prontos para validação.]</span
+              <span
+                >[descrição do que esse item entrega na prática]</span
               >
             </p>
           </div>
 
-          <!-- EDITAR: Entregável 02 — título, tag e descrição -->
           <div class="scope-item" data-reveal data-reveal-delay="0.2">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span class="edit"
-                  >[Entregável 02: Desenvolvimento Front-End &amp; Performance]</span
-                >
+                <span>[Entregável 02: título]</span>
               </h3>
-              <span class="tag"><span class="edit">[HTML5, Tailwind / React / Next.js]</span></span>
+              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
             </div>
             <p>
-              <span class="edit"
-                >[Codificação semântica, responsividade refinada para mobile, tablet e desktop,
-                otimização de velocidade (Core Web Vitals), microinterações leves e total
-                conformidade com acessibilidade.]</span
+              <span
+                >[descrição do que esse item entrega na prática]</span
               >
             </p>
           </div>
 
-          <!-- EDITAR: Entregável 03 — título, tag e descrição -->
           <div class="scope-item" data-reveal data-reveal-delay="0.25">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span class="edit">[Entregável 03: Integrações &amp; Formulários Funcionais]</span>
+                <span>[Entregável 03: título]</span>
               </h3>
-              <span class="tag"><span class="edit">[APIs / Webhooks / WhatsApp]</span></span>
+              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
             </div>
             <p>
-              <span class="edit"
-                >[Configuração de captação de leads via formulário conectado ao e-mail ou CRM, link
-                direto para WhatsApp com mensagem pré-formatada e pixels de rastreamento (GA4 /
-                Meta).]</span
+              <span
+                >[descrição do que esse item entrega na prática]</span
               >
             </p>
           </div>
 
-          <!-- EDITAR: Entregável 04 — título, tag e descrição -->
           <div class="scope-item" data-reveal data-reveal-delay="0.3">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span class="edit"
-                  >[Entregável 04: Deploy, Domínio &amp; Treinamento de Entrega]</span
-                >
+                <span>[Entregável 04: título]</span>
               </h3>
-              <span class="tag"><span class="edit">[Hospedagem + sessão de entrega]</span></span>
+              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
             </div>
             <p>
-              <span class="edit"
-                >[Publicação no servidor escolhido (Vercel, Netlify ou servidor próprio),
-                apontamento de DNS com certificado SSL ativo e vídeo explicativo curto orientando
-                alterações de conteúdo.]</span
+              <span
+                >[descrição do que esse item entrega na prática]</span
               >
             </p>
           </div>
@@ -1676,26 +1670,43 @@
               <span>Não incluso nesta proposta (ou fases futuras)</span>
             </div>
             <ul>
-              <!-- EDITAR: itens fora de escopo -->
               <li>
                 <span class="dash">—</span
-                ><span class="edit"
-                  >[Produção/redação integral de textos comerciais (copywriting) e fotos
-                  originais]</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[Item que fica de fora]</span
                 >
               </li>
               <li>
                 <span class="dash">—</span
-                ><span class="edit"
-                  >[Custos diretos de terceiros: contratação de domínio (.com.br) e planos pagos de
-                  servidores]</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[Item que fica de fora]</span
                 >
               </li>
               <li>
                 <span class="dash">—</span
-                ><span class="edit"
-                  >[Módulos de e-commerce complexo com gateway de pagamento multiproduto nesta
-                  primeira fase]</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[Item que fica de fora]</span
                 >
               </li>
             </ul>
@@ -1709,29 +1720,68 @@
             <ul>
               <li>
                 <span class="check">✓</span
-                ><span class="edit"
-                  ><strong>Conteúdo textual</strong> — Textos, descrições de serviços/produtos e
-                  informações que devem aparecer no site</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>[O que você precisa fornecer 1]</strong> — [descrição do item]
+                  <em style="font-style: italic; color: var(--fg-3)"
+                    >(apenas na Opção 1)</em
+                  ></span
                 >
               </li>
               <li>
                 <span class="check">✓</span
-                ><span class="edit"
-                  ><strong>Imagens e logo</strong> — Fotos em boa resolução e logo em arquivo
-                  vetorial ou alta qualidade, se já existirem</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>[O que você precisa fornecer 2]</strong> — [descrição do item]
+                  <em style="font-style: italic; color: var(--fg-3)"
+                    >(apenas na Opção 2)</em
+                  ></span
                 >
               </li>
               <li>
                 <span class="check">✓</span
-                ><span class="edit"
-                  ><strong>Acesso a domínio/hospedagem</strong> — Login ou autorização para
-                  configurar o site no seu domínio, se já tiver um</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>[O que você precisa fornecer 3]</strong> — [descrição do item]</span
                 >
               </li>
               <li>
                 <span class="check">✓</span
-                ><span class="edit"
-                  ><strong>Feedback nos prazos combinados</strong> — Aprovações e retornos dentro do
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>[O que você precisa fornecer 4]</strong> — [descrição do item]</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Feedback nos prazos combinados</strong> — aprovações e retornos dentro do
                   cronograma, pra não atrasar as próximas etapas</span
                 >
               </li>
@@ -1752,80 +1802,133 @@
           <h2 class="h2">Cronograma estimado</h2>
           <p class="right">
             Prazo total estimado:
-            <!-- EDITAR: prazo total --><span class="edit">[X semanas]</span> a partir do kick-off
+            <span>[prazo total estimado]</span> a partir do kick-off
           </p>
         </div>
 
         <div class="timeline">
-          <!-- EDITAR: Etapa 01 — título, descrição e prazo -->
           <div class="step" data-reveal data-reveal-delay="0.15">
             <span class="step-num">01</span>
             <div class="step-body">
-              <h3 class="h3"><span class="edit">[Alinhamento &amp; Coleta de Requisitos]</span></h3>
+              <h3 class="h3"><span>[Etapa 01: título]</span></h3>
               <p>
-                <span class="edit"
-                  >[Briefing imersivo, análise de referências do segmento e envio de materiais
-                  brutos pelo cliente.]</span
+                <span
+                  >[descrição da etapa]</span
                 >
               </p>
             </div>
             <div class="step-time">
               <span>Tempo estimado:</span>
-              <span class="edit">[Semana 1 · 3 a 5 dias]</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >[prazo estimado]</span
+              >
             </div>
           </div>
 
-          <!-- EDITAR: Etapa 02 — título, descrição e prazo -->
           <div class="step" data-reveal data-reveal-delay="0.2">
             <span class="step-num">02</span>
             <div class="step-body">
-              <h3 class="h3"><span class="edit">[Design de Telas &amp; Aprovação Visual]</span></h3>
+              <h3 class="h3"><span>[Etapa 02: título]</span></h3>
               <p>
-                <span class="edit"
-                  >[Apresentação da proposta visual completa no Figma com rodada de ajustes
-                  pontuais.]</span
+                <span
+                  >[descrição da etapa]</span
                 >
               </p>
             </div>
             <div class="step-time">
               <span>Tempo estimado:</span>
-              <span class="edit">[Semana 2 · 5 a 7 dias]</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >[prazo estimado]</span
+              >
             </div>
           </div>
 
-          <!-- EDITAR: Etapa 03 — título, descrição e prazo -->
           <div class="step" data-reveal data-reveal-delay="0.25">
             <span class="step-num">03</span>
             <div class="step-body">
-              <h3 class="h3"><span class="edit">[Desenvolvimento &amp; Integrações]</span></h3>
+              <h3 class="h3"><span>[Etapa 03: título]</span></h3>
               <p>
-                <span class="edit"
-                  >[Codificação responsiva, animações disciplinadas, conexões de formulários e setup
-                  técnico.]</span
+                <span
+                  >[descrição da etapa]</span
                 >
               </p>
             </div>
             <div class="step-time">
               <span>Tempo estimado:</span>
-              <span class="edit">[Semana 3 · 7 a 10 dias]</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >[prazo estimado]</span
+              >
             </div>
           </div>
 
-          <!-- EDITAR: Etapa 04 — título, descrição e prazo -->
           <div class="step" data-reveal data-reveal-delay="0.3">
             <span class="step-num">04</span>
             <div class="step-body">
-              <h3 class="h3"><span class="edit">[Testes, Deploy &amp; Entrega Final]</span></h3>
+              <h3 class="h3"><span>[Etapa 04: título]</span></h3>
               <p>
-                <span class="edit"
-                  >[Checklist de qualidade em múltiplos aparelhos, publicação em produção e
-                  transferência.]</span
+                <span
+                  >[descrição da etapa]</span
                 >
               </p>
             </div>
             <div class="step-time">
               <span>Tempo estimado:</span>
-              <span class="edit">[Semana 4 · 3 dias úteis]</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >[prazo estimado]</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.35">
+            <span class="step-num">05</span>
+            <div class="step-body">
+              <h3 class="h3"><span>[Etapa 05: título]</span></h3>
+              <p>
+                <span
+                  >[descrição da etapa]</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >[prazo estimado]</span
+              >
             </div>
           </div>
         </div>
@@ -1845,7 +1948,6 @@
             <p>Selecione o formato que melhor atende à necessidade atual do seu negócio.</p>
           </div>
           <div class="option-toggle" role="tablist" aria-label="Opções de investimento">
-            <!-- EDITAR: nome da opção 1 -->
             <button
               type="button"
               class="is-active"
@@ -1854,11 +1956,8 @@
               aria-controls="pane-option-1"
               data-option="1"
             >
-              <span class="edit" style="border-bottom: none; background: transparent"
-                >[Opção 01: Essencial]</span
-              >
+              <span>[Nome da Opção 1]</span>
             </button>
-            <!-- EDITAR: nome da opção 2 -->
             <button
               type="button"
               role="tab"
@@ -1866,141 +1965,349 @@
               aria-controls="pane-option-2"
               data-option="2"
             >
-              <span class="edit" style="border-bottom: none; background: transparent"
-                >[Opção 02: Premium]</span
-              >
+              <span>[Nome da Opção 2]</span>
             </button>
           </div>
         </div>
 
         <!-- PAINEL — OPÇÃO 1 -->
         <div class="pricing-panel" id="pane-option-1" role="tabpanel">
-        <div class="pricing-pane">
-          <div class="pricing-head">
-            <span class="kicker">Configuração selecionada</span>
-            <span class="edit">[Opção 1: Essencial]</span>
-            <p class="desc">
-              <span class="edit"
-                >[Design de interface personalizado, desenvolvimento front-end moderno, responsivo e
-                entrega completa pronta para publicação.]</span
+          <div class="pricing-pane">
+            <div class="pricing-head">
+              <span class="kicker">Configuração selecionada</span>
+              <span
+                style="
+                  font-family: var(--font-display);
+                  font-weight: 700;
+                  font-size: 30px;
+                  display: block;
+                  margin-bottom: 6px;
+                "
+                >[Nome da Opção 1]</span
               >
-            </p>
-          </div>
-          <div class="pricing-rows">
-            <!-- EDITAR: itens e valores da Opção 1 -->
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Design UI Exclusivo + Frontend Responsivo]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 8.500,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Gerenciador de Conteúdo CMS Simplificado]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 2.000,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Otimização de SEO &amp; Performance Básica]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 1.500,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"><span class="edit">[Suporte Técnico 30 dias]</span></span>
-              <span class="price"><span class="edit">[Incluso]</span></span>
-            </div>
-          </div>
-          <div class="pricing-total">
-            <div>
-              <p class="label">Investimento Total</p>
-              <p class="sub" style="margin: 0">
-                <span class="edit">[Pagamento estruturado por etapas de entrega]</span>
+              <p class="desc">
+                <span
+                  >[descrição da opção]</span
+                >
               </p>
             </div>
-            <!-- EDITAR: valor total da Opção 1 -->
-            <span class="price"
-              ><span class="edit" style="background: transparent">[R$ 12.000,00]</span></span
-            >
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Suporte técnico]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >[X dias inclusos]</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="pricing-total">
+              <div>
+                <p class="label">Investimento Total</p>
+                <p class="sub" style="margin: 0">
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 14px;
+                      color: rgba(243, 243, 243, 0.7);
+                    "
+                    >50% no início + 50% na entrega · Pix ou cartão parcelado</span
+                  >
+                </p>
+              </div>
+              <span class="price"
+                ><span class="edit" style="background: transparent">R$ [valor total]</span></span
+              >
+            </div>
           </div>
-        </div>
           <div class="pricing-conditions">
             <span class="icon" aria-hidden="true"
               ><span class="material-symbols-outlined">payments</span></span
             >
-            <!-- EDITAR: condições de pagamento -->
             <p class="note">
-              <strong>Condições de pagamento:</strong> Pix ou transferência bancária,
-              <span class="edit">[50% de entrada + 50% na entrega]</span>.
+              <strong>Condições de pagamento:</strong> 50% no início do projeto, 50% na entrega
+              final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de
+              parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
             </p>
           </div>
         </div>
 
         <!-- PAINEL — OPÇÃO 2 -->
         <div class="pricing-panel" id="pane-option-2" role="tabpanel" hidden>
-        <div class="pricing-pane">
-          <div class="pricing-head">
-            <span class="kicker">Configuração selecionada</span>
-            <span class="edit">[Opção 2: Premium]</span>
-            <p class="desc">
-              <span class="edit"
-                >[Design de interface personalizado, desenvolvimento front-end moderno, responsivo,
-                integrações extras e entrega completa pronta para publicação.]</span
+          <div class="pricing-pane">
+            <div class="pricing-head">
+              <span class="kicker">Configuração selecionada</span>
+              <span
+                style="
+                  font-family: var(--font-display);
+                  font-weight: 700;
+                  font-size: 30px;
+                  display: block;
+                  margin-bottom: 6px;
+                "
+                >[Nome da Opção 2]</span
               >
-            </p>
-          </div>
-          <div class="pricing-rows">
-            <!-- EDITAR: itens e valores da Opção 2 -->
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Design UI Exclusivo + Frontend Responsivo]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 8.500,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Gerenciador de Conteúdo CMS Completo]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 3.500,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Otimização de SEO &amp; Performance Avançada]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 2.800,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"
-                ><span class="edit">[Integrações Extras (CRM, Automação, Analytics)]</span></span
-              >
-              <span class="price"><span class="edit">[R$ 3.200,00]</span></span>
-            </div>
-            <div class="pricing-row">
-              <span class="item"><span class="edit">[Suporte Técnico 90 dias]</span></span>
-              <span class="price"><span class="edit">[Incluso]</span></span>
-            </div>
-          </div>
-          <div class="pricing-total">
-            <div>
-              <p class="label">Investimento Total</p>
-              <p class="sub" style="margin: 0">
-                <span class="edit">[Pagamento estruturado por etapas de entrega]</span>
+              <p class="desc">
+                <span
+                  >[descrição da opção]</span
+                >
               </p>
             </div>
-            <!-- EDITAR: valor total da Opção 2 -->
-            <span class="price"
-              ><span class="edit" style="background: transparent">[R$ 18.000,00]</span></span
-            >
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >R$ [valor]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Suporte técnico]</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >[X dias inclusos]</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="pricing-total">
+              <div>
+                <p class="label">Investimento Total</p>
+                <p class="sub" style="margin: 0">
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 14px;
+                      color: rgba(243, 243, 243, 0.7);
+                    "
+                    >50% no início + 50% na entrega · Pix ou cartão parcelado</span
+                  >
+                </p>
+              </div>
+              <span class="price"
+                ><span class="edit" style="background: transparent">R$ [valor total]</span></span
+              >
+            </div>
           </div>
-        </div>
           <div class="pricing-conditions">
             <span class="icon" aria-hidden="true"
               ><span class="material-symbols-outlined">payments</span></span
             >
-            <!-- EDITAR: condições de pagamento -->
             <p class="note">
-              <strong>Condições de pagamento:</strong> Pix ou transferência bancária,
-              <span class="edit">[50% de entrada + 50% na entrega]</span>.
+              <strong>Condições de pagamento:</strong> 50% no início do projeto, 50% na entrega
+              final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de
+              parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
             </p>
           </div>
         </div>
@@ -2023,40 +2330,34 @@
         </p>
 
         <div class="opp-grid">
-          <!-- EDITAR: Oportunidade 01 — título e descrição -->
           <div class="opp-card" data-reveal data-reveal-delay="0.15">
             <p class="eyebrow-pink">01 · Expansão</p>
-            <h3 class="h3"><span class="edit">[Automação de Atendimento &amp; IA]</span></h3>
+            <h3 class="h3"><span>[Ideia de serviço futuro 1]</span></h3>
             <p>
-              <span class="edit"
-                >[Integração de agente inteligente ou FAQ automatizado conectado aos seus serviços
-                para qualificar visitantes antes da reunião comercial.]</span
+              <span
+                >[por que isso faria sentido pra esse cliente]</span
               >
             </p>
           </div>
 
-          <!-- EDITAR: Oportunidade 02 — título e descrição -->
           <div class="opp-card" data-reveal data-reveal-delay="0.2">
             <p class="eyebrow-pink">02 · Conteúdo</p>
-            <h3 class="h3"><span class="edit">[Painel de Gestão (CMS Headless)]</span></h3>
+            <h3 class="h3"><span>[Ideia de serviço futuro 2]</span></h3>
             <p>
-              <span class="edit"
-                >[Possibilidade de você ou sua equipe publicarem novos artigos, cases e produtos sem
-                precisar encostar em nenhuma linha de código.]</span
+              <span
+                >[por que isso faria sentido pra esse cliente]</span
               >
             </p>
           </div>
 
-          <!-- EDITAR: Oportunidade 03 — título e descrição -->
           <div class="opp-card" data-reveal data-reveal-delay="0.25">
             <p class="eyebrow-pink">03 · Otimização</p>
             <h3 class="h3">
-              <span class="edit">[Retentor Mensal de Evolução &amp; A/B Testing]</span>
+              <span>[Ideia de serviço futuro 3]</span>
             </h3>
             <p>
-              <span class="edit"
-                >[Acompanhamento contínuo de métricas de conversão e ajustes mensais de design para
-                maximizar o retorno do investimento.]</span
+              <span
+                >[por que isso faria sentido pra esse cliente]</span
               >
             </p>
           </div>
@@ -2075,7 +2376,7 @@
             <h2>Vamos começar?</h2>
             <p>
               Se o escopo e as condições estiverem de acordo com o que você precisa, basta clicar
-              abaixo para formalizarmos e iniciarmos o kickoff.
+              abaixo para formalizarmos e iniciarmos o projeto.
             </p>
             <a class="btn" href="https://wa.me/5511930499095" target="_blank" rel="noopener"
               ><span>Aprovar proposta</span
@@ -2100,7 +2401,6 @@
           <span>Paola Assis · Dev &amp; Design</span>
         </div>
         <div class="footer-links">
-          <!-- EDITAR: site pessoal -->
           <a href="https://paolaassis.com" target="_blank" rel="noopener">PORTFÓLIO</a>
           <span class="sep">·</span>
           <a href="https://wa.me/5511930499095" target="_blank" rel="noopener">WHATSAPP</a>
@@ -2117,6 +2417,26 @@
         };
         var FADE_MS = 160; /* metade de --dur-2 (320ms): sai, troca, entra */
 
+        var navCta = document.querySelector('.nav-cta');
+        var ctaBtn = document.querySelector('.cta .btn');
+
+        function montarLinkAprovar(opcao) {
+          var textos = {
+            '1': 'Oi, Paola! Vi a proposta do projeto [Nome do Projeto] e quero seguir com a [Nome da Opção 1] (R$ [valor]). Pode me confirmar os próximos passos?',
+            '2': 'Oi, Paola! Vi a proposta do projeto [Nome do Projeto] e quero seguir com a [Nome da Opção 2] (R$ [valor]). Pode me confirmar os próximos passos?',
+          };
+          var texto = encodeURIComponent(textos[opcao] || textos['1']);
+          return 'https://wa.me/5511930499095?text=' + texto;
+        }
+
+        function atualizarLinksAprovar(opcao) {
+          var link = montarLinkAprovar(opcao);
+          if (navCta) navCta.setAttribute('href', link);
+          if (ctaBtn) ctaBtn.setAttribute('href', link);
+        }
+
+        atualizarLinksAprovar('1');
+
         buttons.forEach(function (btn) {
           btn.addEventListener('click', function () {
             var option = btn.getAttribute('data-option');
@@ -2127,6 +2447,8 @@
               b.classList.toggle('is-active', active);
               b.setAttribute('aria-selected', active ? 'true' : 'false');
             });
+
+            atualizarLinksAprovar(option);
 
             var current = Object.keys(panes)
               .map(function (k) {

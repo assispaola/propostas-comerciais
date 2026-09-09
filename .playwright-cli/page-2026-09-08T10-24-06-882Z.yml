@@ -1,0 +1,228 @@
+- generic [active] [ref=f3e1]:
+  - navigation [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - img "Paola Assis" [ref=f3e5]
+      - link "Aprovar proposta arrow_outward" [ref=f3e7] [cursor=pointer]:
+        - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20Home%20Cook%20e%20quero%20seguir%20com%20a%20Op%C3%A7%C3%A3o%20Essencial%20(R%24%203.030%2C00).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+        - generic [ref=f3e8]: Aprovar proposta
+        - generic [ref=f3e9]: arrow_outward
+  - generic [ref=f3e11]:
+    - generic [ref=f3e12]: Proposta Comercial
+    - heading "Home Cook — Identidade Visual, E-book & Landing Page" [level=1] [ref=f3e14]
+    - paragraph [ref=f3e15]: para Odelma Custódio
+    - generic [ref=f3e16]:
+      - generic [ref=f3e17]:
+        - generic [ref=f3e18]: Preparado por
+        - generic [ref=f3e19]: Paola Assis · Desenvolvedora & Designer
+      - generic [ref=f3e20]:
+        - generic [ref=f3e21]: Vigência & Prazo
+        - generic [ref=f3e22]: 08/09/2026 · Válida até 15/09/2026
+      - generic [ref=f3e23]:
+        - generic [ref=f3e24]: Canal de Contato
+        - link "WhatsApp" [ref=f3e26] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095
+  - generic [ref=f3e28]:
+    - paragraph [ref=f3e29]: 02 / DIAGNÓSTICO & ESTRATÉGIA
+    - heading "Por que esse projeto importa agora" [level=2] [ref=f3e30]
+    - generic [ref=f3e31]:
+      - paragraph [ref=f3e32]: "Contexto atual:"
+      - paragraph [ref=f3e33]: "A Home Cook está deixando de ser só um serviço de personal chef pra virar também um produto digital: um e-book ensinando outras cozinheiras a se tornarem personal chef profissionais. Esse projeto ficou parado por um tempo, e a procura por esse tipo de conhecimento cresceu muito recentemente, tornando o momento ideal pra lançar."
+      - paragraph [ref=f3e34]: Uma marca com autoridade visual à altura do conteúdo que ensina, um e-book pronto pra vender, e uma página capaz de converter a demanda que já está batendo à porta em vendas reais.
+  - generic [ref=f3e37]:
+    - generic [ref=f3e38]:
+      - paragraph [ref=f3e39]: // Experiência comprovada
+      - heading "Quer ver mais do meu trabalho?" [level=3] [ref=f3e40]
+      - paragraph [ref=f3e41]: Esse é só um recorte do que posso fazer. Sou a Paola, desenvolvedora front-end e designer UX/UI — no meu portfólio você encontra outros projetos, meu processo completo e outras soluções que também posso resolver pro seu negócio.
+    - link "Ver portfólio completo arrow_outward" [ref=f3e42] [cursor=pointer]:
+      - /url: https://paolaassis.com
+      - generic [ref=f3e43]: Ver portfólio completo
+      - generic [ref=f3e44]: arrow_outward
+  - generic [ref=f3e46]:
+    - paragraph [ref=f3e47]: 04 / ENTREGÁVEIS
+    - generic [ref=f3e48]:
+      - heading "Escopo do projeto" [level=2] [ref=f3e49]
+      - generic [ref=f3e50]: O que está contemplado nesta entrega
+    - generic [ref=f3e51]:
+      - generic [ref=f3e52]:
+        - generic [ref=f3e53]:
+          - 'heading "Entregável 01: Identidade Visual (Logo)" [level=3] [ref=f3e54]'
+          - generic [ref=f3e55]: Figma + IA Generativa
+        - paragraph [ref=f3e57]: Redesenho do símbolo (chapéu de chef + livro aberto, estilo line-art minimalista) e aplicação da paleta dourado + carvão em todos os materiais da marca.
+      - generic [ref=f3e58]:
+        - generic [ref=f3e59]:
+          - 'heading "Entregável 02: Design e Diagramação do E-book" [level=3] [ref=f3e60]'
+          - generic [ref=f3e61]: Figma + IA Generativa
+        - paragraph [ref=f3e63]: Capa, sumário, introdução e diagramação completa dos capítulos, com ilustrações de linha personalizadas no mesmo estilo da logo. Arquivos finais entregues em PNG (alta resolução, por página) e PDF, produzidos no Figma. Inclui diagramação de até 25 páginas — conteúdo que ultrapassar esse volume é orçado à parte, no valor de R$ 20,00 por página adicional.
+      - generic [ref=f3e64]:
+        - generic [ref=f3e65]:
+          - 'heading "Entregável 03: Landing Page de Vendas Completa do E-book" [level=3] [ref=f3e66]'
+          - generic [ref=f3e67]: HTML/CSS/JS + SEO ON-PAGE
+        - paragraph [ref=f3e69]: "Página de vendas completa (não só a hero), estruturada com técnicas atuais de conversão: copy no formato Problema-Agitação-Solução, headline focada em benefício específico, seções de prova social e tratamento de objeções (FAQ), hierarquia de SEO on-page (headings H1-H3, meta description, alt text otimizado nas imagens), performance de carregamento rápido, layout mobile-first com CTA de compra repetido em pontos estratégicos da página."
+      - generic [ref=f3e70]:
+        - generic [ref=f3e71]:
+          - 'heading "Entregável 04: Deploy, Domínio & Suporte de Entrega" [level=3] [ref=f3e72]'
+          - generic [ref=f3e73]: Hospedagem + sessão de entrega
+        - paragraph [ref=f3e75]: Publicação no servidor escolhido (Vercel, Netlify ou servidor próprio), apontamento de DNS com certificado SSL ativo e uma conversa rápida por chamada para esclarecer qualquer dúvida sobre o domínio, caso necessário.
+    - generic [ref=f3e76]:
+      - generic [ref=f3e77]:
+        - generic [ref=f3e78]: Não incluso nesta proposta (ou fases futuras)
+        - list [ref=f3e81]:
+          - listitem [ref=f3e82]:
+            - generic [ref=f3e83]: —
+            - generic [ref=f3e84]: Redação do conteúdo integral do e-book (nesta versão Essencial — a Opção Completo já inclui a criação do conteúdo via entrevista guiada)
+          - listitem [ref=f3e85]:
+            - generic [ref=f3e86]: —
+            - generic [ref=f3e87]: Pack de posts para redes sociais
+          - listitem [ref=f3e88]:
+            - generic [ref=f3e89]: —
+            - generic [ref=f3e90]: Produção de vídeo/aula complementar
+      - generic [ref=f3e91]:
+        - generic [ref=f3e92]: O que eu preciso de você
+        - list [ref=f3e95]:
+          - listitem [ref=f3e96]:
+            - generic [ref=f3e97]: ✓
+            - generic [ref=f3e98]:
+              - strong [ref=f3e99]: Conteúdo textual
+              - text: — o texto completo do e-book, escrito por você
+              - emphasis [ref=f3e100]: (apenas na Opção Essencial)
+          - listitem [ref=f3e101]:
+            - generic [ref=f3e102]: ✓
+            - generic [ref=f3e103]:
+              - strong [ref=f3e104]: Disponibilidade para entrevistas guiadas
+              - text: — perguntas estruturadas por áudio ou chamada, que viram a base do conteúdo do e-book
+              - emphasis [ref=f3e105]: (apenas na Opção Completo)
+          - listitem [ref=f3e106]:
+            - generic [ref=f3e107]: ✓
+            - generic [ref=f3e108]:
+              - strong [ref=f3e109]: Imagens e referências
+              - text: — fotos e referências visuais, se já existirem
+          - listitem [ref=f3e110]:
+            - generic [ref=f3e111]: ✓
+            - generic [ref=f3e112]:
+              - strong [ref=f3e113]: Acesso a domínio/hospedagem
+              - text: — caso já exista um domínio para publicar a página de vendas
+          - listitem [ref=f3e114]:
+            - generic [ref=f3e115]: ✓
+            - generic [ref=f3e116]:
+              - strong [ref=f3e117]: Feedback nos prazos combinados
+              - text: — aprovações e retornos dentro do cronograma, pra não atrasar as próximas etapas
+  - generic [ref=f3e119]:
+    - paragraph [ref=f3e120]: 05 / ETAPAS
+    - generic [ref=f3e121]:
+      - heading "Cronograma estimado" [level=2] [ref=f3e122]
+      - paragraph [ref=f3e123]: "Prazo total estimado: 4 a 5 semanas (varia conforme envio do conteúdo) a partir do kick-off"
+    - generic [ref=f3e124]:
+      - generic [ref=f3e125]:
+        - generic [ref=f3e126]: "01"
+        - generic [ref=f3e127]:
+          - heading "Aprovação da proposta e pagamento do sinal" [level=3] [ref=f3e128]
+          - paragraph [ref=f3e129]: Formalização do aceite da proposta e confirmação do sinal para início do projeto.
+        - generic [ref=f3e130]:
+          - generic [ref=f3e131]: "Tempo estimado:"
+          - generic [ref=f3e132]: Imediato após aceite
+      - generic [ref=f3e133]:
+        - generic [ref=f3e134]: "02"
+        - generic [ref=f3e135]:
+          - heading "Captação do conteúdo" [level=3] [ref=f3e136]
+          - paragraph [ref=f3e137]: Alinhamento das ideias e coleta das informações necessárias para o desenvolvimento do e-book.
+        - generic [ref=f3e138]:
+          - generic [ref=f3e139]: "Tempo estimado:"
+          - generic [ref=f3e140]: A combinar (depende do envio do conteúdo)
+      - generic [ref=f3e141]:
+        - generic [ref=f3e142]: "03"
+        - generic [ref=f3e143]:
+          - heading "Diagramação, ajustes e revisões do e-book" [level=3] [ref=f3e144]
+          - paragraph [ref=f3e145]: Diagramação do e-book, aplicação da identidade visual e rodada de ajustes.
+        - generic [ref=f3e146]:
+          - generic [ref=f3e147]: "Tempo estimado:"
+          - generic [ref=f3e148]: até 20 dias úteis após o conteúdo
+      - generic [ref=f3e149]:
+        - generic [ref=f3e150]: "04"
+        - generic [ref=f3e151]:
+          - heading "Desenvolvimento da landing page de vendas" [level=3] [ref=f3e152]
+          - paragraph [ref=f3e153]: Início da landing page de vendas somente após o e-book estar concluído e aprovado, garantindo que o conteúdo e a identidade já estejam validados antes da página final.
+        - generic [ref=f3e154]:
+          - generic [ref=f3e155]: "Tempo estimado:"
+          - generic [ref=f3e156]: até 15 dias úteis após aprovação do e-book
+      - generic [ref=f3e157]:
+        - generic [ref=f3e158]: "05"
+        - generic [ref=f3e159]:
+          - heading "Entrega final" [level=3] [ref=f3e160]
+          - paragraph [ref=f3e161]: Publicação da landing page, apontamento de domínio e entrega dos arquivos finais do e-book.
+        - generic [ref=f3e162]:
+          - generic [ref=f3e163]: "Tempo estimado:"
+          - generic [ref=f3e164]: A combinar
+  - generic [ref=f3e166]:
+    - paragraph [ref=f3e167]: 06 / ORÇAMENTO
+    - generic [ref=f3e168]:
+      - generic [ref=f3e169]:
+        - heading "Investimento transparente" [level=2] [ref=f3e170]: Investimentotransparente
+        - paragraph [ref=f3e171]: Selecione o formato que melhor atende à necessidade atual do seu negócio.
+      - tablist "Opções de investimento" [ref=f3e172]:
+        - 'tab "Opção 01: Essencial" [selected] [ref=f3e173] [cursor=pointer]'
+        - 'tab "Opção 02: Completo" [ref=f3e174] [cursor=pointer]'
+    - tabpanel [ref=f3e175]:
+      - generic [ref=f3e176]:
+        - generic [ref=f3e177]:
+          - generic [ref=f3e178]: Configuração selecionada
+          - generic [ref=f3e179]: "Opção 1: Essencial"
+          - paragraph [ref=f3e180]: Logo e identidade visual, e-book diagramado e landing page de vendas completa, prontos para o lançamento do produto digital.
+        - generic [ref=f3e181]:
+          - generic [ref=f3e182]:
+            - generic [ref=f3e183]: Logo e identidade visual
+            - generic [ref=f3e184]: R$ 550,00
+          - generic [ref=f3e185]:
+            - generic [ref=f3e186]: Design e diagramação do e-book
+            - generic [ref=f3e187]: R$ 980,00
+          - generic [ref=f3e188]:
+            - generic [ref=f3e189]: Landing page de vendas completa
+            - generic [ref=f3e190]: R$ 1.500,00
+          - generic [ref=f3e191]:
+            - generic [ref=f3e192]: Suporte técnico
+            - generic [ref=f3e193]: 30 dias inclusos
+        - generic [ref=f3e194]:
+          - generic [ref=f3e195]:
+            - paragraph [ref=f3e196]: Investimento Total
+            - paragraph [ref=f3e197]: 50% no início + 50% na entrega · Pix ou cartão parcelado
+          - generic [ref=f3e198]: R$ 3.030,00
+      - generic [ref=f3e199]:
+        - generic [ref=f3e200]: payments
+        - paragraph [ref=f3e202]:
+          - strong [ref=f3e203]: "Condições de pagamento:"
+          - text: 50% no início do projeto, 50% na entrega final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
+  - generic [ref=f3e205]:
+    - paragraph [ref=f3e206]: 07 / PRÓXIMOS PASSOS
+    - heading "Ideias para os próximos passos" [level=2] [ref=f3e207]
+    - paragraph [ref=f3e208]: Sugestões pensadas especificamente para o crescimento do seu negócio — sem qualquer pressão comercial, apenas caminhos futuros que podemos explorar juntos quando fizer sentido.
+    - generic [ref=f3e209]:
+      - generic [ref=f3e210]:
+        - paragraph [ref=f3e211]: 01 · Expansão
+        - heading "Pack de Posts para Instagram" [level=3] [ref=f3e212]
+        - paragraph [ref=f3e213]: Divulgação contínua da marca Home Cook e do lançamento do e-book nas redes sociais.
+      - generic [ref=f3e214]:
+        - paragraph [ref=f3e215]: 02 · Conteúdo
+        - heading "Planilha de Precificação (bônus adicional)" [level=3] [ref=f3e216]
+        - paragraph [ref=f3e217]: Uma ferramenta simples para quem comprar o e-book calcular quanto cobrar como personal chef, reforçando o valor percebido do produto.
+      - generic [ref=f3e218]:
+        - paragraph [ref=f3e219]: 03 · Otimização
+        - heading "Expansão da página de vendas" [level=3] [ref=f3e220]
+        - paragraph [ref=f3e221]: Inclusão de depoimentos reais e mais seções de prova social assim que os primeiros compradores derem feedback.
+  - generic [ref=f3e225]:
+    - paragraph [ref=f3e226]: // Próximo passo
+    - heading "Vamos começar?" [level=2] [ref=f3e227]
+    - paragraph [ref=f3e228]: Se o escopo e as condições estiverem de acordo com o que você precisa, basta clicar abaixo para formalizarmos e iniciarmos o projeto.
+    - link "Aprovar proposta arrow_outward" [ref=f3e229] [cursor=pointer]:
+      - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20Home%20Cook%20e%20quero%20seguir%20com%20a%20Op%C3%A7%C3%A3o%20Essencial%20(R%24%203.030%2C00).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+      - generic [ref=f3e230]: Aprovar proposta
+      - generic [ref=f3e231]: arrow_outward
+  - contentinfo [ref=f3e232]:
+    - generic [ref=f3e233]:
+      - generic [ref=f3e234]:
+        - img "Paola Assis" [ref=f3e235]
+        - generic [ref=f3e236]: Paola Assis · Dev & Design
+      - generic [ref=f3e237]:
+        - link "PORTFÓLIO" [ref=f3e238] [cursor=pointer]:
+          - /url: https://paola-portfolio-delta.vercel.app/
+        - generic [ref=f3e239]: ·
+        - link "WHATSAPP" [ref=f3e240] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095

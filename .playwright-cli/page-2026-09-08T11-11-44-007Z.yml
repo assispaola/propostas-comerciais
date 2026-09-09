@@ -1,0 +1,238 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - img "Paola Assis" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - link "Contexto" [ref=e8] [cursor=pointer]:
+            - /url: "#contexto"
+          - link "Escopo" [ref=e9] [cursor=pointer]:
+            - /url: "#escopo"
+          - link "Cronograma" [ref=e10] [cursor=pointer]:
+            - /url: "#cronograma"
+          - link "Investimento" [ref=e11] [cursor=pointer]:
+            - /url: "#investimento"
+        - link "Aprovar proposta arrow_outward" [ref=e12] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20%5BNome%20do%20Projeto%5D%20e%20quero%20seguir%20com%20a%20%5BNome%20da%20Op%C3%A7%C3%A3o%201%5D%20(R%24%20%5Bvalor%5D).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+          - generic [ref=e13]: Aprovar proposta
+          - generic [ref=e14]: arrow_outward
+  - generic [ref=e16]:
+    - generic [ref=e17]: Proposta Comercial
+    - heading "[Nome do Projeto]" [level=1] [ref=e19]
+    - paragraph [ref=e20]: para [Nome do Cliente]
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Preparado por
+        - generic [ref=e24]: Paola Assis · Desenvolvedora & Designer
+      - generic [ref=e25]:
+        - generic [ref=e26]: Vigência & Prazo
+        - generic [ref=e27]: "[Data de envio] · Válida até [Data de validade]"
+      - generic [ref=e28]:
+        - generic [ref=e29]: Canal de Contato
+        - link "WhatsApp" [ref=e31] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095
+  - generic [ref=e33]:
+    - paragraph [ref=e34]: 02 / DIAGNÓSTICO & ESTRATÉGIA
+    - heading "Por que esse projeto importa agora" [level=2] [ref=e35]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: "Contexto atual:"
+      - paragraph [ref=e38]: "[Insira aqui o contexto do cliente: qual dor/oportunidade motivou o projeto]"
+      - paragraph [ref=e39]: "[Descreva o impacto esperado: o que muda pro negócio dele depois de pronto]"
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - paragraph [ref=e44]: // Experiência comprovada
+      - heading "Quer ver mais do meu trabalho?" [level=3] [ref=e45]
+      - paragraph [ref=e46]: Esse é só um recorte do que posso fazer. Sou a Paola, desenvolvedora front-end e designer UX/UI — no meu portfólio você encontra outros projetos, meu processo completo e outras soluções que também posso resolver pro seu negócio.
+    - link "Ver portfólio completo arrow_outward" [ref=e47] [cursor=pointer]:
+      - /url: https://paolaassis.com
+      - generic [ref=e48]: Ver portfólio completo
+      - generic [ref=e49]: arrow_outward
+  - generic [ref=e51]:
+    - paragraph [ref=e52]: 04 / ENTREGÁVEIS
+    - generic [ref=e53]:
+      - heading "Escopo do projeto" [level=2] [ref=e54]
+      - generic [ref=e55]: O que está contemplado nesta entrega
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - 'heading "[Entregável 01: título]" [level=3] [ref=e59]'
+          - generic [ref=e60]: "[tecnologia/ferramenta usada]"
+        - paragraph [ref=e62]: "[descrição do que esse item entrega na prática]"
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - 'heading "[Entregável 02: título]" [level=3] [ref=e65]'
+          - generic [ref=e66]: "[tecnologia/ferramenta usada]"
+        - paragraph [ref=e68]: "[descrição do que esse item entrega na prática]"
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - 'heading "[Entregável 03: título]" [level=3] [ref=e71]'
+          - generic [ref=e72]: "[tecnologia/ferramenta usada]"
+        - paragraph [ref=e74]: "[descrição do que esse item entrega na prática]"
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - 'heading "[Entregável 04: título]" [level=3] [ref=e77]'
+          - generic [ref=e78]: "[tecnologia/ferramenta usada]"
+        - paragraph [ref=e80]: "[descrição do que esse item entrega na prática]"
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]: Não incluso nesta proposta (ou fases futuras)
+        - list [ref=e86]:
+          - listitem [ref=e87]:
+            - generic [ref=e88]: —
+            - generic [ref=e89]: "[Item que fica de fora]"
+          - listitem [ref=e90]:
+            - generic [ref=e91]: —
+            - generic [ref=e92]: "[Item que fica de fora]"
+          - listitem [ref=e93]:
+            - generic [ref=e94]: —
+            - generic [ref=e95]: "[Item que fica de fora]"
+      - generic [ref=e96]:
+        - generic [ref=e97]: O que eu preciso de você
+        - list [ref=e100]:
+          - listitem [ref=e101]:
+            - generic [ref=e102]: ✓
+            - generic [ref=e103]:
+              - strong [ref=e104]: "[O que você precisa fornecer 1]"
+              - text: — [descrição do item]
+              - emphasis [ref=e105]: (apenas na Opção 1)
+          - listitem [ref=e106]:
+            - generic [ref=e107]: ✓
+            - generic [ref=e108]:
+              - strong [ref=e109]: "[O que você precisa fornecer 2]"
+              - text: — [descrição do item]
+              - emphasis [ref=e110]: (apenas na Opção 2)
+          - listitem [ref=e111]:
+            - generic [ref=e112]: ✓
+            - generic [ref=e113]:
+              - strong [ref=e114]: "[O que você precisa fornecer 3]"
+              - text: — [descrição do item]
+          - listitem [ref=e115]:
+            - generic [ref=e116]: ✓
+            - generic [ref=e117]:
+              - strong [ref=e118]: "[O que você precisa fornecer 4]"
+              - text: — [descrição do item]
+          - listitem [ref=e119]:
+            - generic [ref=e120]: ✓
+            - generic [ref=e121]:
+              - strong [ref=e122]: Feedback nos prazos combinados
+              - text: — aprovações e retornos dentro do cronograma, pra não atrasar as próximas etapas
+  - generic [ref=e124]:
+    - paragraph [ref=e125]: 05 / ETAPAS
+    - generic [ref=e126]:
+      - heading "Cronograma estimado" [level=2] [ref=e127]
+      - paragraph [ref=e128]: "Prazo total estimado: [prazo total estimado] a partir do kick-off"
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e131]: "01"
+        - generic [ref=e132]:
+          - 'heading "[Etapa 01: título]" [level=3] [ref=e133]'
+          - paragraph [ref=e134]: "[descrição da etapa]"
+        - generic [ref=e135]:
+          - generic [ref=e136]: "Tempo estimado:"
+          - generic [ref=e137]: "[prazo estimado]"
+      - generic [ref=e138]:
+        - generic [ref=e139]: "02"
+        - generic [ref=e140]:
+          - 'heading "[Etapa 02: título]" [level=3] [ref=e141]'
+          - paragraph [ref=e142]: "[descrição da etapa]"
+        - generic [ref=e143]:
+          - generic [ref=e144]: "Tempo estimado:"
+          - generic [ref=e145]: "[prazo estimado]"
+      - generic [ref=e146]:
+        - generic [ref=e147]: "03"
+        - generic [ref=e148]:
+          - 'heading "[Etapa 03: título]" [level=3] [ref=e149]'
+          - paragraph [ref=e150]: "[descrição da etapa]"
+        - generic [ref=e151]:
+          - generic [ref=e152]: "Tempo estimado:"
+          - generic [ref=e153]: "[prazo estimado]"
+      - generic [ref=e154]:
+        - generic [ref=e155]: "04"
+        - generic [ref=e156]:
+          - 'heading "[Etapa 04: título]" [level=3] [ref=e157]'
+          - paragraph [ref=e158]: "[descrição da etapa]"
+        - generic [ref=e159]:
+          - generic [ref=e160]: "Tempo estimado:"
+          - generic [ref=e161]: "[prazo estimado]"
+      - generic [ref=e162]:
+        - generic [ref=e163]: "05"
+        - generic [ref=e164]:
+          - 'heading "[Etapa 05: título]" [level=3] [ref=e165]'
+          - paragraph [ref=e166]: "[descrição da etapa]"
+        - generic [ref=e167]:
+          - generic [ref=e168]: "Tempo estimado:"
+          - generic [ref=e169]: "[prazo estimado]"
+  - generic [ref=e171]:
+    - paragraph [ref=e172]: 06 / ORÇAMENTO
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - heading "Investimento transparente" [level=2] [ref=e175]: Investimentotransparente
+        - paragraph [ref=e176]: Selecione o formato que melhor atende à necessidade atual do seu negócio.
+      - tablist "Opções de investimento" [ref=e177]:
+        - tab "[Nome da Opção 1]" [selected] [ref=e178] [cursor=pointer]
+        - tab "[Nome da Opção 2]" [ref=e179] [cursor=pointer]
+    - tabpanel [ref=e180]:
+      - generic [ref=e181]:
+        - generic [ref=e182]:
+          - generic [ref=e183]: Configuração selecionada
+          - generic [ref=e184]: "[Nome da Opção 1]"
+          - paragraph [ref=e185]: "[descrição da opção]"
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - generic [ref=e188]: "[Item]"
+            - generic [ref=e189]: R$ [valor]
+          - generic [ref=e190]:
+            - generic [ref=e191]: "[Item]"
+            - generic [ref=e192]: R$ [valor]
+          - generic [ref=e193]:
+            - generic [ref=e194]: "[Item]"
+            - generic [ref=e195]: R$ [valor]
+          - generic [ref=e196]:
+            - generic [ref=e197]: "[Suporte técnico]"
+            - generic [ref=e198]: "[X dias inclusos]"
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - paragraph [ref=e201]: Investimento Total
+            - paragraph [ref=e202]: 50% no início + 50% na entrega · Pix ou cartão parcelado
+          - generic [ref=e203]: R$ [valor total]
+      - generic [ref=e204]:
+        - generic [ref=e205]: payments
+        - paragraph [ref=e207]:
+          - strong [ref=e208]: "Condições de pagamento:"
+          - text: 50% no início do projeto, 50% na entrega final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
+  - generic [ref=e210]:
+    - paragraph [ref=e211]: 07 / PRÓXIMOS PASSOS
+    - heading "Ideias para os próximos passos" [level=2] [ref=e212]
+    - paragraph [ref=e213]: Sugestões pensadas especificamente para o crescimento do seu negócio — sem qualquer pressão comercial, apenas caminhos futuros que podemos explorar juntos quando fizer sentido.
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - paragraph [ref=e216]: 01 · Expansão
+        - heading "[Ideia de serviço futuro 1]" [level=3] [ref=e217]
+        - paragraph [ref=e218]: "[por que isso faria sentido pra esse cliente]"
+      - generic [ref=e219]:
+        - paragraph [ref=e220]: 02 · Conteúdo
+        - heading "[Ideia de serviço futuro 2]" [level=3] [ref=e221]
+        - paragraph [ref=e222]: "[por que isso faria sentido pra esse cliente]"
+      - generic [ref=e223]:
+        - paragraph [ref=e224]: 03 · Otimização
+        - heading "[Ideia de serviço futuro 3]" [level=3] [ref=e225]
+        - paragraph [ref=e226]: "[por que isso faria sentido pra esse cliente]"
+  - generic [ref=e230]:
+    - paragraph [ref=e231]: // Próximo passo
+    - heading "Vamos começar?" [level=2] [ref=e232]
+    - paragraph [ref=e233]: Se o escopo e as condições estiverem de acordo com o que você precisa, basta clicar abaixo para formalizarmos e iniciarmos o projeto.
+    - link "Aprovar proposta arrow_outward" [ref=e234] [cursor=pointer]:
+      - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20%5BNome%20do%20Projeto%5D%20e%20quero%20seguir%20com%20a%20%5BNome%20da%20Op%C3%A7%C3%A3o%201%5D%20(R%24%20%5Bvalor%5D).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+      - generic [ref=e235]: Aprovar proposta
+      - generic [ref=e236]: arrow_outward
+  - contentinfo [ref=e237]:
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - img "Paola Assis" [ref=e240]
+        - generic [ref=e241]: Paola Assis · Dev & Design
+      - generic [ref=e242]:
+        - link "PORTFÓLIO" [ref=e243] [cursor=pointer]:
+          - /url: https://paolaassis.com
+        - generic [ref=e244]: ·
+        - link "WHATSAPP" [ref=e245] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095
