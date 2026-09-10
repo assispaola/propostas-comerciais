@@ -1,0 +1,240 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - img "Paola Assis" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - link "Contexto" [ref=e8] [cursor=pointer]:
+            - /url: "#contexto"
+          - link "Escopo" [ref=e9] [cursor=pointer]:
+            - /url: "#escopo"
+          - link "Cronograma" [ref=e10] [cursor=pointer]:
+            - /url: "#cronograma"
+          - link "Investimento" [ref=e11] [cursor=pointer]:
+            - /url: "#investimento"
+        - link "Aprovar proposta arrow_outward" [ref=e12] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20Elefancy%20%E2%80%94%20Divulga%C3%A7%C3%A3o%20de%20Cole%C3%A7%C3%A3o%20%26%20Campanha%20de%20E-mail%20e%20quero%20seguir%20com%20a%20Pack%20Completo%20%2B%20E-mail%20(R%24%201.550).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+          - generic [ref=e13]: Aprovar proposta
+          - generic [ref=e14]: arrow_outward
+  - generic [ref=e16]:
+    - generic [ref=e17]: Proposta Comercial
+    - heading "Elefancy — Divulgação de Coleção & Campanha de E-mail" [level=1] [ref=e19]
+    - paragraph [ref=e20]: para Elefancy
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Preparado por
+        - generic [ref=e24]: Paola Assis · Desenvolvedora & Designer
+      - generic [ref=e25]:
+        - generic [ref=e26]: Vigência & Prazo
+        - generic [ref=e27]: 09/09/2026 · Válida até 16/09/2026
+      - generic [ref=e28]:
+        - generic [ref=e29]: Canal de Contato
+        - link "WhatsApp" [ref=e31] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095
+  - generic [ref=e33]:
+    - paragraph [ref=e34]: 02 / DIAGNÓSTICO & ESTRATÉGIA
+    - heading "Por que esse projeto importa agora" [level=2] [ref=e35]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: "Contexto atual:"
+      - paragraph [ref=e38]: Vocês estão prestes a lançar uma nova coleção e já pensam em uma ação promocional de divulgação. Esse é o momento certo para reforçar a identidade visual da campanha em todos os canais, do Instagram ao e-mail, com consistência.
+      - paragraph [ref=e39]: Um conjunto de criativos pronto para divulgar a coleção com força em todas as frentes, mais uma peça de e-mail já refinada e pronta para reengajar sua base de leads no lançamento.
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - paragraph [ref=e44]: // Experiência comprovada
+      - heading "Quer ver mais do meu trabalho?" [level=3] [ref=e45]
+      - paragraph [ref=e46]: Esse é só um recorte do que posso fazer. Sou a Paola, desenvolvedora front-end e designer UX/UI — no meu portfólio você encontra outros projetos, meu processo completo e outras soluções que também posso resolver pro seu negócio.
+    - link "Ver portfólio completo arrow_outward" [ref=e47] [cursor=pointer]:
+      - /url: https://paolaassis.com
+      - generic [ref=e48]: Ver portfólio completo
+      - generic [ref=e49]: arrow_outward
+  - generic [ref=e51]:
+    - paragraph [ref=e52]: 04 / ENTREGÁVEIS
+    - generic [ref=e53]:
+      - heading "Escopo do projeto" [level=2] [ref=e54]
+      - generic [ref=e55]: O que está contemplado nesta entrega
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - heading "Pack de Criativos para Divulgação" [level=3] [ref=e59]
+          - generic [ref=e60]: DESIGN + REDES SOCIAIS
+        - paragraph [ref=e62]: 10 criativos (mix de posts para feed, stories e carrossel) para divulgação da nova coleção nas redes sociais.
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - heading "Banners de Campanha" [level=3] [ref=e65]
+          - generic [ref=e66]: DESIGN
+        - paragraph [ref=e68]: 2 banners para uso em site e/ou mídia paga, alinhados à identidade visual da nova coleção. Disponível também em versão animada (loop curto em MP4/GIF, ideal para Stories e Reels), mediante acréscimo no investimento.
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - heading "Peças de E-mail Prontas (linha Batizado) — v1 e v2" [level=3] [ref=e71]
+          - generic [ref=e72]: DESIGN + HTML TESTADO
+        - paragraph [ref=e74]: Entrega das duas peças de e-mail da linha Batizado (v1 e v2), com arte em alta resolução (PNG e PDF) e código HTML com todos os hiperlinks funcionando, testado nos principais provedores de e-mail.
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]: Não incluso nesta proposta (ou fases futuras)
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - generic [ref=e82]: —
+            - generic [ref=e83]: Criação de novas peças de e-mail além das duas já existentes
+          - listitem [ref=e84]:
+            - generic [ref=e85]: —
+            - generic [ref=e86]: Configuração de automações/fluxos de e-mail marketing (carrinho abandonado, boas-vindas, etc.)
+          - listitem [ref=e87]:
+            - generic [ref=e88]: —
+            - generic [ref=e89]: Gestão de mídia paga (impulsionamento dos banners)
+      - generic [ref=e90]:
+        - generic [ref=e91]: O que eu preciso de você
+        - list [ref=e94]:
+          - listitem [ref=e95]:
+            - generic [ref=e96]: ✓
+            - generic [ref=e97]:
+              - strong [ref=e98]: Fotos em alta resolução da nova coleção
+              - text: — para produção dos criativos e banners
+              - emphasis [ref=e99]: (apenas na Opção 1)
+          - listitem [ref=e100]:
+            - generic [ref=e101]: ✓
+            - generic [ref=e102]:
+              - strong [ref=e103]: Links de destino para os CTAs das peças de e-mail
+              - text: — para configurar os hiperlinks corretamente
+              - emphasis [ref=e104]: (apenas na Opção 2)
+          - listitem [ref=e105]:
+            - generic [ref=e106]: ✓
+            - generic [ref=e107]:
+              - strong [ref=e108]: Aprovação da paleta de cores e identidade visual da campanha
+              - text: — para orientar a produção dos criativos e banners
+          - listitem [ref=e109]:
+            - generic [ref=e110]: ✓
+            - generic [ref=e111]:
+              - strong [ref=e112]: Textos e CTAs finais
+              - text: — para os criativos, banners e peças de e-mail
+          - listitem [ref=e113]:
+            - generic [ref=e114]: ✓
+            - generic [ref=e115]:
+              - strong [ref=e116]: Feedback nos prazos combinados
+              - text: — aprovações e retornos dentro do cronograma, pra não atrasar as próximas etapas
+  - generic [ref=e118]:
+    - paragraph [ref=e119]: 05 / ETAPAS
+    - generic [ref=e120]:
+      - heading "Cronograma estimado" [level=2] [ref=e121]
+      - paragraph [ref=e122]: "Prazo total estimado: 1 semana a partir do kick-off"
+    - generic [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e125]: "01"
+        - generic [ref=e126]:
+          - heading "Aprovação da proposta e pagamento do sinal" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Confirmação da proposta e pagamento de 50% para reservarmos sua vaga na agenda de produção.
+        - generic [ref=e129]:
+          - generic [ref=e130]: "Tempo estimado:"
+          - generic [ref=e131]: Imediato após aceite
+      - generic [ref=e132]:
+        - generic [ref=e133]: "02"
+        - generic [ref=e134]:
+          - heading "Envio do briefing visual da nova coleção" [level=3] [ref=e135]
+          - paragraph [ref=e136]: Você envia fotos, referências e materiais da nova coleção para orientar a produção dos criativos e banners.
+        - generic [ref=e137]:
+          - generic [ref=e138]: "Tempo estimado:"
+          - generic [ref=e139]: A combinar
+      - generic [ref=e140]:
+        - generic [ref=e141]: "03"
+        - generic [ref=e142]:
+          - heading "Produção dos criativos e banners" [level=3] [ref=e143]
+          - paragraph [ref=e144]: Desenvolvimento dos 10 criativos para redes sociais e dos 2 banners de campanha, alinhados à identidade visual da nova coleção.
+        - generic [ref=e145]:
+          - generic [ref=e146]: "Tempo estimado:"
+          - generic [ref=e147]: 4 dias úteis após briefing
+      - generic [ref=e148]:
+        - generic [ref=e149]: "04"
+        - generic [ref=e150]:
+          - heading "Entrega das peças de e-mail e finalização do projeto" [level=3] [ref=e151]
+          - paragraph [ref=e152]: Testes finais e entrega das duas peças de e-mail (arte e HTML com hiperlinks funcionando) da linha Batizado, junto com todos os arquivos finais do projeto.
+        - generic [ref=e153]:
+          - generic [ref=e154]: "Tempo estimado:"
+          - generic [ref=e155]: 2 dias úteis
+  - generic [ref=e157]:
+    - paragraph [ref=e158]: 06 / ORÇAMENTO
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - heading "Investimento transparente" [level=2] [ref=e161]: Investimentotransparente
+        - paragraph [ref=e162]: Selecione o formato que melhor atende à necessidade atual do seu negócio.
+      - tablist "Opções de investimento" [ref=e163]:
+        - tab "Pack de Divulgação" [ref=e164] [cursor=pointer]
+        - tab "Pack Completo + E-mail" [active] [selected] [ref=e165] [cursor=pointer]
+    - tabpanel [ref=e244]:
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e247]: Configuração selecionada
+          - generic [ref=e248]: Pack Divulgação + E-mail
+          - paragraph [ref=e249]: Tudo da Opção 1 + 2 peças de e-mail da linha Batizado (v1 e v2), caso você também queira usar esse material agora.
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - generic [ref=e252]: 10 criativos para redes sociais
+            - generic [ref=e253]: R$ 500,00
+          - generic [ref=e254]:
+            - generic [ref=e255]: 2 banners estáticos de campanha
+            - generic [ref=e256]: R$ 120,00
+          - generic [ref=e257]:
+            - generic [ref=e258]: "2 Peças de e-mail prontas (linha Batizado): arte + código HTML"
+            - generic [ref=e259]: R$ 450,00
+          - generic [ref=e260]:
+            - generic [ref=e261]: Versão animada dos 2 banners (opcional)
+            - generic [ref=e262]: + R$ 350,00
+        - paragraph [ref=e263]: Item opcional, não incluído automaticamente no total acima — só é somado se você confirmar o interesse.
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - paragraph [ref=e266]: Investimento Total
+            - paragraph [ref=e267]: 50% no início + 50% na entrega · Pix ou cartão parcelado
+          - generic [ref=e268]: R$ 1.070,00
+      - generic [ref=e269]:
+        - generic [ref=e270]: payments
+        - paragraph [ref=e272]:
+          - strong [ref=e273]: "Condições de pagamento:"
+          - text: 50% no início do projeto, 50% na entrega final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
+  - generic [ref=e194]:
+    - paragraph [ref=e195]: 07 / PRÓXIMOS PASSOS
+    - generic [ref=e196]:
+      - generic [ref=e197]: stars_2
+      - heading "Ideias para os próximos passos" [level=2] [ref=e198]
+    - paragraph [ref=e199]: Sugestões pensadas especificamente para o crescimento do seu negócio — sem qualquer pressão comercial, apenas caminhos futuros que podemos explorar juntos quando fizer sentido.
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - paragraph [ref=e202]: 01 · Recorrência
+        - heading "Pack Mensal de Posts para Redes Sociais" [level=3] [ref=e203]
+        - paragraph [ref=e204]: Conteúdo recorrente todo mês, com valor especial por ser recorrente, pra manter a Elefancy sempre presente sem precisar pensar em cada lançamento separadamente.
+      - generic [ref=e205]:
+        - paragraph [ref=e206]: 02 · Automação
+        - heading "Automação de Atendimento via WhatsApp" [level=3] [ref=e207]
+        - paragraph [ref=e208]: Aquele "robozinho" que responde dúvidas frequentes, informa sobre tamanhos e disponibilidade, e direciona pra você só quando for algo que realmente precisa do seu toque pessoal.
+      - generic [ref=e209]:
+        - paragraph [ref=e210]: 03 · Automação
+        - heading "Fluxos de Automação de E-mail Marketing" [level=3] [ref=e211]
+        - paragraph [ref=e212]: Sequências automáticas de carrinho abandonado, boas-vindas para novos assinantes e reengajamento de clientes inativos, disparando sozinhas sem esforço manual.
+      - generic [ref=e213]:
+        - paragraph [ref=e214]: 04 · Exclusivo do nicho
+        - heading "E-mail de Marco de Idade do Bebê" [level=3] [ref=e215]
+        - paragraph [ref=e216]: "Uma automação exclusiva para o nicho, disparando sugestões de troca de tamanho conforme o bebê cresce (ex: \"seu bebê completa 3 meses, hora do próximo tamanho\"), gerando recompra natural."
+      - generic [ref=e217]:
+        - paragraph [ref=e218]: 05 · Expansão
+        - heading "Expansão da linha Batizado" [level=3] [ref=e219]
+        - paragraph [ref=e220]: Novas peças de e-mail para outras datas comemorativas e ocasiões especiais, reaproveitando o mesmo padrão visual já validado.
+      - generic [ref=e221]:
+        - paragraph [ref=e222]: 06 · E-commerce
+        - heading "Redesenho da Loja Virtual" [level=3] [ref=e223]
+        - paragraph [ref=e224]: Uma loja mais alinhada à identidade visual que a Elefancy já tem nas redes, com experiência de compra mais fluida, pensada pra converter melhor quem já chega interessado.
+  - generic [ref=e228]:
+    - paragraph [ref=e229]: // Próximo passo
+    - heading "Vamos começar?" [level=2] [ref=e230]
+    - paragraph [ref=e231]: Se o escopo e as condições estiverem de acordo com o que você precisa, basta clicar abaixo para formalizarmos e iniciarmos o projeto.
+    - link "Aprovar proposta arrow_outward" [ref=e232] [cursor=pointer]:
+      - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20Elefancy%20%E2%80%94%20Divulga%C3%A7%C3%A3o%20de%20Cole%C3%A7%C3%A3o%20%26%20Campanha%20de%20E-mail%20e%20quero%20seguir%20com%20a%20Pack%20Completo%20%2B%20E-mail%20(R%24%201.550).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+      - generic [ref=e233]: Aprovar proposta
+      - generic [ref=e234]: arrow_outward
+  - contentinfo [ref=e235]:
+    - generic [ref=e236]:
+      - generic [ref=e237]:
+        - img "Paola Assis" [ref=e238]
+        - generic [ref=e239]: Paola Assis · Dev & Design
+      - generic [ref=e240]:
+        - link "PORTFÓLIO" [ref=e241] [cursor=pointer]:
+          - /url: https://paolaassis.com
+        - generic [ref=e242]: ·
+        - link "WHATSAPP" [ref=e243] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095

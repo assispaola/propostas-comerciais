@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proposta Comercial — Home Cook</title>
+    <title>Proposta Comercial — Elefancy</title>
     <link
       rel="icon"
       type="image/png"
@@ -828,9 +828,9 @@
         border-radius: 9999px;
         cursor: pointer;
         flex: 1 1 0;
-        min-height: 40px;
         min-width: 150px;
         white-space: normal;
+        text-align: center;
         transition:
           background var(--dur-1) var(--ease),
           color var(--dur-1) var(--ease),
@@ -918,6 +918,45 @@
         letter-spacing: 0.6px;
         text-transform: uppercase;
         white-space: nowrap;
+      }
+      .gift-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-left: 10px;
+        padding: 3px 10px 3px 8px;
+        border-radius: 9999px;
+        background: var(--accent);
+        color: var(--accent-ink);
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+      .gift-badge .material-symbols-outlined {
+        font-size: 13px;
+        color: var(--accent-ink);
+      }
+      .pricing-row.optional {
+        background: var(--bg-2);
+        border-top: 1px dashed var(--border-2);
+      }
+      .pricing-row.optional .item span,
+      .pricing-row.optional .price span {
+        color: var(--fg-3);
+      }
+      .pricing-optional-note {
+        padding: 12px 20px 20px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-style: italic;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+        color: var(--fg-4);
+        background: var(--bg-2);
       }
       .pricing-total {
         background: var(--fg);
@@ -1012,13 +1051,55 @@
         line-height: 1.625;
         color: var(--ink-80);
       }
+      .opp-title-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .opp-title-row .h2 {
+        margin-bottom: 0;
+      }
+      .opp-title-icon {
+        flex: none;
+        font-size: clamp(40px, 5vw, 60px);
+        line-height: 1;
+        font-variation-settings:
+          'FILL' 1,
+          'wght' 500,
+          'GRAD' 0,
+          'opsz' 48;
+        background: linear-gradient(135deg, #fff5fb 0%, var(--accent) 45%, #a83f96 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 10px rgba(254, 150, 225, 0.5));
+        animation: opp-icon-shine 3.4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes opp-icon-shine {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 6px rgba(254, 150, 225, 0.35));
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          filter: drop-shadow(0 0 18px rgba(254, 150, 225, 0.85));
+          transform: scale(1.08) rotate(6deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .opp-title-icon {
+          animation: none;
+        }
+      }
       .opp-grid {
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
       }
       .opp-card {
-        flex: 1 1 0;
-        min-width: 0;
+        flex: 1 1 calc((100% - 48px) / 3);
+        min-width: 280px;
         background: var(--bg);
         border: 1px solid var(--border);
         border-radius: 16px;
@@ -1512,12 +1593,12 @@
         <span class="badge-pill"><span class="dot"></span>Proposta Comercial</span>
 
         <h1 class="hero-title">
-          <span class="h1">Home Cook — Identidade Visual, E-book &amp; Landing Page</span>
+          <span class="h1">Elefancy — Divulgação de Coleção &amp; Campanha de E-mail</span>
         </h1>
 
         <p class="hero-for">
           <span class="word">para</span>
-          <span>Odelma Custódio</span>
+          <span>Elefancy</span>
         </p>
 
         <div class="hero-meta">
@@ -1528,8 +1609,8 @@
           <div class="col">
             <span class="mono-label">Vigência &amp; Prazo</span>
             <span class="mono-value">
-              <span>08/09/2026</span> · Válida até
-              <span>15/09/2026</span>
+              <span>09/09/2026</span> · Válida até
+              <span>16/09/2026</span>
             </span>
           </div>
           <div class="col">
@@ -1557,18 +1638,13 @@
 
           <p class="big">
             <span
-              >A Home Cook está deixando de ser só um serviço de personal chef pra virar também um
-              produto digital: um e-book ensinando outras cozinheiras a se tornarem personal chef
-              profissionais. Esse projeto ficou parado por um tempo, e a procura por esse tipo de
-              conhecimento cresceu muito recentemente, tornando o momento ideal pra lançar.</span
+              >Vocês estão prestes a lançar uma nova coleção e já pensam em uma ação promocional de divulgação. Esse é o momento certo para reforçar a identidade visual da campanha em todos os canais, do Instagram ao e-mail, com consistência.</span
             >
           </p>
 
           <p class="small">
             <span
-              >Uma marca com autoridade visual à altura do conteúdo que ensina, um e-book pronto pra
-              vender, e uma página capaz de converter a demanda que já está batendo à porta em
-              vendas reais.</span
+              >Um conjunto de criativos pronto para divulgar a coleção com força em todas as frentes, mais uma peça de e-mail já refinada e pronta para reengajar sua base de leads no lançamento.</span
             >
           </p>
         </div>
@@ -1590,8 +1666,7 @@
               e outras soluções que também posso resolver pro seu negócio.
             </p>
           </div>
-          <!-- EDITAR: link do portfólio -->
-          <a class="btn" href="https://paola-portfolio-delta.vercel.app/" target="_blank" rel="noopener"
+          <a class="btn" href="https://paolaassis.com" target="_blank" rel="noopener"
             ><span>Ver portfólio completo</span
             ><span class="material-symbols-outlined fs-16">arrow_outward</span></a
           >
@@ -1615,14 +1690,13 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.15">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Entregável 01: Identidade Visual (Logo)</span>
+                <span>Pack de Criativos para Divulgação</span>
               </h3>
-              <span class="tag"><span>Figma + IA Generativa</span></span>
+              <span class="tag"><span>DESIGN + REDES SOCIAIS</span></span>
             </div>
             <p>
               <span
-                >Redesenho do símbolo (chapéu de chef + livro aberto, estilo line-art minimalista) e
-                aplicação da paleta dourado + carvão em todos os materiais da marca.</span
+                >10 criativos (mix de posts para feed, stories e carrossel) para divulgação da nova coleção nas redes sociais.</span
               >
             </p>
           </div>
@@ -1630,17 +1704,13 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.2">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Entregável 02: Design e Diagramação do E-book</span>
+                <span>Banners de Campanha</span>
               </h3>
-              <span class="tag"><span>Figma + IA Generativa</span></span>
+              <span class="tag"><span>DESIGN</span></span>
             </div>
             <p>
               <span
-                >Capa, sumário, introdução e diagramação completa dos capítulos, com ilustrações de
-                linha personalizadas no mesmo estilo da logo. Arquivos finais entregues em PNG (alta
-                resolução, por página) e PDF, produzidos no Figma. Inclui diagramação de até 25
-                páginas — conteúdo que ultrapassar esse volume é orçado à parte, no valor de R$
-                20,00 por página adicional.</span
+                >2 banners para uso em site e/ou mídia paga, alinhados à identidade visual da nova coleção. Disponível também em versão animada (loop curto em MP4/GIF, ideal para Stories e Reels), mediante acréscimo no investimento.</span
               >
             </p>
           </div>
@@ -1648,34 +1718,13 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.25">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Entregável 03: Landing Page de Vendas Completa do E-book</span>
+                <span>Peças de E-mail Prontas (linha Batizado) — v1 e v2</span>
               </h3>
-              <span class="tag"><span>HTML/CSS/JS + SEO ON-PAGE</span></span>
+              <span class="tag"><span>DESIGN + HTML TESTADO</span></span>
             </div>
             <p>
               <span
-                >Página de vendas completa (não só a hero), estruturada com técnicas atuais de
-                conversão: copy no formato Problema-Agitação-Solução, headline focada em benefício
-                específico, seções de prova social e tratamento de objeções (FAQ), hierarquia de SEO
-                on-page (headings H1-H3, meta description, alt text otimizado nas imagens),
-                performance de carregamento rápido, layout mobile-first com CTA de compra repetido
-                em pontos estratégicos da página.</span
-              >
-            </p>
-          </div>
-
-          <div class="scope-item" data-reveal data-reveal-delay="0.3">
-            <div class="scope-item-head">
-              <h3 class="h3">
-                <span>Entregável 04: Deploy, Domínio &amp; Suporte de Entrega</span>
-              </h3>
-              <span class="tag"><span>Hospedagem + sessão de entrega</span></span>
-            </div>
-            <p>
-              <span
-                >Publicação no servidor escolhido (Vercel, Netlify ou servidor próprio), apontamento
-                de DNS com certificado SSL ativo e uma conversa rápida por chamada para esclarecer
-                qualquer dúvida sobre o domínio, caso necessário.</span
+                >Entrega das duas peças de e-mail da linha Batizado (v1 e v2), com arte em alta resolução (PNG e PDF) e código HTML com todos os hiperlinks funcionando, testado nos principais provedores de e-mail.</span
               >
             </p>
           </div>
@@ -1701,8 +1750,7 @@
                     text-transform: uppercase;
                     color: var(--fg-2);
                   "
-                  >Redação do conteúdo integral do e-book (nesta versão Essencial — a Opção Completo
-                  já inclui a criação do conteúdo via entrevista guiada)</span
+                  >Criação de novas peças de e-mail além das duas já existentes</span
                 >
               </li>
               <li>
@@ -1715,7 +1763,7 @@
                     text-transform: uppercase;
                     color: var(--fg-2);
                   "
-                  >Pack de posts para redes sociais</span
+                  >Configuração de automações/fluxos de e-mail marketing (carrinho abandonado, boas-vindas, etc.)</span
                 >
               </li>
               <li>
@@ -1728,7 +1776,7 @@
                     text-transform: uppercase;
                     color: var(--fg-2);
                   "
-                  >Produção de vídeo/aula complementar</span
+                  >Gestão de mídia paga (impulsionamento dos banners)</span
                 >
               </li>
             </ul>
@@ -1749,9 +1797,9 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>Conteúdo textual</strong> — o texto completo do e-book, escrito por você
+                  ><strong>Fotos em alta resolução da nova coleção</strong> — para produção dos criativos e banners
                   <em style="font-style: italic; color: var(--fg-3)"
-                    >(apenas na Opção Essencial)</em
+                    >(apenas na Opção 1)</em
                   ></span
                 >
               </li>
@@ -1764,10 +1812,9 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>Disponibilidade para entrevistas guiadas</strong> — perguntas
-                  estruturadas por áudio ou chamada, que viram a base do conteúdo do e-book
+                  ><strong>Links de destino para os CTAs das peças de e-mail</strong> — para configurar os hiperlinks corretamente
                   <em style="font-style: italic; color: var(--fg-3)"
-                    >(apenas na Opção Completo)</em
+                    >(apenas na Opção 2)</em
                   ></span
                 >
               </li>
@@ -1780,8 +1827,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>Imagens e referências</strong> — fotos e referências visuais, se já
-                  existirem</span
+                  ><strong>Aprovação da paleta de cores e identidade visual da campanha</strong> — para orientar a produção dos criativos e banners</span
                 >
               </li>
               <li>
@@ -1793,8 +1839,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>Acesso a domínio/hospedagem</strong> — caso já exista um domínio para
-                  publicar a página de vendas</span
+                  ><strong>Textos e CTAs finais</strong> — para os criativos, banners e peças de e-mail</span
                 >
               </li>
               <li>
@@ -1827,7 +1872,7 @@
           <h2 class="h2">Cronograma estimado</h2>
           <p class="right">
             Prazo total estimado:
-            <span>4 a 5 semanas (varia conforme envio do conteúdo)</span> a partir do kick-off
+            <span>1 semana</span> a partir do kick-off
           </p>
         </div>
 
@@ -1838,8 +1883,7 @@
               <h3 class="h3"><span>Aprovação da proposta e pagamento do sinal</span></h3>
               <p>
                 <span
-                  >Formalização do aceite da proposta e confirmação do sinal para início do
-                  projeto.</span
+                  >Confirmação da proposta e pagamento de 50% para reservarmos sua vaga na agenda de produção.</span
                 >
               </p>
             </div>
@@ -1861,89 +1905,10 @@
           <div class="step" data-reveal data-reveal-delay="0.2">
             <span class="step-num">02</span>
             <div class="step-body">
-              <h3 class="h3"><span>Captação do conteúdo</span></h3>
+              <h3 class="h3"><span>Envio do briefing visual da nova coleção</span></h3>
               <p>
                 <span
-                  >Alinhamento das ideias e coleta das informações necessárias para o
-                  desenvolvimento do e-book.</span
-                >
-              </p>
-            </div>
-            <div class="step-time">
-              <span>Tempo estimado:</span>
-              <span
-                style="
-                  font-family: var(--font-mono);
-                  font-weight: 700;
-                  font-size: 12px;
-                  letter-spacing: 0.6px;
-                  text-transform: uppercase;
-                "
-                >A combinar (depende do envio do conteúdo)</span
-              >
-            </div>
-          </div>
-
-          <div class="step" data-reveal data-reveal-delay="0.25">
-            <span class="step-num">03</span>
-            <div class="step-body">
-              <h3 class="h3"><span>Diagramação, ajustes e revisões do e-book</span></h3>
-              <p>
-                <span
-                  >Diagramação do e-book, aplicação da identidade visual e rodada de ajustes.</span
-                >
-              </p>
-            </div>
-            <div class="step-time">
-              <span>Tempo estimado:</span>
-              <span
-                style="
-                  font-family: var(--font-mono);
-                  font-weight: 700;
-                  font-size: 12px;
-                  letter-spacing: 0.6px;
-                  text-transform: uppercase;
-                "
-                >até 20 dias úteis após o conteúdo</span
-              >
-            </div>
-          </div>
-
-          <div class="step" data-reveal data-reveal-delay="0.3">
-            <span class="step-num">04</span>
-            <div class="step-body">
-              <h3 class="h3"><span>Desenvolvimento da landing page de vendas</span></h3>
-              <p>
-                <span
-                  >Início da landing page de vendas somente após o e-book estar concluído e
-                  aprovado, garantindo que o conteúdo e a identidade já estejam validados antes da
-                  página final.</span
-                >
-              </p>
-            </div>
-            <div class="step-time">
-              <span>Tempo estimado:</span>
-              <span
-                style="
-                  font-family: var(--font-mono);
-                  font-weight: 700;
-                  font-size: 12px;
-                  letter-spacing: 0.6px;
-                  text-transform: uppercase;
-                "
-                >até 15 dias úteis após aprovação do e-book</span
-              >
-            </div>
-          </div>
-
-          <div class="step" data-reveal data-reveal-delay="0.35">
-            <span class="step-num">05</span>
-            <div class="step-body">
-              <h3 class="h3"><span>Entrega final</span></h3>
-              <p>
-                <span
-                  >Publicação da landing page, apontamento de domínio e entrega dos arquivos finais
-                  do e-book.</span
+                  >Você envia fotos, referências e materiais da nova coleção para orientar a produção dos criativos e banners.</span
                 >
               </p>
             </div>
@@ -1958,6 +1923,56 @@
                   text-transform: uppercase;
                 "
                 >A combinar</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.25">
+            <span class="step-num">03</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Produção dos criativos e banners</span></h3>
+              <p>
+                <span
+                  >Desenvolvimento dos 10 criativos para redes sociais e dos 2 banners de campanha, alinhados à identidade visual da nova coleção.</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >4 dias úteis após briefing</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.3">
+            <span class="step-num">04</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Entrega das peças de e-mail e finalização do projeto</span></h3>
+              <p>
+                <span
+                  >Testes finais e entrega das duas peças de e-mail (arte e HTML com hiperlinks funcionando) da linha Batizado, junto com todos os arquivos finais do projeto.</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >2 dias úteis</span
               >
             </div>
           </div>
@@ -1986,7 +2001,7 @@
               aria-controls="pane-option-1"
               data-option="1"
             >
-              <span>Essencial</span>
+              <span>Pack de Divulgação</span>
             </button>
             <button
               type="button"
@@ -1995,7 +2010,7 @@
               aria-controls="pane-option-2"
               data-option="2"
             >
-              <span>Completo</span>
+              <span>Pack + E-mail</span>
             </button>
           </div>
         </div>
@@ -2013,12 +2028,11 @@
                   display: block;
                   margin-bottom: 6px;
                 "
-                >Opção 1: Essencial</span
+                >Pack de Divulgação</span
               >
               <p class="desc">
                 <span
-                  >Logo e identidade visual, e-book diagramado e landing page de vendas completa,
-                  prontos para o lançamento do produto digital.</span
+                  >Criativos e banners para divulgar a nova coleção nas redes sociais e no site.</span
                 >
               </p>
             </div>
@@ -2032,7 +2046,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Logo e identidade visual</span
+                    >10 criativos para redes sociais</span
                   ></span
                 >
                 <span class="price"
@@ -2045,7 +2059,7 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 550,00</span
+                    >R$ 500,00</span
                   ></span
                 >
               </div>
@@ -2058,7 +2072,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Design e diagramação do e-book</span
+                    >2 banners estáticos de campanha</span
                   ></span
                 >
                 <span class="price"
@@ -2071,11 +2085,11 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 980,00</span
+                    >R$ 120,00</span
                   ></span
                 >
               </div>
-              <div class="pricing-row">
+              <div class="pricing-row optional">
                 <span class="item"
                   ><span
                     style="
@@ -2084,7 +2098,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Landing page de vendas completa</span
+                    >Versão animada dos 2 banners (opcional)</span
                   ></span
                 >
                 <span class="price"
@@ -2097,37 +2111,15 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 1.500,00</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                    "
-                    >Suporte técnico</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >30 dias inclusos</span
+                    >+ R$ 80,00</span
                   ></span
                 >
               </div>
             </div>
+            <p class="pricing-optional-note">
+              Item opcional, não incluído automaticamente no total acima — só é somado se você
+              confirmar o interesse.
+            </p>
             <div class="pricing-total">
               <div>
                 <p class="label">Investimento Total</p>
@@ -2144,8 +2136,8 @@
               </div>
               <span
                 class="price"
-                style="background: transparent; border-bottom: none; color: var(--bg)"
-                ><span>R$ 3.030,00</span></span
+                style="background: none; border-bottom: none; padding: 0; color: var(--bg)"
+                >R$ 620,00</span
               >
             </div>
           </div>
@@ -2174,12 +2166,11 @@
                   display: block;
                   margin-bottom: 6px;
                 "
-                >Opção 2: Completo</span
+                >Pack Divulgação + E-mail</span
               >
               <p class="desc">
                 <span
-                  >Tudo da Opção Essencial, com a criação do conteúdo do e-book via entrevista
-                  guiada.</span
+                  >Tudo da Opção 1 + 2 peças de e-mail da linha Batizado (v1 e v2), caso você também queira usar esse material agora.</span
                 >
               </p>
             </div>
@@ -2193,7 +2184,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Logo e identidade visual</span
+                    >10 criativos para redes sociais</span
                   ></span
                 >
                 <span class="price"
@@ -2206,7 +2197,7 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 550,00</span
+                    >R$ 500,00</span
                   ></span
                 >
               </div>
@@ -2219,7 +2210,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Design e diagramação do e-book</span
+                    >2 banners estáticos de campanha</span
                   ></span
                 >
                 <span class="price"
@@ -2232,7 +2223,7 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 980,00</span
+                    >R$ 120,00</span
                   ></span
                 >
               </div>
@@ -2245,7 +2236,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Landing page de vendas completa</span
+                    >Peça de e-mail pronta (linha Batizado v1): arte + código HTML</span
                   ></span
                 >
                 <span class="price"
@@ -2258,7 +2249,7 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 1.500,00</span
+                    >R$ 450,00</span
                   ></span
                 >
               </div>
@@ -2271,7 +2262,12 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Criação do conteúdo via entrevista guiada</span
+                    >Peça de e-mail pronta (linha Batizado v2): arte + código HTML<span
+                      class="gift-badge"
+                      ><span class="material-symbols-outlined" style="font-size: 14px"
+                        >redeem</span
+                      >Cortesia</span
+                    ></span
                   ></span
                 >
                 <span class="price"
@@ -2284,11 +2280,11 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >R$ 1.500,00</span
+                    >—</span
                   ></span
                 >
               </div>
-              <div class="pricing-row">
+              <div class="pricing-row optional">
                 <span class="item"
                   ><span
                     style="
@@ -2297,7 +2293,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >Suporte técnico</span
+                    >Versão animada dos 2 banners (opcional)</span
                   ></span
                 >
                 <span class="price"
@@ -2310,11 +2306,15 @@
                       text-transform: uppercase;
                       white-space: nowrap;
                     "
-                    >90 dias inclusos</span
+                    >+ R$ 80,00</span
                   ></span
                 >
               </div>
             </div>
+            <p class="pricing-optional-note">
+              Item opcional, não incluído automaticamente no total acima — só é somado se você
+              confirmar o interesse.
+            </p>
             <div class="pricing-total">
               <div>
                 <p class="label">Investimento Total</p>
@@ -2331,8 +2331,8 @@
               </div>
               <span
                 class="price"
-                style="background: transparent; border-bottom: none; color: var(--bg)"
-                ><span>R$ 4.530,00</span></span
+                style="background: none; border-bottom: none; padding: 0; color: var(--bg)"
+                >R$ 1.070,00</span
               >
             </div>
           </div>
@@ -2356,9 +2356,12 @@
     <section class="opportunities">
       <div class="wrap">
         <p class="eyebrow" data-reveal>07 / PRÓXIMOS PASSOS</p>
-        <h2 class="h2" style="margin-bottom: 16px" data-reveal data-reveal-delay="0.1">
-          Ideias para os próximos passos
-        </h2>
+        <div class="opp-title-row" data-reveal data-reveal-delay="0.1">
+          <span class="material-symbols-outlined opp-title-icon">stars_2</span>
+          <h2 class="h2" style="margin-bottom: 16px">
+            Ideias para os próximos passos
+          </h2>
+        </div>
         <p class="intro" data-reveal data-reveal-delay="0.1">
           Sugestões pensadas especificamente para o crescimento do seu negócio — sem qualquer
           pressão comercial, apenas caminhos futuros que podemos explorar juntos quando fizer
@@ -2367,36 +2370,63 @@
 
         <div class="opp-grid">
           <div class="opp-card" data-reveal data-reveal-delay="0.15">
-            <p class="eyebrow-pink">01 · Expansão</p>
-            <h3 class="h3"><span>Pack de Posts para Instagram</span></h3>
+            <p class="eyebrow-pink">01 · Recorrência</p>
+            <h3 class="h3"><span>Pack Mensal de Posts para Redes Sociais</span></h3>
             <p>
               <span
-                >Divulgação contínua da marca Home Cook e do lançamento do e-book nas redes
-                sociais.</span
+                >Conteúdo recorrente todo mês, com valor especial por ser recorrente, pra manter a Elefancy sempre presente sem precisar pensar em cada lançamento separadamente.</span
               >
             </p>
           </div>
 
           <div class="opp-card" data-reveal data-reveal-delay="0.2">
-            <p class="eyebrow-pink">02 · Conteúdo</p>
-            <h3 class="h3"><span>Planilha de Precificação (bônus adicional)</span></h3>
+            <p class="eyebrow-pink">02 · Automação</p>
+            <h3 class="h3"><span>Automação de Atendimento via WhatsApp</span></h3>
             <p>
               <span
-                >Uma ferramenta simples para quem comprar o e-book calcular quanto cobrar como
-                personal chef, reforçando o valor percebido do produto.</span
+                >Aquele "robozinho" que responde dúvidas frequentes, informa sobre tamanhos e disponibilidade, e direciona pra você só quando for algo que realmente precisa do seu toque pessoal.</span
               >
             </p>
           </div>
 
           <div class="opp-card" data-reveal data-reveal-delay="0.25">
-            <p class="eyebrow-pink">03 · Otimização</p>
+            <p class="eyebrow-pink">03 · Automação</p>
+            <h3 class="h3"><span>Fluxos de Automação de E-mail Marketing</span></h3>
+            <p>
+              <span
+                >Sequências automáticas de carrinho abandonado, boas-vindas para novos assinantes e reengajamento de clientes inativos, disparando sozinhas sem esforço manual.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.3">
+            <p class="eyebrow-pink">04 · Exclusivo do nicho</p>
+            <h3 class="h3"><span>E-mail de Marco de Idade do Bebê</span></h3>
+            <p>
+              <span
+                >Uma automação exclusiva para o nicho, disparando sugestões de troca de tamanho conforme o bebê cresce (ex: "seu bebê completa 3 meses, hora do próximo tamanho"), gerando recompra natural.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.35">
+            <p class="eyebrow-pink">05 · Expansão</p>
             <h3 class="h3">
-              <span>Expansão da página de vendas</span>
+              <span>Expansão da linha Batizado</span>
             </h3>
             <p>
               <span
-                >Inclusão de depoimentos reais e mais seções de prova social assim que os primeiros
-                compradores derem feedback.</span
+                >Novas peças de e-mail para outras datas comemorativas e ocasiões especiais, reaproveitando o mesmo padrão visual já validado.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.4">
+            <p class="eyebrow-pink">06 · E-commerce</p>
+            <h3 class="h3"><span>Redesenho da Loja Virtual</span></h3>
+            <p>
+              <span
+                >Uma loja mais alinhada à identidade visual que a Elefancy já tem nas redes, com experiência de compra mais fluida, pensada pra converter melhor quem já chega interessado.</span
               >
             </p>
           </div>
@@ -2440,8 +2470,7 @@
           <span>Paola Assis · Dev &amp; Design</span>
         </div>
         <div class="footer-links">
-          <!-- EDITAR: site pessoal -->
-          <a href="https://paola-portfolio-delta.vercel.app/" target="_blank" rel="noopener">PORTFÓLIO</a>
+          <a href="https://paolaassis.com" target="_blank" rel="noopener">PORTFÓLIO</a>
           <span class="sep">·</span>
           <a href="https://wa.me/5511930499095" target="_blank" rel="noopener">WHATSAPP</a>
         </div>
@@ -2462,8 +2491,8 @@
 
         function montarLinkAprovar(opcao) {
           var textos = {
-            '1': 'Oi, Paola! Vi a proposta do projeto Home Cook e quero seguir com a Opção Essencial (R$ 3.030,00). Pode me confirmar os próximos passos?',
-            '2': 'Oi, Paola! Vi a proposta do projeto Home Cook e quero seguir com a Opção Completo (R$ 4.530,00). Pode me confirmar os próximos passos?',
+            '1': 'Oi, Paola! Vi a proposta do projeto Elefancy — Divulgação de Coleção & Campanha de E-mail e quero seguir com a Pack de Divulgação (R$ 1.100). Pode me confirmar os próximos passos?',
+            '2': 'Oi, Paola! Vi a proposta do projeto Elefancy — Divulgação de Coleção & Campanha de E-mail e quero seguir com a Pack Completo + E-mail (R$ 1.550). Pode me confirmar os próximos passos?',
           };
           var texto = encodeURIComponent(textos[opcao] || textos['1']);
           return 'https://wa.me/5511930499095?text=' + texto;
