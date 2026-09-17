@@ -1,0 +1,218 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - img "Paola Assis" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - link "Contexto" [ref=e8] [cursor=pointer]:
+            - /url: "#contexto"
+          - link "Escopo" [ref=e9] [cursor=pointer]:
+            - /url: "#escopo"
+          - link "Cronograma" [ref=e10] [cursor=pointer]:
+            - /url: "#cronograma"
+          - link "Investimento" [ref=e11] [cursor=pointer]:
+            - /url: "#investimento"
+        - link "Aprovar proposta arrow_outward" [ref=e12] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20Melissa%20Moreira%20%E2%80%94%20Presen%C3%A7a%20Digital%20%26%20Divulga%C3%A7%C3%A3o%20e%20quero%20seguir%20com%20a%20Essencial%20(R%24%201.000%2C00).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+          - generic [ref=e13]: Aprovar proposta
+          - generic [ref=e14]: arrow_outward
+  - generic [ref=e16]:
+    - generic [ref=e17]: Proposta Comercial
+    - heading "Melissa Moreira — Presença Digital & Divulgação" [level=1] [ref=e19]
+    - paragraph [ref=e20]: para Melissa Moreira
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Preparado por
+        - generic [ref=e24]: Paola Assis · Desenvolvedora & Designer
+      - generic [ref=e25]:
+        - generic [ref=e26]: Vigência & Prazo
+        - generic [ref=e27]: 17 de setembro de 2026 · Válida até 24 de setembro de 2026
+      - generic [ref=e28]:
+        - generic [ref=e29]: Canal de Contato
+        - link "WhatsApp" [ref=e31] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095
+  - generic [ref=e33]:
+    - paragraph [ref=e34]: 02 / DIAGNÓSTICO & ESTRATÉGIA
+    - heading "Por que esse projeto importa agora" [level=2] [ref=e35]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: "Contexto atual:"
+      - paragraph [ref=e38]: Seu Instagram já está ativo e bem produzido, mas o link da sua bio (a ferramenta que você usa hoje) está pausado, exigindo um plano pago pra reativar. Isso significa que, agora, quem tenta clicar pra conhecer seu trabalho ou agendar cai numa página bloqueada, no momento em que você mais precisa se divulgar.
+      - paragraph [ref=e39]: Uma presença digital própria, sem depender de ferramenta de terceiro que pode pausar a qualquer momento, com capacidade de crescer, dos primeiros contatos até campanhas pagas no futuro, se você quiser seguir esse caminho.
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - paragraph [ref=e44]: // Experiência comprovada
+      - heading "Quer ver mais do meu trabalho?" [level=3] [ref=e45]
+      - paragraph [ref=e46]: Esse é só um recorte do que posso fazer. Sou a Paola, desenvolvedora front-end e designer UX/UI — no meu portfólio você encontra outros projetos, meu processo completo e outras soluções que também posso resolver pro seu negócio.
+    - link "Ver portfólio completo arrow_outward" [ref=e47] [cursor=pointer]:
+      - /url: https://paola-portfolio-delta.vercel.app/
+      - generic [ref=e48]: Ver portfólio completo
+      - generic [ref=e49]: arrow_outward
+  - generic [ref=e51]:
+    - paragraph [ref=e52]: 04 / ENTREGÁVEIS
+    - generic [ref=e53]:
+      - heading "Escopo do projeto" [level=2] [ref=e54]
+      - generic [ref=e55]: O que está contemplado nesta entrega
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - heading "Página Personalizada de Links" [level=3] [ref=e59]
+          - generic [ref=e60]: DESIGN + LINK PRÓPRIO
+        - paragraph [ref=e62]: Substitui a ferramenta pausada por uma página sua, com quantos links você quiser e um botão de agendamento que já abre o WhatsApp com mensagem formatada.
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - heading "Site Completo com Serviços e Agendamento" [level=3] [ref=e65]
+          - generic [ref=e66]: HTML/CSS/JS
+        - paragraph [ref=e68]: Site institucional completo, apresentando seus serviços de estética integrativa, com botão de agendamento inteligente.
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - heading "Pack de 10 Posts para Instagram" [level=3] [ref=e71]
+          - generic [ref=e72]: DESIGN + REDES SOCIAIS
+        - paragraph [ref=e74]: 10 criativos para feed/stories, reforçando a presença que você já construiu, com identidade visual consistente.
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - heading "Configuração de Campanha (Google Meu Negócio + Google Ads)" [level=3] [ref=e77]
+          - generic [ref=e78]: CONFIGURAÇÃO + TRÁFEGO PAGO
+        - paragraph [ref=e80]: Configuração completa do Google Meu Negócio, mais criação e configuração inicial de uma campanha no Google Ads (2 criativos inclusos). A verba de investimento em anúncios é paga por você diretamente ao Google, não está inclusa neste valor.
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]: Não incluso nesta proposta (ou fases futuras)
+        - list [ref=e86]:
+          - listitem [ref=e87]:
+            - generic [ref=e88]: —
+            - generic [ref=e89]: Gestão contínua/otimização semanal da campanha do Google Ads após a criação inicial
+          - listitem [ref=e90]:
+            - generic [ref=e91]: —
+            - generic [ref=e92]: Verba de anúncios (orçamento de mídia paga ao Google)
+          - listitem [ref=e93]:
+            - generic [ref=e94]: —
+            - generic [ref=e95]: Pack mensal recorrente de posts (fica como ideia de próximos passos)
+      - generic [ref=e96]:
+        - generic [ref=e97]: O que eu preciso de você
+        - list [ref=e100]:
+          - listitem [ref=e101]:
+            - generic [ref=e102]: ✓
+            - generic [ref=e103]:
+              - strong [ref=e104]: Fotos profissionais dos seus atendimentos e do espaço
+              - text: — para usar no site e nos posts
+          - listitem [ref=e105]:
+            - generic [ref=e106]: ✓
+            - generic [ref=e107]:
+              - strong [ref=e108]: Referências visuais e de estilo
+              - text: — para alinhar a identidade visual às suas expectativas
+          - listitem [ref=e109]:
+            - generic [ref=e110]: ✓
+            - generic [ref=e111]:
+              - strong [ref=e112]: Briefing completo dos serviços oferecidos
+              - text: — descrições, valores e diferenciais de cada procedimento
+          - listitem [ref=e113]:
+            - generic [ref=e114]: ✓
+            - generic [ref=e115]:
+              - strong [ref=e116]: Feedback nos prazos combinados
+              - text: — aprovações e retornos dentro do cronograma, pra não atrasar as próximas etapas
+  - generic [ref=e118]:
+    - paragraph [ref=e119]: 05 / ETAPAS
+    - generic [ref=e120]:
+      - heading "Cronograma estimado" [level=2] [ref=e121]
+      - paragraph [ref=e122]: "Prazo total estimado: 2 a 3 semanas a partir do kick-off"
+    - generic [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e125]: "01"
+        - generic [ref=e126]:
+          - heading "Aprovação da proposta e pagamento do sinal" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Após aprovar a proposta e efetuar o pagamento do sinal (50%), damos início oficial ao projeto.
+        - generic [ref=e129]:
+          - generic [ref=e130]: "Tempo estimado:"
+          - generic [ref=e131]: Imediato após aceite
+      - generic [ref=e132]:
+        - generic [ref=e133]: "02"
+        - generic [ref=e134]:
+          - heading "Envio de fotos, referências e briefing dos serviços" [level=3] [ref=e135]
+          - paragraph [ref=e136]: Você me envia as fotos, referências visuais e as informações sobre os serviços que serão apresentados no site e nos posts.
+        - generic [ref=e137]:
+          - generic [ref=e138]: "Tempo estimado:"
+          - generic [ref=e139]: A combinar
+      - generic [ref=e140]:
+        - generic [ref=e141]: "03"
+        - generic [ref=e142]:
+          - heading "Entrega da página de links" [level=3] [ref=e143]
+          - paragraph [ref=e144]: "Resolve o link pausado rapidamente: sua nova página de links já fica no ar com todos os seus contatos e canais centralizados."
+        - generic [ref=e145]:
+          - generic [ref=e146]: "Tempo estimado:"
+          - generic [ref=e147]: 2 dias úteis após briefing
+      - generic [ref=e148]:
+        - generic [ref=e149]: "04"
+        - generic [ref=e150]:
+          - heading "Produção do site completo, posts e/ou campanhas" [level=3] [ref=e151]
+          - paragraph [ref=e152]: Desenvolvimento do site, criação dos posts e/ou configuração das campanhas, conforme o pacote escolhido.
+        - generic [ref=e153]:
+          - generic [ref=e154]: "Tempo estimado:"
+          - generic [ref=e155]: 10 a 15 dias úteis
+  - generic [ref=e157]:
+    - paragraph [ref=e158]: 06 / ORÇAMENTO
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - heading "Investimento transparente" [level=2] [ref=e161]: Investimentotransparente
+        - paragraph [ref=e162]: Selecione o formato que melhor atende à necessidade atual do seu negócio.
+      - tablist "Opções de investimento" [ref=e163]:
+        - tab "Essencial" [selected] [ref=e164] [cursor=pointer]
+        - tab "Presença Completa" [ref=e165] [cursor=pointer]
+        - tab "Presença + Google Ads" [ref=e166] [cursor=pointer]
+    - tabpanel [ref=e167]:
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]: Configuração selecionada
+          - generic [ref=e171]: Essencial
+          - paragraph [ref=e172]: Ideal para resolver o link pausado com urgência e ter uma presença digital própria, com site completo para apresentar seus serviços.
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - generic [ref=e175]: Página personalizada de links
+            - generic [ref=e176]:
+              - generic [ref=e177]: R$ 250,00
+              - generic [ref=e178]: BRINDE · R$ 0,00
+          - generic [ref=e179]:
+            - generic [ref=e180]: Site completo com serviços e agendamento
+            - generic [ref=e181]: R$ 1.000,00
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - paragraph [ref=e184]: Investimento Total
+            - paragraph [ref=e185]: 50% no início + 50% na entrega · Pix ou cartão parcelado
+          - generic [ref=e186]: R$ 1.000,00
+      - generic [ref=e187]:
+        - generic [ref=e188]: payments
+        - paragraph [ref=e190]:
+          - strong [ref=e191]: "Condições de pagamento:"
+          - text: 50% no início do projeto, 50% na entrega final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
+  - generic [ref=e193]:
+    - paragraph [ref=e194]: 07 / PRÓXIMOS PASSOS
+    - generic [ref=e195]:
+      - generic [ref=e196]: stars_2
+      - heading "Ideias para os próximos passos" [level=2] [ref=e197]
+    - paragraph [ref=e198]: Sugestões pensadas especificamente para o crescimento do seu negócio — sem qualquer pressão comercial, apenas caminhos futuros que podemos explorar juntos quando fizer sentido.
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: 01 · Conteúdo
+        - heading "Pack Mensal de Posts" [level=3] [ref=e202]
+        - paragraph [ref=e203]: Conteúdo recorrente todo mês, com valor especial por ser recorrente — mantém sua presença sempre ativa sem que você precise se preocupar com isso.
+      - generic [ref=e204]:
+        - paragraph [ref=e205]: 02 · Automação
+        - heading "Automação de Atendimento via WhatsApp" [level=3] [ref=e206]
+        - paragraph [ref=e207]: Um atendimento automático que responde dúvidas frequentes, faz a triagem inicial de quem procura você, agenda horários e esclarece as principais perguntas, direcionando pra você só quando for algo que realmente precisa do seu toque pessoal.
+  - generic [ref=e211]:
+    - paragraph [ref=e212]: // Próximo passo
+    - heading "Vamos começar?" [level=2] [ref=e213]
+    - paragraph [ref=e214]: Se o escopo e as condições estiverem de acordo com o que você precisa, basta clicar abaixo para formalizarmos e iniciarmos o projeto.
+    - link "Aprovar proposta arrow_outward" [ref=e215] [cursor=pointer]:
+      - /url: https://wa.me/5511930499095?text=Oi%2C%20Paola!%20Vi%20a%20proposta%20do%20projeto%20Melissa%20Moreira%20%E2%80%94%20Presen%C3%A7a%20Digital%20%26%20Divulga%C3%A7%C3%A3o%20e%20quero%20seguir%20com%20a%20Essencial%20(R%24%201.000%2C00).%20Pode%20me%20confirmar%20os%20pr%C3%B3ximos%20passos%3F
+      - generic [ref=e216]: Aprovar proposta
+      - generic [ref=e217]: arrow_outward
+  - contentinfo [ref=e218]:
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - img "Paola Assis" [ref=e221]
+        - generic [ref=e222]: Paola Assis · Dev & Design
+      - generic [ref=e223]:
+        - link "PORTFÓLIO" [ref=e224] [cursor=pointer]:
+          - /url: https://paola-portfolio-delta.vercel.app/
+        - generic [ref=e225]: ·
+        - link "WHATSAPP" [ref=e226] [cursor=pointer]:
+          - /url: https://wa.me/5511930499095

@@ -470,6 +470,38 @@
         margin: 0;
       }
 
+      /* ---- mini-blocos "o que é / benefício real" dentro do context-card:
+     padrão fixo para resumir estratégias/ferramentas do escopo em
+     linguagem de venda, não técnica. Preencha o conteúdo e apague os
+     blocos que não se aplicarem a este projeto (2 a 3 blocos costuma
+     bastar). ---- */
+      .context-strategies {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border-2);
+      }
+      .context-strategy {
+        flex: 1 1 0;
+        min-width: 220px;
+      }
+      .context-strategy-title {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.3;
+        margin: 0 0 8px;
+        color: var(--fg);
+      }
+      .context-strategy-text {
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--ink-80);
+        margin: 0;
+      }
+
       /* ============================================================
      BANNER CTA PORTFÓLIO — compacto, entre Diagnóstico e Escopo
      ============================================================ */
@@ -1607,6 +1639,39 @@
               >[Descreva o impacto esperado: o que muda pro negócio dele depois de pronto]</span
             >
           </p>
+
+          <!-- mini-blocos "o que é / benefício real" — resuma cada estratégia/
+         ferramenta do escopo em linguagem de venda, não técnica. Apague os
+         blocos que não se aplicarem a este projeto. -->
+          <div class="context-strategies">
+            <div class="context-strategy">
+              <p class="context-strategy-title">[Nome da estratégia/ferramenta 1], o que é</p>
+              <p class="context-strategy-text">
+                <span
+                  >[Explicação simples da estratégia e o benefício real pro negócio do
+                  cliente]</span
+                >
+              </p>
+            </div>
+            <div class="context-strategy">
+              <p class="context-strategy-title">[Nome da estratégia/ferramenta 2], o que é</p>
+              <p class="context-strategy-text">
+                <span
+                  >[Explicação simples da estratégia e o benefício real pro negócio do
+                  cliente]</span
+                >
+              </p>
+            </div>
+            <div class="context-strategy">
+              <p class="context-strategy-title">[Nome da estratégia/ferramenta 3], o que é</p>
+              <p class="context-strategy-text">
+                <span
+                  >[Explicação simples da estratégia e o benefício real pro negócio do
+                  cliente]</span
+                >
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
