@@ -1,0 +1,2966 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposta Comercial — Loja Online de Enxoval Personalizado</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============================================================
+     DESIGN TOKENS — ajuste as cores/fontes aqui se precisar
+     ============================================================ */
+      :root {
+        --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+        --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+        --t-hero: clamp(56px, 11vw, 168px);
+        --t-display: clamp(40px, 6vw, 96px);
+        --t-h1: clamp(32px, 4.4vw, 64px);
+        --t-h2: clamp(24px, 2.6vw, 36px);
+        --t-h3: 20px;
+        --t-body: 16px;
+        --t-small: 13px;
+        --t-meta: 11px;
+
+        --sp-1: 4px;
+        --sp-2: 8px;
+        --sp-3: 12px;
+        --sp-4: 16px;
+        --sp-5: 24px;
+        --sp-6: 32px;
+        --sp-7: 48px;
+        --sp-8: 64px;
+        --sp-9: 96px;
+        --sp-10: 128px;
+
+        --r-sm: 6px;
+        --r-md: 12px;
+        --r-lg: 20px;
+        --r-xl: 28px;
+
+        --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+        --ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --dur-1: 180ms;
+        --dur-2: 320ms;
+        --dur-3: 560ms;
+
+        --gutter: clamp(20px, 4vw, 64px);
+        --max-w: 1440px;
+
+        --accent: #fe96e1;
+        --accent-2: #fdcefc;
+        --accent-ink: #1a0a17;
+        --accent-soft: rgba(254, 150, 225, 0.14);
+        --accent-gradient: linear-gradient(135deg, #fdcefc 0%, #fe96e1 100%);
+        --accent-fill: #fe96e1;
+
+        --bg: #f3f3f3;
+        --bg-2: #e8e8e8;
+        --bg-3: #dedede;
+        --border: #d2d2d2;
+        --border-2: #b8b8b8;
+        --fg: #141414;
+        --fg-2: #3a3a3a;
+        --fg-3: #5c5c5c;
+        --fg-4: #8a8a8a;
+        --shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 30px 60px -28px rgba(20, 20, 20, 0.16);
+        --grain-op: 0.02;
+
+        --content-max: 1072px;
+        --nav-max: 1152px;
+        --nav-height: 80px;
+
+        --ink-90: rgba(20, 20, 20, 0.9);
+        --ink-80: rgba(20, 20, 20, 0.8);
+        --ink-75: rgba(20, 20, 20, 0.75);
+        --ink-70: rgba(20, 20, 20, 0.7);
+        --ink-60: rgba(20, 20, 20, 0.6);
+        --ink-40: rgba(20, 20, 20, 0.4);
+        --ink-30: rgba(20, 20, 20, 0.3);
+        --ink-20: rgba(20, 20, 20, 0.2);
+        --ink-15: rgba(20, 20, 20, 0.15);
+        --ink-12: rgba(20, 20, 20, 0.12);
+        --ink-10: rgba(20, 20, 20, 0.1);
+
+        --pink-08: rgba(254, 150, 225, 0.08);
+        --pink-14: var(--accent-soft);
+        --pink-18: rgba(254, 150, 225, 0.18);
+        --pink-20: rgba(254, 150, 225, 0.2);
+        --pink-70: rgba(254, 150, 225, 0.7);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--nav-height) + 16px);
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-display);
+        font-variation-settings:
+          'opsz' 14,
+          'wdth' 100;
+        -webkit-font-smoothing: antialiased;
+      }
+      img,
+      svg {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        max-width: var(--content-max);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      section {
+        padding: 96px 0;
+      }
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.65s var(--ease),
+          transform 0.65s var(--ease);
+      }
+      [data-reveal].is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        [data-reveal] {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+
+      .edit {
+        background: var(--pink-18);
+        border-bottom: 1px dashed var(--accent);
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        padding: 2px 4px;
+        text-decoration: none;
+      }
+
+      .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        font-feature-settings: 'liga';
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+      }
+      .fs-16 {
+        font-size: 16px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: var(--ink-70);
+        margin: 0 0 16px;
+      }
+      .eyebrow::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        flex: none;
+        border-radius: 9999px;
+        background: var(--accent);
+      }
+      .h1 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 1;
+        letter-spacing: -2.4px;
+        margin: 0;
+      }
+      .h2 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -1.5px;
+        margin: 0;
+      }
+      .h3 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.33;
+        margin: 0;
+      }
+      .body-lg {
+        font-size: 18px;
+        line-height: 1.625;
+      }
+      .body-md {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .body-sm {
+        font-size: 14px;
+        line-height: 1.625;
+      }
+
+      .mono-label {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+      }
+      .mono-value {
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+      }
+      .mono-bold-sm {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+      }
+
+      /* ============================================================
+     SECTION 1 — COVER / HERO
+     ============================================================ */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 96px 0 112px;
+        opacity: 0;
+        transform: translateY(16px);
+        animation: heroIn 0.9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        background-image: url('imgs/hero-bg.png');
+        background-repeat: repeat;
+        background-size: 480px auto;
+      }
+      @keyframes heroIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .hero-waves {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 1.5px;
+        width: 100%;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+      .hero-waves img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+      .hero-waves img:nth-child(1) {
+        top: 29.5%;
+      }
+      .hero-waves img:nth-child(2) {
+        top: 47%;
+      }
+      .hero-waves img:nth-child(3) {
+        top: 27.5%;
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 1;
+      }
+      .badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(234, 234, 234, 0.85);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border: 1px solid var(--border-2);
+        border-radius: 9999px;
+        color: var(--fg);
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 11px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        padding: 7px 14px 7px 12px;
+        margin-bottom: 24px;
+      }
+      .badge-pill .dot {
+        width: 8px;
+        height: 8px;
+        flex: none;
+        border-radius: 9999px;
+        background: var(--accent);
+      }
+      .hero-title {
+        margin: 0;
+      }
+      .hero-title .edit {
+        font-size: 96px;
+        font-weight: 700;
+        letter-spacing: -2.4px;
+        line-height: 1;
+      }
+      .hero-for {
+        margin: 16px 0 32px;
+        font-size: 36px;
+        line-height: 40px;
+        color: var(--fg);
+      }
+      .hero-for .word {
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .hero-for .edit {
+        font-size: 36px;
+        font-weight: 400;
+        color: var(--fg);
+      }
+      .hero-meta {
+        border-top: 1px solid var(--border);
+        padding-top: 33px;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+      .hero-meta .col {
+        flex: 1 1 240px;
+      }
+      .hero-meta .col:last-child {
+        flex: 0.6 1 160px;
+      }
+      .hero-meta .mono-label {
+        display: block;
+        margin-bottom: 4px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.6px;
+        text-transform: none;
+        color: var(--fg);
+      }
+      .hero-meta .mono-value {
+        display: block;
+        color: var(--ink-70);
+      }
+      .hero-meta .edit {
+        font-size: 12px;
+      }
+
+      /* ============================================================
+     SECTION 2 — POR QUE ESSE PROJETO IMPORTA
+     ============================================================ */
+      .context-section {
+        border-bottom: 1px solid var(--border);
+      }
+      .context-card {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 57px 41px 41px;
+        margin-top: 16px;
+        transition:
+          transform var(--dur-2) var(--ease),
+          border-color var(--dur-2) var(--ease),
+          box-shadow var(--dur-2) var(--ease);
+      }
+      .context-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--fg);
+        box-shadow: var(--shadow);
+      }
+      .context-card .tag {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: var(--ink-60);
+        margin: 0 0 16px;
+      }
+      .context-card .big {
+        font-size: 24px;
+        line-height: 1.33;
+        margin: 0 0 16px;
+      }
+      .context-card .small {
+        font-size: 18px;
+        line-height: 1.55;
+        color: var(--ink-80);
+        margin: 0;
+      }
+
+      .context-strategies {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border-2);
+      }
+      .context-strategy {
+        flex: 1 1 0;
+        min-width: 220px;
+      }
+      .context-strategy-title {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.3;
+        margin: 0 0 8px;
+        color: var(--fg);
+      }
+      .context-strategy-text {
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--ink-80);
+        margin: 0;
+      }
+
+      /* ============================================================
+     BANNER CTA PORTFÓLIO
+     ============================================================ */
+      .portfolio-banner {
+        padding: 64px 0;
+      }
+      .portfolio-banner-inner {
+        position: relative;
+        overflow: hidden;
+        background: var(--fg);
+        color: var(--bg);
+        border-radius: 24px;
+        padding: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+      .portfolio-banner-inner::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('imgs/hero-bg.png');
+        background-repeat: repeat;
+        background-size: 480px auto;
+        opacity: 0.2;
+        pointer-events: none;
+      }
+      .portfolio-banner-inner::after {
+        content: '';
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        right: -70px;
+        bottom: -97.5px;
+        border-radius: 9999px;
+        background: var(--pink-20);
+        filter: blur(32px);
+        pointer-events: none;
+      }
+      .portfolio-banner-text {
+        position: relative;
+        max-width: 598px;
+      }
+      .portfolio-banner .eyebrow-pink {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 12px;
+      }
+      .portfolio-banner h3 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 36px;
+        letter-spacing: -0.9px;
+        line-height: 1.11;
+        margin: 0 0 12px;
+        color: var(--bg);
+      }
+      .portfolio-banner p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        color: var(--bg-2);
+      }
+      .portfolio-banner .btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        background: var(--accent);
+        color: var(--accent-ink);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: none;
+        padding: 12px 18px;
+        border-radius: 9999px;
+        text-decoration: none;
+        white-space: nowrap;
+        flex: none;
+      }
+      .portfolio-banner .btn .material-symbols-outlined {
+        color: var(--accent-ink);
+      }
+
+      /* ============================================================
+     SECTION 4 — ESCOPO
+     ============================================================ */
+      .scope-section,
+      .timeline-section {
+        border-bottom: 1px solid var(--border);
+      }
+      .scope-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+      .scope-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 32px;
+      }
+      .scope-item {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        border-radius: 16px;
+        padding: 33px 33px 33px 36px;
+        transition:
+          transform var(--dur-2) var(--ease),
+          box-shadow var(--dur-2) var(--ease),
+          background var(--dur-2) var(--ease);
+      }
+      .scope-item:hover {
+        transform: translateY(-4px);
+        background: var(--bg-2);
+        box-shadow: var(--shadow);
+      }
+      .scope-item-head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+      .scope-item-head .h3 {
+        font-size: 24px;
+      }
+      .scope-item-head .tag-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .scope-item-head .tag {
+        display: inline-flex;
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-radius: 9999px;
+        padding: 3px 13px 2px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.55px;
+        text-transform: uppercase;
+        color: var(--ink-70);
+        white-space: nowrap;
+      }
+      .scope-item-head .tag.pkg {
+        background: var(--pink-18);
+        border-color: var(--accent);
+        color: var(--accent-ink);
+      }
+      .scope-item p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--ink-80);
+      }
+      .scope-item ul {
+        list-style: none;
+        margin: 16px 0 0;
+        padding: 16px 0 0;
+        border-top: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .scope-item li {
+        position: relative;
+        padding-left: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--ink-80);
+      }
+      .scope-item li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: var(--accent);
+      }
+
+      .not-included {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 33px;
+      }
+      .not-included.dashed {
+        background: rgba(234, 234, 234, 0.8);
+        border: 1px dashed var(--border-2);
+      }
+      .not-included-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .not-included-head .sq {
+        width: 10px;
+        height: 10px;
+        border-radius: 9999px;
+        background: var(--ink-60);
+        flex: none;
+      }
+      .not-included-head .sq.pink {
+        background: var(--accent);
+      }
+      .not-included-head span {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+      .not-included ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .not-included li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+      }
+      .not-included li .dash {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        flex: none;
+        color: var(--fg-4);
+      }
+      .not-included li .check {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        flex: none;
+        color: var(--accent);
+      }
+      .not-included li .edit {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: var(--ink-75);
+      }
+      .not-included.checklist li .edit {
+        text-transform: none;
+        color: rgba(20, 20, 20, 0.85);
+      }
+      .not-included.checklist li .edit strong {
+        font-weight: 700;
+      }
+
+      /* ============================================================
+     SECTION 5 — CRONOGRAMA
+     ============================================================ */
+      .timeline-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+        flex-wrap: wrap;
+        padding-bottom: 54px;
+      }
+      .timeline-head .right {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: var(--ink-70);
+      }
+      .timeline {
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 2fr 6fr 4fr;
+        gap: 24px;
+        padding: 32px 24px;
+        margin: 0 -24px;
+        border-top: 1px solid var(--border);
+        align-items: start;
+        transition: background var(--dur-2) var(--ease);
+      }
+      .step:first-child {
+        border-top: none;
+      }
+      .step:hover {
+        background: var(--bg-2);
+      }
+      .step-num {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1;
+        color: var(--accent);
+        transition: transform var(--dur-2) var(--ease);
+      }
+      .step:hover .step-num {
+        transform: scale(1.06);
+      }
+      .step-body {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .step-body .h3 {
+        font-size: 24px;
+      }
+      .step-body p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.625;
+        color: var(--ink-80);
+      }
+      .step-time {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .step-time span:first-child {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: var(--ink-70);
+      }
+      .step-time .edit {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+      }
+
+      /* ============================================================
+     SECTION 6 — INVESTIMENTO (toggle)
+     ============================================================ */
+      .invest-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        padding-bottom: 32px;
+      }
+      .invest-head p {
+        margin: 8px 0 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--ink-80);
+      }
+
+      .option-toggle {
+        display: inline-flex;
+        gap: 8px;
+        background: transparent;
+        border-radius: 9999px;
+        padding: 4px;
+        margin-bottom: 32px;
+        max-width: 100%;
+      }
+      .option-toggle button {
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0;
+        text-transform: none;
+        padding: 5px 24px;
+        border: 1px solid var(--border);
+        background: var(--bg-2);
+        color: var(--fg);
+        border-radius: 9999px;
+        cursor: pointer;
+        flex: 1 1 0;
+        min-height: 40px;
+        min-width: 150px;
+        white-space: normal;
+        transition:
+          background var(--dur-1) var(--ease),
+          color var(--dur-1) var(--ease),
+          border-color var(--dur-1) var(--ease);
+      }
+      .option-toggle button:hover:not(.is-active) {
+        background: var(--accent-soft);
+      }
+      .option-toggle button.is-active {
+        background: var(--accent);
+        color: var(--accent-ink);
+        border-color: var(--accent);
+      }
+      .option-toggle button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .pricing-panel {
+        opacity: 1;
+        transition: opacity var(--dur-2) var(--ease);
+      }
+      .pricing-panel[hidden] {
+        display: none;
+      }
+      .pricing-pane {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .pricing-head {
+        background: var(--bg-2);
+        border-bottom: 1px solid var(--border);
+        padding: 32px;
+      }
+      .pricing-head .kicker {
+        display: block;
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--ink-70);
+        margin: 0 0 8px;
+      }
+      .pricing-head .edit {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        display: block;
+        margin-bottom: 6px;
+      }
+      .pricing-head .desc {
+        font-family: var(--font-display);
+        font-size: 14px;
+        line-height: 1.43;
+        color: var(--ink-80);
+        margin: 0;
+      }
+      .pricing-head .plan-badge {
+        display: inline-flex;
+        margin-top: 12px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 9999px;
+        padding: 3px 13px 2px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.55px;
+        text-transform: uppercase;
+        color: var(--ink-70);
+      }
+      .pricing-rows {
+        display: flex;
+        flex-direction: column;
+      }
+      .pricing-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 20px;
+        border-top: 1px solid var(--border);
+      }
+      .pricing-row:first-child {
+        border-top: none;
+      }
+      .pricing-row .item .edit {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+      }
+      .pricing-row .item::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: var(--accent);
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+      .pricing-row .price .edit {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .pricing-total {
+        background: var(--fg);
+        color: var(--bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 32px;
+        flex-wrap: wrap;
+      }
+      .pricing-total .label {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 4px;
+      }
+      .pricing-total .sub .edit {
+        font-family: var(--font-mono);
+        font-size: 14px;
+        color: rgba(243, 243, 243, 0.7);
+        border-color: var(--accent);
+        background: var(--pink-18);
+      }
+      .pricing-total .price {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 48px;
+        padding: 2px 4px;
+        color: var(--accent);
+      }
+      .pricing-conditions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 20px;
+        padding: 18px 22px;
+        border-radius: 12px;
+        background: var(--accent-soft);
+        border: 1px solid var(--accent);
+      }
+      .pricing-conditions .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--accent);
+        color: var(--accent-ink);
+      }
+      .pricing-conditions .icon .material-symbols-outlined {
+        font-size: 16px;
+      }
+      .pricing-conditions .note {
+        font-family: var(--font-mono);
+        font-style: normal;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--fg);
+        margin: 0;
+      }
+      .pricing-conditions .note strong {
+        font-weight: 700;
+      }
+      .pricing-conditions .edit {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-style: normal;
+        font-size: 13px;
+        color: var(--accent-ink);
+        background: var(--accent);
+      }
+
+      /* ============================================================
+     SECTION 7 — PRÓXIMAS OPORTUNIDADES
+     ============================================================ */
+      .opportunities {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 97px;
+      }
+      .opportunities .intro {
+        max-width: 672px;
+        margin: 0 0 32px;
+        font-size: 16px;
+        line-height: 1.625;
+        color: var(--ink-80);
+      }
+      .opp-title-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .opp-title-row .h2 {
+        margin-bottom: 0;
+      }
+      .opp-title-icon {
+        flex: none;
+        font-size: clamp(40px, 5vw, 60px);
+        line-height: 1;
+        font-variation-settings:
+          'FILL' 1,
+          'wght' 500,
+          'GRAD' 0,
+          'opsz' 48;
+        background: linear-gradient(135deg, #fff5fb 0%, var(--accent) 45%, #a83f96 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 10px rgba(254, 150, 225, 0.5));
+        animation: opp-icon-shine 3.4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes opp-icon-shine {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 6px rgba(254, 150, 225, 0.35));
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          filter: drop-shadow(0 0 18px rgba(254, 150, 225, 0.85));
+          transform: scale(1.08) rotate(6deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .opp-title-icon {
+          animation: none;
+        }
+      }
+      .opp-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .opp-grid.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .opp-card {
+        min-width: 0;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 33px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition:
+          transform var(--dur-2) var(--ease),
+          border-color var(--dur-2) var(--ease),
+          box-shadow var(--dur-2) var(--ease);
+      }
+      .opp-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--fg);
+        box-shadow: var(--shadow);
+      }
+      .opp-card .eyebrow-pink {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0;
+      }
+      .opp-card .h3 {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .opp-card p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.625;
+      }
+      .opp-card.featured {
+        margin-bottom: 24px;
+        padding: 40px;
+      }
+      .opp-featured-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 8px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+      .opp-featured-grid h4 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      .opp-featured-grid p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.625;
+        color: var(--ink-80);
+      }
+
+      /* ============================================================
+     SECTION 8 — CTA FINAL
+     ============================================================ */
+      .cta {
+        background: var(--accent-gradient);
+        color: var(--accent-ink);
+        border-radius: 24px;
+        padding: 80px;
+        margin: 0 -24px;
+      }
+      .cta-inner {
+        max-width: 768px;
+        margin: 0;
+      }
+      .cta .eyebrow-pink {
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: rgba(153, 91, 136, 0.7);
+        margin: 0 0 16px;
+      }
+      .cta h2 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -1.5px;
+        margin: 0 0 16px;
+        color: var(--accent-ink);
+      }
+      .cta p {
+        font-size: 20px;
+        line-height: 1.4;
+        margin: 0 0 32px;
+        color: var(--accent-ink);
+      }
+      .cta .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: rgba(0, 0, 0, 0.12);
+        color: var(--accent-ink);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 0;
+        text-transform: none;
+        padding: 10px 20px;
+        border-radius: 9999px;
+        text-decoration: none;
+      }
+      .cta .btn .material-symbols-outlined {
+        color: var(--accent-ink);
+      }
+      .cta .btn,
+      .portfolio-banner .btn {
+        cursor: pointer;
+        transition:
+          box-shadow var(--dur-1) var(--ease),
+          transform var(--dur-1) var(--ease);
+      }
+      .cta .btn:hover {
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.08);
+      }
+      .portfolio-banner .btn:hover {
+        box-shadow: 0 0 0 6px var(--accent-soft);
+      }
+      .cta .btn:active,
+      .portfolio-banner .btn:active {
+        transform: translateY(1px);
+      }
+      .cta .btn:focus-visible,
+      .portfolio-banner .btn:focus-visible {
+        outline: 2px solid var(--accent-ink);
+        outline-offset: 3px;
+      }
+
+      /* ============================================================
+     TOP NAVIGATION & BRAND HEADER
+     ============================================================ */
+      .site-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(243, 243, 243, 0.95);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-wrap {
+        max-width: var(--nav-max);
+        margin: 0 auto;
+        padding: 0 40px;
+        height: var(--nav-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-width: 0;
+      }
+      .nav-logo {
+        height: 36px;
+        width: auto;
+        flex: none;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      .nav-links a {
+        position: relative;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-70);
+        padding-bottom: 2px;
+        white-space: nowrap;
+      }
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--fg);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform var(--dur-2) var(--ease);
+      }
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--fg);
+      }
+      .nav-links a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: var(--accent-ink);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: none;
+        padding: 12px 18px;
+        border-radius: 9999px;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+          box-shadow var(--dur-1) var(--ease),
+          transform var(--dur-1) var(--ease);
+      }
+      .nav-cta .material-symbols-outlined {
+        color: var(--accent-ink);
+      }
+      .nav-cta:hover {
+        box-shadow: 0 0 0 6px var(--accent-soft);
+      }
+      .nav-cta:active {
+        transform: translateY(1px);
+      }
+      .nav-cta:focus-visible {
+        outline: 2px solid var(--accent-ink);
+        outline-offset: 2px;
+      }
+
+      /* ============================================================
+     FOOTER
+     ============================================================ */
+      .site-footer {
+        background: var(--bg);
+        border-top: 1px solid var(--border-2);
+        padding: 49px 24px 48px;
+      }
+      .footer-wrap {
+        max-width: var(--nav-max);
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px 24px;
+        flex-wrap: wrap;
+      }
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .footer-logo {
+        height: 24px;
+        width: auto;
+        opacity: 0.9;
+        flex: none;
+      }
+      .footer-brand span {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .footer-links a {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-decoration-color: var(--border-2);
+        white-space: nowrap;
+        transition:
+          text-decoration-color var(--dur-1) var(--ease),
+          color var(--dur-1) var(--ease);
+      }
+      .footer-links a:hover,
+      .footer-links a:focus-visible {
+        color: var(--pink-70);
+        text-decoration-color: var(--accent);
+      }
+      .footer-links a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .footer-links .sep {
+        font-family: var(--font-mono);
+        font-size: 12px;
+      }
+      .footer-links .edit {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+      @media (max-width: 880px) {
+        .wrap {
+          padding: 0 20px;
+        }
+        section {
+          padding: 64px 0;
+        }
+        .hero {
+          padding: 56px 0 64px;
+        }
+        .h1,
+        .hero-title .edit {
+          font-size: clamp(40px, 11vw, 72px);
+          letter-spacing: -2px;
+        }
+        .hero-for,
+        .hero-for .edit {
+          font-size: 24px;
+        }
+        .h2 {
+          font-size: 32px;
+          letter-spacing: -0.8px;
+        }
+        .cta h2 {
+          font-size: 40px;
+        }
+
+        .hero-meta {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .hero-meta .col {
+          flex-basis: auto;
+        }
+
+        .scope-head,
+        .timeline-head {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .scope-item-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .scope-items {
+          grid-template-columns: 1fr;
+        }
+        .scope-item {
+          min-width: 0;
+        }
+        .scope-columns {
+          flex-direction: column;
+        }
+        .scope-columns > .not-included {
+          min-width: 0;
+          flex-basis: auto;
+        }
+
+        .opp-grid,
+        .opp-grid.three,
+        .opp-featured-grid {
+          grid-template-columns: 1fr;
+        }
+        .opp-card.featured {
+          padding: 24px;
+        }
+        .step {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 24px 20px;
+          margin: 0 -20px;
+        }
+        .step-num {
+          font-size: 40px;
+        }
+        .step-time {
+          justify-content: flex-start;
+        }
+
+        .option-toggle {
+          display: flex;
+          width: 100%;
+        }
+        .option-toggle button {
+          font-size: 10px;
+          padding: 12px 10px;
+          min-width: 0;
+          white-space: normal;
+          text-align: center;
+        }
+        .pricing-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+        .pricing-total {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .pricing-total .price {
+          font-size: clamp(28px, 9vw, 40px);
+        }
+
+        .cta {
+          padding: 56px 20px;
+          margin: 0 -20px;
+          border-radius: 0px;
+        }
+        .portfolio-banner {
+          padding: 32px 0;
+        }
+        .portfolio-banner-inner {
+          padding: 32px 20px;
+          margin: 0 -20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          border-radius: 0px;
+        }
+        .portfolio-banner .btn {
+          width: 100%;
+        }
+
+        .nav-wrap {
+          padding: 0 20px;
+          gap: 12px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-brand-label {
+          display: none;
+        }
+        .nav-cta {
+          padding: 9px 14px;
+          font-size: 11px;
+        }
+
+        .footer-wrap {
+          padding: 0 20px;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================================
+     TOP NAVIGATION & BRAND HEADER
+     ============================================================ -->
+    <nav class="site-nav">
+      <div class="nav-wrap">
+        <div class="nav-brand">
+          <img class="nav-logo" src="imgs/logo.png" alt="Paola Assis" />
+        </div>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="#contexto">Contexto</a>
+            <a href="#escopo">Escopo</a>
+            <a href="#cronograma">Cronograma</a>
+            <a href="#investimento">Investimento</a>
+          </div>
+          <a class="nav-cta" href="https://wa.me/5511930499095" target="_blank" rel="noopener"
+            ><span>Aprovar proposta</span
+            ><span class="material-symbols-outlined fs-16">arrow_outward</span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+     SEÇÃO 1 — CAPA / HERO
+     ============================================================ -->
+    <section class="hero">
+      <div class="hero-waves" aria-hidden="true">
+        <img src="imgs/hero-wave-1.svg" alt="" />
+        <img src="imgs/hero-wave-2.svg" alt="" />
+        <img src="imgs/hero-wave-3.svg" alt="" />
+      </div>
+      <div class="wrap">
+        <span class="badge-pill"><span class="dot"></span>Proposta Comercial</span>
+
+        <h1 class="hero-title">
+          <span class="h1">Loja Online de Enxoval Personalizado</span>
+        </h1>
+
+        <p class="hero-for">
+          <span class="word">para</span>
+          <span>Eliane, loja de enxoval personalizado</span>
+        </p>
+
+        <div class="hero-meta">
+          <div class="col">
+            <span class="mono-label">Preparado por</span>
+            <span class="mono-value">Paola Assis · Desenvolvedora &amp; Designer</span>
+          </div>
+          <div class="col">
+            <span class="mono-label">Vigência &amp; Prazo</span>
+            <span class="mono-value">
+              <span>09/10/2026</span> · Válida até
+              <span>16/10/2026</span>
+            </span>
+          </div>
+          <div class="col">
+            <span class="mono-label">Canal de Contato</span>
+            <span class="mono-value"
+              ><a href="https://wa.me/5511930499095" target="_blank" rel="noopener"
+                >WhatsApp</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 2 — POR QUE ESSE PROJETO IMPORTA
+     ============================================================ -->
+    <section class="context-section" id="contexto">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>02 / DIAGNÓSTICO &amp; ESTRATÉGIA</p>
+        <h2 class="h2" data-reveal data-reveal-delay="0.1">Por que esse projeto importa agora</h2>
+
+        <div class="context-card" data-reveal data-reveal-delay="0.2">
+          <p class="tag">Contexto atual:</p>
+
+          <p class="big">
+            <span
+              >Seu ateliê transforma enxoval de bebê em peça única: são 19 itens ao todo, entre os
+              que você borda à mão e os de fornecedores parceiros. O que diferencia o seu trabalho
+              é a mãe poder escolher o bordado de cada peça — isso aproxima sua loja de um "monte
+              o seu" em vez de uma vitrine comum.</span
+            >
+          </p>
+
+          <p class="small">
+            <span
+              >Você atende famílias no Brasil e nos Estados Unidos, onde mora hoje por conta do
+              trabalho do seu marido, enquanto sua confecção segue em São Bernardo do Campo — por
+              isso a escolha pela Nuvemshop, que cobre bem os dois mercados. Você já tentou montar
+              a loja sozinha e sentiu que precisava de alguém que realmente entende do trabalho,
+              sem ter que aprender configuração de plataforma no meio do caminho.</span
+            >
+          </p>
+
+          <div class="context-strategies">
+            <div class="context-strategy">
+              <p class="context-strategy-title">Protótipo como tradução visual</p>
+              <p class="context-strategy-text">
+                <span
+                  >Você trouxe duas referências: um site minimalista (a linha de fralda de banho
+                  bordada) e outro mais lifestyle, com fotos de família em ambientes aconchegantes.
+                  O protótipo no Figma traduz essas referências pra estrutura real da sua loja —
+                  não é um rascunho rápido, é o trabalho de design completo que define como tudo
+                  vai parecer antes de ir pra Nuvemshop.</span
+                >
+              </p>
+            </div>
+            <div class="context-strategy">
+              <p class="context-strategy-title">Personalização por bordado</p>
+              <p class="context-strategy-text">
+                <span
+                  >Cada peça permite escolher o bordado (e, quando for o caso, a cor) antes de
+                  finalizar a compra. É o coração do seu negócio: sem essa lógica bem configurada,
+                  a loja vende peças genéricas, não o produto que você realmente oferece.</span
+                >
+              </p>
+            </div>
+            <div class="context-strategy">
+              <p class="context-strategy-title">Nuvemshop para Brasil e EUA</p>
+              <p class="context-strategy-text">
+                <span
+                  >Plataforma brasileira com suporte a vendas e frete para os dois países onde
+                  você já tem clientes, fácil de administrar no dia a dia sem depender de
+                  programador.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO — BANNER CTA PORTFÓLIO
+     ============================================================ -->
+    <section class="portfolio-banner">
+      <div class="wrap">
+        <div class="portfolio-banner-inner">
+          <div class="portfolio-banner-text">
+            <p class="eyebrow-pink">// Experiência comprovada</p>
+            <h3>Quer ver mais do meu trabalho?</h3>
+            <p>
+              Esse é só um recorte do que posso fazer. Sou a Paola, desenvolvedora front-end e
+              designer UX/UI — no meu portfólio você encontra outros projetos, meu processo completo
+              e outras soluções que também posso resolver pro seu negócio.
+            </p>
+          </div>
+          <a class="btn" href="https://paola-portfolio-delta.vercel.app/" target="_blank" rel="noopener"
+            ><span>Ver portfólio completo</span
+            ><span class="material-symbols-outlined fs-16">arrow_outward</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 4 — ESCOPO DO PROJETO
+     ============================================================ -->
+    <section class="scope-section" id="escopo">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>04 / ENTREGÁVEIS</p>
+
+        <div class="scope-head" data-reveal data-reveal-delay="0.1">
+          <h2 class="h2">Escopo do projeto</h2>
+          <span class="mono-value">Itens marcados "Completo" só entram no Pacote Completo</span>
+        </div>
+
+        <div class="scope-items">
+          <div class="scope-item" data-reveal data-reveal-delay="0.15">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Direção visual a partir das referências</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Figma</span></span>
+                <span class="tag pkg"><span>Básico + Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >Trabalho as duas referências que vocês enviaram — o site minimalista e o site
+                lifestyle — para chegar a uma direção própria, nem uma cópia nem a outra.</span
+              >
+            </p>
+            <ul>
+              <li>Paleta de cores, par de fontes e estilo de botões, selos e ícones</li>
+              <li>Definição de como combinar o clean da primeira referência com o aconchego da segunda</li>
+              <li>Uma página-guia no Figma para aprovação</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.2">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Protótipo no Figma</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Figma</span></span>
+                <span class="tag pkg"><span>Básico + Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >Esta é a etapa que traduz as referências para a estrutura real da loja — um
+                trabalho de design completo, não uma etapa intermediária. Vocês veem e aprovam a
+                loja antes de ela existir.</span
+              >
+            </p>
+            <ul>
+              <li>Home, categoria e produto, em versão desktop e mobile</li>
+              <li>Tela de produto mostrando como a escolha do bordado aparece para a mãe</li>
+              <li>Componentes: botões, cartão de produto, selos e cabeçalho/rodapé</li>
+              <li>1 rodada de ajustes antes da aprovação</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.25">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Tema aplicado na Nuvemshop</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Nuvemshop · editor visual + CSS</span></span>
+                <span class="tag pkg"><span>Básico + Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >Transformo o protótipo aprovado em uma loja de fato, usando tudo o que o tema
+                permite configurar.</span
+              >
+            </p>
+            <ul>
+              <li>Cores, fontes, botões e espaçamentos ajustados conforme o protótipo</li>
+              <li>Logo, cabeçalho, rodapé e banner principal da home</li>
+              <li>Versão mobile conferida tela a tela</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.3">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Navegação e categorias</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Nuvemshop</span></span>
+                <span class="tag pkg"><span>Básico + Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span>Estrutura de categorias pensada para os 19 itens do enxoval.</span>
+            </p>
+            <ul>
+              <li>Categorias por tipo de peça e por ocasião (chá de bebê, maternidade)</li>
+              <li>Menu e ordem das categorias pensados para o celular</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.35">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Lógica de personalização por bordado</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Nuvemshop · variações</span></span>
+                <span class="tag pkg"><span>Só no Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >Configuro a escolha de bordado (e cor, quando aplicável) nos 19 itens, para que a
+                mãe personalize a peça direto na página do produto.</span
+              >
+            </p>
+            <ul>
+              <li>Opções de bordado cadastradas item a item</li>
+              <li>Checagem de que a escolha aparece corretamente no carrinho e no pedido</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.4">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Catálogo de produtos</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Nuvemshop + planilha</span></span>
+                <span class="tag pkg"><span>Só no Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >Cadastro dos produtos usando as fotos e descrições que a cliente já tem, com o
+                restante documentado para facilitar manutenção futura.</span
+              >
+            </p>
+            <ul>
+              <li>Cadastro completo de produtos-modelo (nome, descrição, preço, variações e fotos)</li>
+              <li>Planilha para importar o restante do catálogo, com instruções de preenchimento</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.45">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Pagamento e frete</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Nuvem Pago</span></span>
+                <span class="tag pkg"><span>Só no Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >Loja pronta para receber de clientes no Brasil e nos Estados Unidos, com
+                pagamento e frete testados do início ao fim.</span
+              >
+            </p>
+            <ul>
+              <li>Ativação do Nuvem Pago (Pix e cartão de crédito)</li>
+              <li>Cálculo de frete conforme as opções de envio disponíveis para os dois mercados</li>
+              <li>Compra de teste completa, do carrinho ao pagamento</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.5">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>Domínio, publicação e suporte</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>Domínio próprio</span></span>
+                <span class="tag pkg"><span>Só no Completo</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >A loja no ar, com o endereço que a cliente já tiver e tudo documentado para que
+                ela consiga tocar o dia a dia sozinha.</span
+              >
+            </p>
+            <ul>
+              <li>Conexão do domínio que a cliente já possuir à loja (não inclui compra de domínio)</li>
+              <li>Guia rápido (vídeo ou PDF) de como cadastrar produto, trocar banner e acompanhar pedidos</li>
+              <li>15 dias de suporte após a publicação</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="scope-columns"
+          style="display: flex; gap: 24px; align-items: stretch; flex-wrap: wrap"
+          data-reveal
+          data-reveal-delay="0.1"
+        >
+          <div class="not-included checklist" style="flex: 1 1 0; min-width: 280px">
+            <div class="not-included-head">
+              <span class="sq pink"></span>
+              <span>O que dá para fazer no plano Essencial</span>
+            </div>
+            <ul>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >Trocar cores, fontes, botões, espaçamentos e estilo de tudo o que o tema já
+                  tem</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >Reorganizar, ocultar e ordenar as seções do tema</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >Configurar variações de produto, incluindo opções de bordado/cor</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >Montar categorias, menu e catálogo completos</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >Aceitar Pix, cartão e calcular frete para Brasil e EUA</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="not-included dashed" style="flex: 1 1 0; min-width: 280px">
+            <div class="not-included-head">
+              <span class="sq"></span>
+              <span>O que o plano Essencial não permite</span>
+            </div>
+            <ul>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Criar seções, blocos ou funcionalidades novas (ex.: "monte seu kit")</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Mudar a estrutura das páginas</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Layout 100% exclusivo: o resultado se aproxima do protótipo dentro do que o
+                  tema permite</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Personalização avançada do checkout</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Manter os ajustes se o tema for trocado (o CSS precisa ser refeito)</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mono-value" data-reveal data-reveal-delay="0.15" style="margin: 16px 0 0">
+          A Nuvemshop tem dois planos principais: o Essencial, que é o que está incluso nesta
+          proposta e já cobre tudo que você precisa pra vender, e o Impulso, que libera
+          customização total de layout via código — só faz sentido migrar se no futuro a loja
+          pedir algo que o tema não permita. Veja mais em Próximos passos.
+        </p>
+
+        <div
+          class="scope-columns"
+          style="display: flex; gap: 24px; align-items: stretch; flex-wrap: wrap; margin-top: 32px"
+        >
+          <div class="not-included dashed" style="flex: 1 1 0; min-width: 280px" data-reveal>
+            <div class="not-included-head">
+              <span class="sq"></span>
+              <span>Não incluso nesta proposta (ou fases futuras)</span>
+            </div>
+            <ul>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Assinatura mensal da Nuvemshop (Essencial ou Impulso) e tema pago, se houver</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Compra de domínio (apenas a conexão do domínio já existente está incluída)</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Banners adicionais, fotografia de produtos e e-mail marketing (orçados à
+                  parte)</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >Seções novas e layout exclusivo (disponíveis no plano Impulso)</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="not-included checklist" style="flex: 1 1 0; min-width: 280px" data-reveal>
+            <div class="not-included-head">
+              <span class="sq pink"></span>
+              <span>O que eu preciso de você</span>
+            </div>
+            <ul>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Referências visuais</strong> — já recebidas (site minimalista e site
+                  lifestyle)</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Fotos e descrições dos 19 produtos</strong> — já recebidas</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Textos da marca</strong> — política de troca, prazos de entrega
+                  (Brasil e EUA) e garantias</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Acesso à conta Nuvemshop como colaboradora</strong> — a conta fica
+                  sempre no nome da cliente</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Domínio</strong> — apenas se o Pacote Completo for escolhido</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>Feedback nos prazos combinados</strong> — aprovações e retornos dentro
+                  do cronograma, pra não atrasar as próximas etapas</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 5 — CRONOGRAMA
+     ============================================================ -->
+    <section class="timeline-section" id="cronograma">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>05 / ETAPAS</p>
+
+        <div class="timeline-head" data-reveal data-reveal-delay="0.1">
+          <h2 class="h2">Cronograma estimado</h2>
+          <p class="right">
+            Prazo total estimado (Pacote Completo):
+            <span>3 a 4 semanas</span> a partir do kick-off
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="step" data-reveal data-reveal-delay="0.15">
+            <span class="step-num">01</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Kick-off, briefing e direção visual</span></h3>
+              <p>
+                <span
+                  >Alinhamento das referências, acesso à conta Nuvemshop e aprovação da direção
+                  visual.</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >4 a 5 dias</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.2">
+            <span class="step-num">02</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Protótipo no Figma e aprovação</span></h3>
+              <p>
+                <span
+                  >Home, categoria e produto em desktop e mobile, com 1 rodada de ajustes.</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >1 semana</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.25">
+            <span class="step-num">03</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Tema, identidade e navegação</span></h3>
+              <p>
+                <span
+                  >Aplicação da marca no tema e estrutura de categorias por peça e ocasião.</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >1 semana</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.3">
+            <span class="step-num">04</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Personalização, catálogo, pagamento e frete</span></h3>
+              <p>
+                <span
+                  >Configuração da escolha de bordado nos 19 itens, catálogo, Nuvem Pago e frete
+                  (Pacote Completo).</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >5 a 6 dias</span
+              >
+            </div>
+          </div>
+
+          <div class="step" data-reveal data-reveal-delay="0.35">
+            <span class="step-num">05</span>
+            <div class="step-body">
+              <h3 class="h3"><span>Revisão, domínio e publicação</span></h3>
+              <p>
+                <span
+                  >Ajustes finais, conexão do domínio, guia rápido e publicação.</span
+                >
+              </p>
+            </div>
+            <div class="step-time">
+              <span>Tempo estimado:</span>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-weight: 700;
+                  font-size: 12px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                "
+                >3 a 4 dias</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <p class="mono-value" data-reveal data-reveal-delay="0.4" style="margin: 24px 0 0">
+          O prazo depende da agilidade das aprovações e do envio dos materiais. No Pacote Básico,
+          o projeto termina na etapa 03 (tema aplicado e navegação), sem catálogo, pagamento,
+          personalização ou domínio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 6 — INVESTIMENTO (toggle interativo)
+     ============================================================ -->
+    <section class="invest-section" id="investimento">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>06 / ORÇAMENTO</p>
+
+        <div class="invest-head" data-reveal data-reveal-delay="0.1">
+          <div>
+            <h2 class="h2">Investimento<br />transparente</h2>
+            <p>Dois formatos, pra você escolher o que faz sentido agora.</p>
+          </div>
+          <div class="option-toggle" role="tablist" aria-label="Opções de investimento">
+            <button
+              type="button"
+              class="is-active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="pane-option-1"
+              data-option="1"
+            >
+              <span>Pacote Básico</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="pane-option-2"
+              data-option="2"
+            >
+              <span>Pacote Completo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PAINEL — PACOTE BÁSICO -->
+        <div class="pricing-panel" id="pane-option-1" role="tabpanel">
+          <div class="pricing-pane">
+            <div class="pricing-head">
+              <span class="kicker">Configuração selecionada</span>
+              <span
+                style="
+                  font-family: var(--font-display);
+                  font-weight: 700;
+                  font-size: 30px;
+                  display: block;
+                  margin-bottom: 6px;
+                "
+                >Pacote Básico — Design + Implementação</span
+              >
+              <p class="desc">
+                <span
+                  >A loja com a cara certa, desenhada e aplicada na Nuvemshop. Não inclui catálogo,
+                  personalização, pagamento ou domínio — esses ficam no Pacote Completo.</span
+                >
+              </p>
+              <span class="plan-badge"><span>Compatível com plano Essencial da Nuvemshop</span></span>
+            </div>
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Direção visual a partir das referências enviadas</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Protótipo no Figma: home, categoria e produto, desktop e mobile</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Tema aplicado com a identidade definida</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Navegação e estrutura de categorias</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Suporte técnico</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >7 dias inclusos</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="pricing-total">
+              <div>
+                <p class="label">Investimento Total</p>
+                <p class="sub" style="margin: 0">
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 14px;
+                      color: rgba(243, 243, 243, 0.7);
+                    "
+                    >50% no início · 50% na entrega</span
+                  >
+                </p>
+              </div>
+              <span class="price">R$ 2.500</span>
+            </div>
+          </div>
+          <div class="pricing-conditions">
+            <span class="icon" aria-hidden="true"
+              ><span class="material-symbols-outlined">payments</span></span
+            >
+            <p class="note">
+              <strong>Condições de pagamento:</strong> 50% ao iniciar (R$ 1.250) e 50% na entrega
+              da loja desenhada e aplicada (R$ 1.250). A assinatura da Nuvemshop e o tema pago, se
+              houver, são pagos por você direto à plataforma.
+            </p>
+          </div>
+        </div>
+
+        <!-- PAINEL — PACOTE COMPLETO -->
+        <div class="pricing-panel" id="pane-option-2" role="tabpanel" hidden>
+          <div class="pricing-pane">
+            <div class="pricing-head">
+              <span class="kicker">Configuração selecionada</span>
+              <span
+                style="
+                  font-family: var(--font-display);
+                  font-weight: 700;
+                  font-size: 30px;
+                  display: block;
+                  margin-bottom: 6px;
+                "
+                >Pacote Completo — Loja funcionando com tudo</span
+              >
+              <p class="desc">
+                <span
+                  >Tudo do Pacote Básico, mais a personalização por bordado, catálogo, pagamento,
+                  frete e domínio — a loja pronta para vender.</span
+                >
+              </p>
+              <span class="plan-badge"><span>Compatível com plano Essencial da Nuvemshop</span></span>
+            </div>
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Tudo do Pacote Básico (direção visual, protótipo, tema, navegação)</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Configuração da personalização por bordado/cor nos 19 itens</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Catálogo: produtos-modelo cadastrados + planilha para o restante</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Pagamento (Nuvem Pago) e frete configurados e testados</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Conexão do domínio já existente</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >Guia rápido de uso e suporte técnico</span
+                  ></span
+                >
+                <span class="price"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-weight: 700;
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    "
+                    >15 dias inclusos</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="pricing-total">
+              <div>
+                <p class="label">Investimento Total</p>
+                <p class="sub" style="margin: 0">
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 14px;
+                      color: rgba(243, 243, 243, 0.7);
+                    "
+                    >50% no início · 50% na entrega</span
+                  >
+                </p>
+              </div>
+              <span class="price">R$ 3.800</span>
+            </div>
+          </div>
+          <div class="pricing-conditions">
+            <span class="icon" aria-hidden="true"
+              ><span class="material-symbols-outlined">payments</span></span
+            >
+            <p class="note">
+              <strong>Condições de pagamento:</strong> 50% ao iniciar (R$ 1.900) e 50% na entrega
+              da loja publicada (R$ 1.900). A assinatura da Nuvemshop, o tema pago (se houver) e a
+              compra do domínio, se ainda não existir, são pagos por você direto às respectivas
+              plataformas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 7 — PRÓXIMAS OPORTUNIDADES
+     ============================================================ -->
+    <section class="opportunities">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>07 / PRÓXIMOS PASSOS</p>
+        <div class="opp-title-row" data-reveal data-reveal-delay="0.1">
+          <span class="material-symbols-outlined opp-title-icon">stars_2</span>
+          <h2 class="h2" style="margin-bottom: 16px">Ideias para os próximos passos</h2>
+        </div>
+        <p class="intro" data-reveal data-reveal-delay="0.1">
+          Sugestões pensadas especificamente para o crescimento do seu negócio — sem qualquer
+          pressão comercial, apenas caminhos futuros que podemos explorar juntos quando fizer
+          sentido.
+        </p>
+
+        <div class="opp-card featured" data-reveal data-reveal-delay="0.15">
+          <p class="eyebrow-pink">01 · Evolução</p>
+          <h3 class="h3"><span>Plano Impulso: liberdade total de layout</span></h3>
+          <p>
+            <span>Sem pressão: só recomendo esse passo se a loja mostrar que precisa.</span>
+          </p>
+          <div class="opp-featured-grid">
+            <div>
+              <h4>Quando faz sentido</h4>
+              <p>
+                Quando a loja já estiver vendendo e surgir a vontade de ter algo exclusivo, como
+                uma página de "monte seu kit personalizado" — onde a mãe escolhe as peças e os
+                bordados em um fluxo visual só seu, em vez da tela de produto padrão.
+              </p>
+            </div>
+            <div>
+              <h4>Como funciona</h4>
+              <p>
+                Você migra para o plano Impulso, que libera o código do tema. Eu recrio o visual
+                do protótipo em HTML, CSS e JavaScript, com seções sob medida. Catálogo, pagamento
+                e domínio continuam como estão.
+              </p>
+            </div>
+            <div>
+              <h4>O que muda</h4>
+              <p>
+                A mensalidade da plataforma é maior e mudanças estruturais passam a depender de
+                desenvolvedor. Trocar produtos, preços e banners continua sendo feito por você. O
+                investimento é orçado à parte, só depois de definirmos juntos o que faz sentido
+                construir.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="opp-grid">
+          <div class="opp-card" data-reveal data-reveal-delay="0.2">
+            <p class="eyebrow-pink">02 · Expansão</p>
+            <h3 class="h3"><span>E-mail marketing para a loja</span></h3>
+            <p>
+              <span
+                >Fluxo de boas-vindas, carrinho abandonado e lembretes para datas como chás de
+                bebê, para vender mais para quem já conhece a marca.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.25">
+            <p class="eyebrow-pink">03 · Conteúdo</p>
+            <h3 class="h3"><span>Banners e criativos para campanhas sazonais</span></h3>
+            <p>
+              <span
+                >Banners para dia das mães, chás de bebê e outras datas importantes do nicho de
+                enxoval, feitos seguindo a direção visual definida no projeto.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.3">
+            <p class="eyebrow-pink">04 · Manutenção</p>
+            <h3 class="h3"><span>Manutenção e atualizações da loja</span></h3>
+            <p>
+              <span
+                >Depois que a loja estiver no ar, eu cuido das atualizações: novos produtos,
+                banners de campanha, ajustes de layout e melhorias, em um plano mensal ou por
+                demanda.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.35">
+            <p class="eyebrow-pink">05 · Imagens de produto</p>
+            <h3 class="h3"><span>Geração de imagens dos produtos</span></h3>
+            <p>
+              <span
+                >Até 5 imagens por produto, no estilo fotográfico que você definir (ou que eu
+                sugerir alinhado à direção visual já aprovada no projeto). R$ 40,00 por produto —
+                orçado à parte, conforme a quantidade de itens que você quiser cobrir.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 8 — CTA FINAL
+     ============================================================ -->
+    <section>
+      <div class="wrap">
+        <div class="cta" data-reveal>
+          <div class="cta-inner">
+            <p class="eyebrow-pink">// Próximo passo</p>
+            <h2>Vamos começar?</h2>
+            <p>
+              Se o escopo e as condições estiverem de acordo com o que você precisa, basta clicar
+              abaixo para formalizarmos e iniciarmos o projeto.
+            </p>
+            <a class="btn" href="https://wa.me/5511930499095" target="_blank" rel="noopener"
+              ><span>Aprovar proposta</span
+              ><span class="material-symbols-outlined fs-16">arrow_outward</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <div class="footer-brand">
+          <img class="footer-logo" src="imgs/logo.png" alt="Paola Assis" />
+          <span>Paola Assis · Dev &amp; Design</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://paola-portfolio-delta.vercel.app/" target="_blank" rel="noopener">PORTFÓLIO</a>
+          <span class="sep">·</span>
+          <a href="https://wa.me/5511930499095" target="_blank" rel="noopener">WHATSAPP</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var buttons = document.querySelectorAll('.option-toggle button');
+        var panes = {
+          1: document.getElementById('pane-option-1'),
+          2: document.getElementById('pane-option-2'),
+        };
+        var FADE_MS = 160;
+
+        var navCta = document.querySelector('.nav-cta');
+        var ctaBtn = document.querySelector('.cta .btn');
+
+        function montarLinkAprovar(opcao) {
+          var textos = {
+            '1': "Oi, Paola! Vi a proposta da Loja Online de Enxoval Personalizado e quero seguir com o Pacote Básico (R$ 2.500). Pode me confirmar os próximos passos?",
+            '2': "Oi, Paola! Vi a proposta da Loja Online de Enxoval Personalizado e quero seguir com o Pacote Completo (R$ 3.800). Pode me confirmar os próximos passos?",
+          };
+          var texto = encodeURIComponent(textos[opcao] || textos['1']);
+          return 'https://wa.me/5511930499095?text=' + texto;
+        }
+
+        function atualizarLinksAprovar(opcao) {
+          var link = montarLinkAprovar(opcao);
+          if (navCta) navCta.setAttribute('href', link);
+          if (ctaBtn) ctaBtn.setAttribute('href', link);
+        }
+
+        atualizarLinksAprovar('1');
+
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var option = btn.getAttribute('data-option');
+            if (btn.classList.contains('is-active')) return;
+
+            buttons.forEach(function (b) {
+              var active = b === btn;
+              b.classList.toggle('is-active', active);
+              b.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            atualizarLinksAprovar(option);
+
+            var current = Object.keys(panes)
+              .map(function (k) {
+                return panes[k];
+              })
+              .find(function (p) {
+                return !p.hidden;
+              });
+            if (current) current.style.opacity = '0';
+
+            window.setTimeout(function () {
+              Object.keys(panes).forEach(function (key) {
+                panes[key].hidden = key !== option;
+              });
+              var next = panes[option];
+              next.style.opacity = '0';
+              requestAnimationFrame(function () {
+                next.style.opacity = '1';
+              });
+            }, FADE_MS);
+          });
+        });
+      })();
+
+      /* Scroll reveal — mesmo comportamento do portfólio (fade + translateY via
+   IntersectionObserver, easing/duração idênticos ao token --ease). A hero
+   já tem sua própria animação de entrada e não usa data-reveal. */
+      (function () {
+        var els = document.querySelectorAll('[data-reveal]');
+        if (!els.length || !('IntersectionObserver' in window)) return;
+
+        var io = new IntersectionObserver(
+          function (entries, obs) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var el = entry.target;
+              var delay = parseFloat(el.getAttribute('data-reveal-delay') || '0');
+              el.style.transitionDelay = delay + 's';
+              el.classList.add('is-visible');
+              obs.unobserve(el);
+            });
+          },
+          { rootMargin: '0px 0px -12% 0px', threshold: 0 },
+        );
+
+        els.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>
