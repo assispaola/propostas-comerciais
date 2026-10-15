@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proposta Comercial — Template</title>
+    <title>Proposta Comercial — [Nome do Projeto]</title>
     <link
       rel="icon"
       type="image/png"
@@ -1086,11 +1086,11 @@
         }
       }
       .opp-grid {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
       .opp-card {
-        flex: 1 1 0;
         min-width: 0;
         background: var(--bg);
         border: 1px solid var(--border);
@@ -1460,7 +1460,7 @@
         }
 
         .opp-grid {
-          flex-direction: column;
+          grid-template-columns: 1fr;
         }
         .step {
           grid-template-columns: 1fr;
@@ -1542,11 +1542,117 @@
           gap: 16px;
         }
       }
+
+      /* ============================================================
+     ADIÇÕES — escopo detalhado (tags + itens) e destaque Impulso
+     ============================================================ */
+      .scope-item-head .tag-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .scope-item ul {
+        list-style: none;
+        margin: 16px 0 0;
+        padding: 16px 0 0;
+        border-top: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .scope-item li {
+        position: relative;
+        padding-left: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--ink-80);
+      }
+      .scope-item li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: var(--accent);
+      }
+      .opp-card.featured {
+        margin-bottom: 24px;
+        padding: 40px;
+      }
+      .opp-featured-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 8px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+      .opp-featured-grid h4 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      .opp-featured-grid p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.625;
+        color: var(--ink-80);
+      }
+      .opp-grid.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 880px) {
+        .opp-featured-grid,
+        .opp-grid.three {
+          grid-template-columns: 1fr;
+        }
+        .opp-card.featured {
+          padding: 24px;
+        }
+      }
+
+      /* ============================================================
+     ADIÇÃO — total do investimento sem estilo de campo editável
+     ============================================================ */
+      .pricing-total .price {
+        border-bottom: none;
+        background: transparent;
+        padding: 0;
+      }
+      .pricing-row .item::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: var(--accent);
+        margin-right: 12px;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
     <!-- ============================================================
+     COMO USAR ESTE TEMPLATE
+     1. Copiar este arquivo para /<nome-do-cliente>/index.html (manter a
+        pasta imgs/ junto, com os caminhos relativos intactos).
+     2. Preencher todos os [colchetes] com as informações do cliente.
+     3. Apagar os blocos marcados como OPCIONAL que não se aplicarem
+        (bloco de limitações no Escopo e/ou card .opp-card.featured em
+        Próximos passos).
+     4. Conferir se a soma das horas de cada entrega bate com o total
+        indicado em .scope-head (ex.: "8 entregas · ≈ 35 a 45h").
+     5. Rodar grep por "\[" e por "edit" no arquivo final e confirmar
+        que não sobrou nenhum placeholder nem span de campo editável.
+     6. Confirmar que a seção de investimento mostra só o valor total,
+        nunca um preço por etapa/linha.
+     ============================================================ -->
+    <!-- ============================================================
      TOP NAVIGATION & BRAND HEADER
+     (fixo — não precisa editar, exceto o link do WhatsApp se mudar)
      ============================================================ -->
     <nav class="site-nav">
       <div class="nav-wrap">
@@ -1574,6 +1680,8 @@
 
     <!-- ============================================================
      SEÇÃO 1 — CAPA / HERO
+     Preencher: nome do projeto, nome do cliente, data de envio e
+     validade (sugestão: validade = data de envio + 7 dias).
      ============================================================ -->
     <section class="hero">
       <div class="hero-waves" aria-hidden="true">
@@ -1619,6 +1727,9 @@
 
     <!-- ============================================================
      SEÇÃO 2 — POR QUE ESSE PROJETO IMPORTA
+     Preencher .big e .small com fatos que o cliente contou (dor,
+     história ou oportunidade + impacto esperado). Usar de 3 a 4 blocos
+     .context-strategy e apagar os que não se aplicarem a este projeto.
      ============================================================ -->
     <section class="context-section" id="contexto">
       <div class="wrap">
@@ -1630,26 +1741,23 @@
 
           <p class="big">
             <span
-              >[Insira aqui o contexto do cliente: qual dor/oportunidade motivou o projeto]</span
+              >[Contexto do cliente em 2 frases, usando fatos que ele contou: a dor, a história ou
+              a oportunidade]</span
             >
           </p>
 
           <p class="small">
             <span
-              >[Descreva o impacto esperado: o que muda pro negócio dele depois de pronto]</span
+              >[Impacto esperado e o que a proposta precisa resolver]</span
             >
           </p>
 
-          <!-- mini-blocos "o que é / benefício real" — resuma cada estratégia/
-         ferramenta do escopo em linguagem de venda, não técnica. Apague os
-         blocos que não se aplicarem a este projeto. -->
           <div class="context-strategies">
             <div class="context-strategy">
               <p class="context-strategy-title">[Nome da estratégia/ferramenta 1], o que é</p>
               <p class="context-strategy-text">
                 <span
-                  >[Explicação simples da estratégia e o benefício real pro negócio do
-                  cliente]</span
+                  >[Explicação em linguagem de venda + benefício real para o negócio]</span
                 >
               </p>
             </div>
@@ -1657,8 +1765,7 @@
               <p class="context-strategy-title">[Nome da estratégia/ferramenta 2], o que é</p>
               <p class="context-strategy-text">
                 <span
-                  >[Explicação simples da estratégia e o benefício real pro negócio do
-                  cliente]</span
+                  >[Explicação em linguagem de venda + benefício real para o negócio]</span
                 >
               </p>
             </div>
@@ -1666,8 +1773,15 @@
               <p class="context-strategy-title">[Nome da estratégia/ferramenta 3], o que é</p>
               <p class="context-strategy-text">
                 <span
-                  >[Explicação simples da estratégia e o benefício real pro negócio do
-                  cliente]</span
+                  >[Explicação em linguagem de venda + benefício real para o negócio]</span
+                >
+              </p>
+            </div>
+            <div class="context-strategy">
+              <p class="context-strategy-title">[Nome da estratégia/ferramenta 4], o que é</p>
+              <p class="context-strategy-text">
+                <span
+                  >[Explicação em linguagem de venda + benefício real para o negócio]</span
                 >
               </p>
             </div>
@@ -1701,6 +1815,9 @@
 
     <!-- ============================================================
      SEÇÃO 4 — ESCOPO DO PROJETO
+     Usar de 6 a 8 entregas (apagar ou duplicar .scope-item conforme
+     necessário, mantendo delays de reveal crescentes). As horas de
+     cada tag devem somar o total indicado em .scope-head.
      ============================================================ -->
     <section class="scope-section" id="escopo">
       <div class="wrap">
@@ -1708,70 +1825,363 @@
 
         <div class="scope-head" data-reveal data-reveal-delay="0.1">
           <h2 class="h2">Escopo do projeto</h2>
-          <span class="mono-value">O que está contemplado nesta entrega</span>
+          <span class="mono-value">[N] entregas · ≈ [X a Y] horas de trabalho</span>
         </div>
 
         <div class="scope-items">
           <div class="scope-item" data-reveal data-reveal-delay="0.15">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>[Entregável 01: título]</span>
+                <span>[Entrega 01: título]</span>
               </h3>
-              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
             </div>
             <p>
               <span
-                >[descrição do que esse item entrega na prática]</span
+                >[o que é e por que importa para o cliente]</span
               >
             </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
           </div>
 
           <div class="scope-item" data-reveal data-reveal-delay="0.2">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>[Entregável 02: título]</span>
+                <span>[Entrega 02: título]</span>
               </h3>
-              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
             </div>
             <p>
               <span
-                >[descrição do que esse item entrega na prática]</span
+                >[o que é e por que importa para o cliente]</span
               >
             </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
           </div>
 
           <div class="scope-item" data-reveal data-reveal-delay="0.25">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>[Entregável 03: título]</span>
+                <span>[Entrega 03: título]</span>
               </h3>
-              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
             </div>
             <p>
               <span
-                >[descrição do que esse item entrega na prática]</span
+                >[o que é e por que importa para o cliente]</span
               >
             </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
           </div>
 
           <div class="scope-item" data-reveal data-reveal-delay="0.3">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>[Entregável 04: título]</span>
+                <span>[Entrega 04: título]</span>
               </h3>
-              <span class="tag"><span>[tecnologia/ferramenta usada]</span></span>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
             </div>
             <p>
               <span
-                >[descrição do que esse item entrega na prática]</span
+                >[o que é e por que importa para o cliente]</span
               >
             </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.35">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>[Entrega 05: título]</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >[o que é e por que importa para o cliente]</span
+              >
+            </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.4">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>[Entrega 06: título]</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >[o que é e por que importa para o cliente]</span
+              >
+            </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.45">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>[Entrega 07: título]</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >[o que é e por que importa para o cliente]</span
+              >
+            </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
+          </div>
+
+          <div class="scope-item" data-reveal data-reveal-delay="0.5">
+            <div class="scope-item-head">
+              <h3 class="h3">
+                <span>[Entrega 08: título]</span>
+              </h3>
+              <div class="tag-row">
+                <span class="tag"><span>[ferramenta/tecnologia]</span></span>
+                <span class="tag"><span>≈ [X a Yh]</span></span>
+              </div>
+            </div>
+            <p>
+              <span
+                >[o que é e por que importa para o cliente]</span
+              >
+            </p>
+            <ul>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+              <li>[item concreto do que está incluso]</li>
+            </ul>
           </div>
         </div>
 
+        <!-- BLOCO DE LIMITAÇÕES — OPCIONAL: use só quando a tecnologia ou o
+         plano escolhido tiver limites que o cliente precisa conhecer antes
+         de aprovar (ex.: plano de entrada de uma plataforma). Se não houver
+         essas limitações neste projeto, apague o bloco inteiro (as duas
+         divs .not-included abaixo, a div .scope-columns que as envolve e o
+         parágrafo .mono-value com o caminho de evolução). -->
         <div
           class="scope-columns"
           style="display: flex; gap: 24px; align-items: stretch; flex-wrap: wrap"
+          data-reveal
+          data-reveal-delay="0.1"
+        >
+          <div class="not-included checklist" style="flex: 1 1 0; min-width: 280px">
+            <div class="not-included-head">
+              <span class="sq pink"></span>
+              <span>O que dá para fazer com [plataforma/plano]</span>
+            </div>
+            <ul>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >[item do que é possível fazer]</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >[item do que é possível fazer]</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >[item do que é possível fazer]</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >[item do que é possível fazer]</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  >[item do que é possível fazer]</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="not-included dashed" style="flex: 1 1 0; min-width: 280px">
+            <div class="not-included-head">
+              <span class="sq"></span>
+              <span>O que [plataforma/plano] não permite</span>
+            </div>
+            <ul>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[item da limitação]</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[item da limitação]</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[item da limitação]</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[item da limitação]</span
+                >
+              </li>
+              <li>
+                <span class="dash">—</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: var(--fg-2);
+                  "
+                  >[item da limitação]</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mono-value" data-reveal data-reveal-delay="0.15" style="margin: 16px 0 0">
+          [Caminho de evolução, ex.: outro plano ou fase futura. Veja em Próximos passos]
+        </p>
+        <!-- FIM DO BLOCO DE LIMITAÇÕES (OPCIONAL) -->
+
+        <!-- "Não incluso": usar de 3 a 5 itens. "O que eu preciso de você":
+         usar 5 itens + manter fixo o último ("Feedback nos prazos
+         combinados"), sem colchetes. -->
+        <div
+          class="scope-columns"
+          style="display: flex; gap: 24px; align-items: stretch; flex-wrap: wrap; margin-top: 32px"
         >
           <div class="not-included dashed" style="flex: 1 1 0; min-width: 280px" data-reveal>
             <div class="not-included-head">
@@ -1836,10 +2246,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>[O que você precisa fornecer 1]</strong> — [descrição do item]
-                  <em style="font-style: italic; color: var(--fg-3)"
-                    >(apenas na Opção 1)</em
-                  ></span
+                  ><strong>[O que o cliente precisa fornecer]</strong> — [descrição]</span
                 >
               </li>
               <li>
@@ -1851,10 +2258,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>[O que você precisa fornecer 2]</strong> — [descrição do item]
-                  <em style="font-style: italic; color: var(--fg-3)"
-                    >(apenas na Opção 2)</em
-                  ></span
+                  ><strong>[O que o cliente precisa fornecer]</strong> — [descrição]</span
                 >
               </li>
               <li>
@@ -1866,7 +2270,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>[O que você precisa fornecer 3]</strong> — [descrição do item]</span
+                  ><strong>[O que o cliente precisa fornecer]</strong> — [descrição]</span
                 >
               </li>
               <li>
@@ -1878,7 +2282,19 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>[O que você precisa fornecer 4]</strong> — [descrição do item]</span
+                  ><strong>[O que o cliente precisa fornecer]</strong> — [descrição]</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    color: var(--ink-90);
+                  "
+                  ><strong>[O que o cliente precisa fornecer]</strong> — [descrição]</span
                 >
               </li>
               <li>
@@ -1902,6 +2318,8 @@
 
     <!-- ============================================================
      SEÇÃO 5 — CRONOGRAMA
+     Manter 5 etapas e a linha de apoio fixa no final ("O prazo depende
+     da agilidade das aprovações e do envio dos materiais.").
      ============================================================ -->
     <section class="timeline-section" id="cronograma">
       <div class="wrap">
@@ -1911,7 +2329,7 @@
           <h2 class="h2">Cronograma estimado</h2>
           <p class="right">
             Prazo total estimado:
-            <span>[prazo total estimado]</span> a partir do kick-off
+            <span>[prazo total]</span> a partir do kick-off
           </p>
         </div>
 
@@ -1922,7 +2340,7 @@
               <h3 class="h3"><span>[Etapa 01: título]</span></h3>
               <p>
                 <span
-                  >[descrição da etapa]</span
+                  >[descrição]</span
                 >
               </p>
             </div>
@@ -1947,7 +2365,7 @@
               <h3 class="h3"><span>[Etapa 02: título]</span></h3>
               <p>
                 <span
-                  >[descrição da etapa]</span
+                  >[descrição]</span
                 >
               </p>
             </div>
@@ -1972,7 +2390,7 @@
               <h3 class="h3"><span>[Etapa 03: título]</span></h3>
               <p>
                 <span
-                  >[descrição da etapa]</span
+                  >[descrição]</span
                 >
               </p>
             </div>
@@ -1997,7 +2415,7 @@
               <h3 class="h3"><span>[Etapa 04: título]</span></h3>
               <p>
                 <span
-                  >[descrição da etapa]</span
+                  >[descrição]</span
                 >
               </p>
             </div>
@@ -2022,7 +2440,7 @@
               <h3 class="h3"><span>[Etapa 05: título]</span></h3>
               <p>
                 <span
-                  >[descrição da etapa]</span
+                  >[descrição]</span
                 >
               </p>
             </div>
@@ -2041,11 +2459,19 @@
             </div>
           </div>
         </div>
+
+        <p class="mono-value" data-reveal data-reveal-delay="0.4" style="margin: 24px 0 0">
+          O prazo depende da agilidade das aprovações e do envio dos materiais.
+        </p>
       </div>
     </section>
 
     <!-- ============================================================
-     SEÇÃO 6 — INVESTIMENTO (toggle interativo)
+     SEÇÃO 6 — INVESTIMENTO
+     Pacote único, nunca preço por item/etapa. Usar de 6 a 8 linhas em
+     .pricing-rows, só com o texto do item incluso, sem coluna de
+     preço. 40/30/30 é o padrão recomendado para primeiro projeto ou
+     cliente desconfiado, mas pode ser ajustado.
      ============================================================ -->
     <section class="invest-section" id="investimento">
       <div class="wrap">
@@ -2054,36 +2480,15 @@
         <div class="invest-head" data-reveal data-reveal-delay="0.1">
           <div>
             <h2 class="h2">Investimento<br />transparente</h2>
-            <p>Selecione o formato que melhor atende à necessidade atual do seu negócio.</p>
-          </div>
-          <div class="option-toggle" role="tablist" aria-label="Opções de investimento">
-            <button
-              type="button"
-              class="is-active"
-              role="tab"
-              aria-selected="true"
-              aria-controls="pane-option-1"
-              data-option="1"
-            >
-              <span>[Nome da Opção 1]</span>
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-controls="pane-option-2"
-              data-option="2"
-            >
-              <span>[Nome da Opção 2]</span>
-            </button>
+            <p>Um pacote único, com tudo o que o projeto precisa para sair do papel.</p>
           </div>
         </div>
 
-        <!-- PAINEL — OPÇÃO 1 -->
-        <div class="pricing-panel" id="pane-option-1" role="tabpanel">
+        <!-- PAINEL — PACOTE ÚNICO -->
+        <div class="pricing-panel" id="pane-option-1">
           <div class="pricing-pane">
             <div class="pricing-head">
-              <span class="kicker">Configuração selecionada</span>
+              <span class="kicker">Pacote único</span>
               <span
                 style="
                   font-family: var(--font-display);
@@ -2092,11 +2497,11 @@
                   display: block;
                   margin-bottom: 6px;
                 "
-                >[Nome da Opção 1]</span
+                >[Nome do pacote]</span
               >
               <p class="desc">
                 <span
-                  >[descrição da opção]</span
+                  >[Descrição do pacote em 1 frase]</span
                 >
               </p>
             </div>
@@ -2110,20 +2515,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
+                    >[Item incluso: descrição curta]</span
                   ></span
                 >
               </div>
@@ -2136,20 +2528,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
+                    >[Item incluso: descrição curta]</span
                   ></span
                 >
               </div>
@@ -2162,20 +2541,7 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
+                    >[Item incluso: descrição curta]</span
                   ></span
                 >
               </div>
@@ -2188,20 +2554,59 @@
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
                     "
-                    >[Suporte técnico]</span
+                    >[Item incluso: descrição curta]</span
                   ></span
                 >
-                <span class="price"
+              </div>
+              <div class="pricing-row">
+                <span class="item"
                   ><span
                     style="
                       font-family: var(--font-mono);
-                      font-weight: 700;
                       font-size: 12px;
                       letter-spacing: 0.6px;
                       text-transform: uppercase;
-                      white-space: nowrap;
                     "
-                    >[X dias inclusos]</span
+                    >[Item incluso: descrição curta]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item incluso: descrição curta]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item incluso: descrição curta]</span
+                  ></span
+                >
+              </div>
+              <div class="pricing-row">
+                <span class="item"
+                  ><span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 12px;
+                      letter-spacing: 0.6px;
+                      text-transform: uppercase;
+                    "
+                    >[Item incluso: descrição curta]</span
                   ></span
                 >
               </div>
@@ -2216,13 +2621,11 @@
                       font-size: 14px;
                       color: rgba(243, 243, 243, 0.7);
                     "
-                    >50% no início + 50% na entrega · Pix ou cartão parcelado</span
+                    >[X]% no início · [Y]% na [marco de aprovação] · [Z]% na entrega</span
                   >
                 </p>
               </div>
-              <span class="price"
-                ><span class="edit" style="background: transparent">[R$ valor total]</span></span
-              >
+              <span class="price">[R$ valor total]</span>
             </div>
           </div>
           <div class="pricing-conditions">
@@ -2230,193 +2633,10 @@
               ><span class="material-symbols-outlined">payments</span></span
             >
             <p class="note">
-              <strong>Condições de pagamento:</strong> 50% no início do projeto, 50% na entrega
-              final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de
-              parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
-            </p>
-          </div>
-        </div>
-
-        <!-- PAINEL — OPÇÃO 2 -->
-        <div class="pricing-panel" id="pane-option-2" role="tabpanel" hidden>
-          <div class="pricing-pane">
-            <div class="pricing-head">
-              <span class="kicker">Configuração selecionada</span>
-              <span
-                style="
-                  font-family: var(--font-display);
-                  font-weight: 700;
-                  font-size: 30px;
-                  display: block;
-                  margin-bottom: 6px;
-                "
-                >[Nome da Opção 2]</span
-              >
-              <p class="desc">
-                <span
-                  >[descrição da opção]</span
-                >
-              </p>
-            </div>
-            <div class="pricing-rows">
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                    "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                    "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                    "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                    "
-                    >[Item]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >R$ [valor]</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                    "
-                    >[Suporte técnico]</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono);
-                      font-weight: 700;
-                      font-size: 12px;
-                      letter-spacing: 0.6px;
-                      text-transform: uppercase;
-                      white-space: nowrap;
-                    "
-                    >[X dias inclusos]</span
-                  ></span
-                >
-              </div>
-            </div>
-            <div class="pricing-total">
-              <div>
-                <p class="label">Investimento Total</p>
-                <p class="sub" style="margin: 0">
-                  <span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 14px;
-                      color: rgba(243, 243, 243, 0.7);
-                    "
-                    >50% no início + 50% na entrega · Pix ou cartão parcelado</span
-                  >
-                </p>
-              </div>
-              <span class="price"
-                ><span class="edit" style="background: transparent">R$ [valor total]</span></span
-              >
-            </div>
-          </div>
-          <div class="pricing-conditions">
-            <span class="icon" aria-hidden="true"
-              ><span class="material-symbols-outlined">payments</span></span
-            >
-            <p class="note">
-              <strong>Condições de pagamento:</strong> 50% no início do projeto, 50% na entrega
-              final. Pagamento via Pix (sem taxas) ou link de pagamento Mercado Pago, com opção de
-              parcelamento em até 12x (sujeito a taxas e acréscimos da operadora do cartão).
+              <strong>Condições de pagamento:</strong> [X]% ao iniciar ([R$ parcela 1]), [Y]%
+              quando [marco de aprovação] ([R$ parcela 2]) e [Z]% na [entrega final] ([R$ parcela
+              3]). [Custos que o cliente paga direto a terceiros, ex.: assinatura da plataforma,
+              domínio, tema pago.]
             </p>
           </div>
         </div>
@@ -2424,7 +2644,13 @@
     </section>
 
     <!-- ============================================================
-     SEÇÃO 7 — PRÓXIMAS OPORTUNIDADES
+     SEÇÃO 7 — PRÓXIMOS PASSOS
+     O texto de introdução é fixo. O card .opp-card.featured é OPCIONAL:
+     use para a evolução mais provável do projeto (ex.: upgrade de
+     plano, segunda fase); se não houver, apague o card inteiro. Os
+     cards 03 (Conteúdo) e 04 (Manutenção) têm texto padrão fixo, sem
+     colchetes — só ajuste se o serviço não fizer sentido para o
+     projeto.
      ============================================================ -->
     <section class="opportunities">
       <div class="wrap">
@@ -2441,35 +2667,70 @@
           sentido.
         </p>
 
-        <div class="opp-grid">
-          <div class="opp-card" data-reveal data-reveal-delay="0.15">
-            <p class="eyebrow-pink">01 · Expansão</p>
-            <h3 class="h3"><span>[Ideia de serviço futuro 1]</span></h3>
-            <p>
-              <span
-                >[por que isso faria sentido pra esse cliente]</span
-              >
-            </p>
+        <!-- CARD EM DESTAQUE — OPCIONAL: apagar se não houver uma evolução
+         clara para o projeto (ex.: upgrade de plano, segunda fase). -->
+        <div class="opp-card featured" data-reveal data-reveal-delay="0.15">
+          <p class="eyebrow-pink">01 · Evolução</p>
+          <h3 class="h3"><span>[Título do próximo passo principal]</span></h3>
+          <p>
+            <span
+              >Sem pressão: só recomendo esse passo se o projeto mostrar que precisa.</span
+            >
+          </p>
+          <div class="opp-featured-grid">
+            <div>
+              <h4>Quando faz sentido</h4>
+              <p>
+                [Descrever o cenário que indica que o cliente precisa desse próximo passo]
+              </p>
+            </div>
+            <div>
+              <h4>Como funciona</h4>
+              <p>
+                [Descrever como esse próximo passo seria executado na prática]
+              </p>
+            </div>
+            <div>
+              <h4>O que muda</h4>
+              <p>
+                [Descrever o que muda em custo, responsabilidade ou processo para o cliente]
+              </p>
+            </div>
           </div>
+        </div>
+        <!-- FIM DO CARD EM DESTAQUE (OPCIONAL) -->
 
+        <div class="opp-grid three">
           <div class="opp-card" data-reveal data-reveal-delay="0.2">
-            <p class="eyebrow-pink">02 · Conteúdo</p>
-            <h3 class="h3"><span>[Ideia de serviço futuro 2]</span></h3>
+            <p class="eyebrow-pink">02 · Expansão</p>
+            <h3 class="h3"><span>[Ideia de serviço futuro]</span></h3>
             <p>
               <span
-                >[por que isso faria sentido pra esse cliente]</span
+                >[Por que faz sentido para esse cliente]</span
               >
             </p>
           </div>
 
           <div class="opp-card" data-reveal data-reveal-delay="0.25">
-            <p class="eyebrow-pink">03 · Otimização</p>
+            <p class="eyebrow-pink">03 · Conteúdo</p>
+            <h3 class="h3"><span>Banners e criativos</span></h3>
+            <p>
+              <span
+                >Peças para o site e para anúncios, feitas por mim seguindo a direção visual
+                definida no projeto. Deixa a marca coerente em todos os canais.</span
+              >
+            </p>
+          </div>
+
+          <div class="opp-card" data-reveal data-reveal-delay="0.3">
+            <p class="eyebrow-pink">04 · Manutenção</p>
             <h3 class="h3">
-              <span>[Ideia de serviço futuro 3]</span>
+              <span>Manutenção e atualizações</span>
             </h3>
             <p>
               <span
-                >[por que isso faria sentido pra esse cliente]</span
+                >Depois que o projeto estiver no ar, eu cuido das atualizações e melhorias, em um
+                plano mensal ou por demanda, sem você precisar lidar com a parte técnica.</span
               >
             </p>
           </div>
@@ -2522,67 +2783,9 @@
 
     <script>
       (function () {
-        var buttons = document.querySelectorAll('.option-toggle button');
-        var panes = {
-          1: document.getElementById('pane-option-1'),
-          2: document.getElementById('pane-option-2'),
-        };
-        var FADE_MS = 160; /* metade de --dur-2 (320ms): sai, troca, entra */
-
-        var navCta = document.querySelector('.nav-cta');
-        var ctaBtn = document.querySelector('.cta .btn');
-
-        function montarLinkAprovar(opcao) {
-          var textos = {
-            '1': 'Oi, Paola! Vi a proposta do projeto [Nome do Projeto] e quero seguir com a [Nome da Opção 1] (R$ [valor]). Pode me confirmar os próximos passos?',
-            '2': 'Oi, Paola! Vi a proposta do projeto [Nome do Projeto] e quero seguir com a [Nome da Opção 2] (R$ [valor]). Pode me confirmar os próximos passos?',
-          };
-          var texto = encodeURIComponent(textos[opcao] || textos['1']);
-          return 'https://wa.me/5511930499095?text=' + texto;
-        }
-
-        function atualizarLinksAprovar(opcao) {
-          var link = montarLinkAprovar(opcao);
-          if (navCta) navCta.setAttribute('href', link);
-          if (ctaBtn) ctaBtn.setAttribute('href', link);
-        }
-
-        atualizarLinksAprovar('1');
-
-        buttons.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var option = btn.getAttribute('data-option');
-            if (btn.classList.contains('is-active')) return;
-
-            buttons.forEach(function (b) {
-              var active = b === btn;
-              b.classList.toggle('is-active', active);
-              b.setAttribute('aria-selected', active ? 'true' : 'false');
-            });
-
-            atualizarLinksAprovar(option);
-
-            var current = Object.keys(panes)
-              .map(function (k) {
-                return panes[k];
-              })
-              .find(function (p) {
-                return !p.hidden;
-              });
-            if (current) current.style.opacity = '0';
-
-            window.setTimeout(function () {
-              Object.keys(panes).forEach(function (key) {
-                panes[key].hidden = key !== option;
-              });
-              var next = panes[option];
-              next.style.opacity = '0';
-              requestAnimationFrame(function () {
-                next.style.opacity = '1';
-              });
-            }, FADE_MS);
-          });
-        });
+        var texto = "Oi, Paola! Vi a proposta do projeto [Nome do Projeto] e quero seguir com o [Nome do Pacote] ([R$ valor total]). Pode me confirmar os próximos passos?";
+        var link = 'https://wa.me/5511930499095?text=' + encodeURIComponent(texto);
+        document.querySelectorAll('.nav-cta, .cta .btn').forEach(function (el) { el.setAttribute('href', link); });
       })();
 
       /* Scroll reveal — mesmo comportamento do portfólio (fade + translateY via
