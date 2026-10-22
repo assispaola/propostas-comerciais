@@ -837,49 +837,6 @@
         color: var(--ink-80);
       }
 
-      .option-toggle {
-        display: inline-flex;
-        gap: 8px;
-        background: transparent;
-        border-radius: 9999px;
-        padding: 4px;
-        margin-bottom: 32px;
-        max-width: 100%;
-      }
-      .option-toggle button {
-        font-family: var(--font-mono);
-        font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 0;
-        text-transform: none;
-        padding: 5px 24px;
-        border: 1px solid var(--border);
-        background: var(--bg-2);
-        color: var(--fg);
-        border-radius: 9999px;
-        cursor: pointer;
-        flex: 1 1 0;
-        min-height: 40px;
-        min-width: 150px;
-        white-space: normal;
-        transition:
-          background var(--dur-1) var(--ease),
-          color var(--dur-1) var(--ease),
-          border-color var(--dur-1) var(--ease);
-      }
-      .option-toggle button:hover:not(.is-active) {
-        background: var(--accent-soft);
-      }
-      .option-toggle button.is-active {
-        background: var(--accent);
-        color: var(--accent-ink);
-        border-color: var(--accent);
-      }
-      .option-toggle button:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 2px;
-      }
-
       .pricing-panel {
         opacity: 1;
         transition: opacity var(--dur-2) var(--ease);
@@ -1501,17 +1458,6 @@
           justify-content: flex-start;
         }
 
-        .option-toggle {
-          display: flex;
-          width: 100%;
-        }
-        .option-toggle button {
-          font-size: 10px;
-          padding: 12px 10px;
-          min-width: 0;
-          white-space: normal;
-          text-align: center;
-        }
         .pricing-row {
           flex-direction: column;
           align-items: flex-start;
@@ -1719,13 +1665,13 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.15">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Landing Page Shopify Personnalisée</span>
+                <span>Landing Page Shopify en 7 sections</span>
               </h3>
               <span class="tag"><span>Shopify · Liquid · Klaviyo</span></span>
             </div>
             <p>
               <span
-                >Page de capture d'email construite avec un template Liquid exclusif (pas un template de boutique standard), suivant l'identité visuelle FELVÉA™ (teal #2A9D8F, or #C9A84C, crème #F9F5EE, typographies Playfair Display + DM Sans). Formulaire intégré nativement à Klaviyo.</span
+                >Hero, accroche, grille des 9 produits, réassurance, capture d'email (ebook offert), à propos de la marque, CTA final et footer. Template Liquid exclusif (en dehors du thème standard de la boutique), fidèle à l'identité FELVÉA™ : Teal #2A9D8F, Or #C9A84C, Ink #0D1F1C, Cream #F9F5EE, typographies Playfair Display + DM Sans. Formulaire connecté nativement à Klaviyo, 100% responsive.</span
               >
             </p>
           </div>
@@ -1733,13 +1679,13 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.2">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Livraison Automatique de l'Ebook</span>
+                <span>Flux 1 — Pré-lancement (8 emails / 75 jours)</span>
               </h3>
-              <span class="tag"><span>Klaviyo · Automatisation</span></span>
+              <span class="tag"><span>HTML responsive · Klaviyo</span></span>
             </div>
             <p>
               <span
-                >Configuration pour que le lead reçoive l'ebook automatiquement dès son inscription sur la landing page, sans intervention manuelle.</span
+                >Bienvenue + ebook, histoire de la marque, présentation des 9 produits, conseils d'experts, mise à jour de la production, compte à rebours et email de lancement. Mise en forme HTML responsive de chaque email, à partir des textes déjà rédigés par le client.</span
               >
             </p>
           </div>
@@ -1747,13 +1693,13 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.25">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Design de la Séquence d'Emails (4 pièces)</span>
+                <span>Flux 2 — Nurture post-inscription (4 emails)</span>
               </h3>
-              <span class="tag"><span>HTML · Email</span></span>
+              <span class="tag"><span>HTML responsive · Klaviyo</span></span>
             </div>
             <p>
               <span
-                >Création visuelle complète des 4 emails en HTML (bienvenue + livraison de l'ebook, annonce du lancement, preuve sociale avec avis clients, urgence/offre limitée), dans la même identité visuelle que l'ebook déjà livré.</span
+                >Bienvenue + ebook, découverte produit, preuve sociale et urgence / offre finale. Même identité visuelle et même niveau de finition que le Flux 1, à partir du contenu fourni par le client. Au total, 1 des 12 emails est offert, en remplacement des cadeaux initialement prévus.</span
               >
             </p>
           </div>
@@ -1761,46 +1707,31 @@
           <div class="scope-item" data-reveal data-reveal-delay="0.3">
             <div class="scope-item-head">
               <h3 class="h3">
-                <span>Configuration du Flux dans Klaviyo</span>
+                <span>Configuration technique dans Klaviyo</span>
               </h3>
-              <span class="tag"><span>Klaviyo · Exclusif Pack Complet</span></span>
+              <span class="tag"><span>Klaviyo · Automatisation</span></span>
             </div>
             <p>
               <span
-                >Mise en place du flow automatisé dans le compte Klaviyo du client : déclencheurs, ordre d'envoi, tests et activation.</span
+                >Déclencheurs, délais entre les envois, tags d'exclusion croisée entre les deux flux (un contact qui achète dans le Flux 1 est automatiquement exclu du Flux 2 Nurture) et tests A/B sur les objets des emails 3 et 8.</span
               >
             </p>
           </div>
 
-          <div class="scope-item is-gift" data-reveal data-reveal-delay="0.35">
+          <div class="scope-item" data-reveal data-reveal-delay="0.35">
             <div class="scope-item-head">
-              <span class="gift-badge"><span class="material-symbols-outlined" aria-hidden="true">redeem</span>Cadeau</span>
               <h3 class="h3">
-                <span>Couverture personnalisée pour Reels</span>
+                <span>Tests de compatibilité et de délivrabilité</span>
               </h3>
-              <span class="tag"><span>Cadeau · Toutes les options</span></span>
+              <span class="tag"><span>Gmail · Outlook · Apple Mail</span></span>
             </div>
             <p>
               <span
-                >Inclus en cadeau dans les deux options.</span
+                >Vérification de l'affichage et de la délivrabilité des emails sur Gmail, Outlook, Apple Mail et les autres clients de messagerie courants, avant l'activation des flux.</span
               >
             </p>
           </div>
 
-          <div class="scope-item is-gift" data-reveal data-reveal-delay="0.4">
-            <div class="scope-item-head">
-              <span class="gift-badge"><span class="material-symbols-outlined" aria-hidden="true">redeem</span>Cadeau</span>
-              <h3 class="h3">
-                <span>Linktree personnalisé en HTML</span>
-              </h3>
-              <span class="tag"><span>HTML · Exclusif Pack Complet</span></span>
-            </div>
-            <p>
-              <span
-                >Cadeau exclusif du Pack Complet, avec jusqu'à 5 liens et l'identité visuelle FELVÉA™.</span
-              >
-            </p>
-          </div>
         </div>
 
         <div
@@ -1836,7 +1767,7 @@
                     text-transform: uppercase;
                     color: var(--fg-2);
                   "
-                  >Illustrations ou éléments graphiques au-delà de l'identité visuelle déjà définie</span
+                  >Rédaction des textes des emails (fournis par le client) et illustrations ou éléments graphiques au-delà de l'identité visuelle déjà définie</span
                 >
               </li>
               <li>
@@ -1849,7 +1780,7 @@
                     text-transform: uppercase;
                     color: var(--fg-2);
                   "
-                  >Gestion continue des campagnes après l'activation du flux</span
+                  >Gestion continue des campagnes après l'activation des flux</span
                 >
               </li>
             </ul>
@@ -1894,7 +1825,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>Design des 4 emails en HTML</strong></span
+                  ><strong>Design et code HTML de 12 emails</strong></span
                 >
               </li>
               <li>
@@ -1906,10 +1837,7 @@
                     letter-spacing: 0.6px;
                     color: var(--ink-90);
                   "
-                  ><strong>Configuration du flux automatisé</strong>
-                  <em style="font-style: italic; color: var(--fg-3)"
-                    >(uniquement dans le Pack Complet)</em
-                  ></span
+                  ><strong>Configuration des 2 flux automatisés dans Klaviyo</strong></span
                 >
               </li>
             </ul>
@@ -1929,7 +1857,7 @@
           <h2 class="h2">Calendrier estimé</h2>
           <p class="right">
             Délai total estimé :
-            <span>2 à 3 semaines</span> à partir de l'approbation de la proposition
+            <span>3 à 4 semaines</span> à partir de l'approbation de la proposition
           </p>
         </div>
 
@@ -1940,7 +1868,7 @@
               <h3 class="h3"><span>Briefing et alignement du périmètre</span></h3>
               <p>
                 <span
-                  >Confirmation finale du contenu, du ton visuel et des exigences techniques.</span
+                  >Confirmation finale du contenu fourni, du ton visuel et des exigences techniques.</span
                 >
               </p>
             </div>
@@ -1962,10 +1890,10 @@
           <div class="step" data-reveal data-reveal-delay="0.2">
             <span class="step-num">02</span>
             <div class="step-body">
-              <h3 class="h3"><span>Structure et wireframe de la landing page</span></h3>
+              <h3 class="h3"><span>Design de la landing page</span></h3>
               <p>
                 <span
-                  >Organisation du parcours de capture et hiérarchie du contenu.</span
+                  >Structure des 7 sections et design visuel dans l'identité FELVÉA™.</span
                 >
               </p>
             </div>
@@ -1979,7 +1907,7 @@
                   letter-spacing: 0.6px;
                   text-transform: uppercase;
                 "
-                >3 jours</span
+                >4 jours</span
               >
             </div>
           </div>
@@ -1987,10 +1915,10 @@
           <div class="step" data-reveal data-reveal-delay="0.25">
             <span class="step-num">03</span>
             <div class="step-body">
-              <h3 class="h3"><span>Design visuel</span></h3>
+              <h3 class="h3"><span>Approbation du design, puis développement de la landing page</span></h3>
               <p>
                 <span
-                  >Landing page et les 4 emails dans l'identité FELVÉA™.</span
+                  >Le client valide le design avant tout code. Ensuite, implémentation sur Shopify (Liquid) et intégration Klaviyo.</span
                 >
               </p>
             </div>
@@ -2004,7 +1932,7 @@
                   letter-spacing: 0.6px;
                   text-transform: uppercase;
                 "
-                >5 jours</span
+                >2 jours + 5 jours</span
               >
             </div>
           </div>
@@ -2012,10 +1940,10 @@
           <div class="step" data-reveal data-reveal-delay="0.3">
             <span class="step-num">04</span>
             <div class="step-body">
-              <h3 class="h3"><span>Développement et codage</span></h3>
+              <h3 class="h3"><span>Design des 12 emails</span></h3>
               <p>
                 <span
-                  >Implémentation de la landing page sur Shopify (Liquid) et intégration Klaviyo.</span
+                  >Création visuelle des emails des deux flux, à partir des textes fournis par le client.</span
                 >
               </p>
             </div>
@@ -2037,10 +1965,10 @@
           <div class="step" data-reveal data-reveal-delay="0.35">
             <span class="step-num">05</span>
             <div class="step-body">
-              <h3 class="h3"><span>Configuration, tests et livraison finale</span></h3>
+              <h3 class="h3"><span>Approbation, codage HTML et configuration Klaviyo</span></h3>
               <p>
                 <span
-                  >(Pack Complet) Mise en place du flow dans Klaviyo, tests d'envoi, activation et livraison.</span
+                  >Après validation du design par le client : codage HTML responsive, mise en place des deux flux dans Klaviyo (déclencheurs, délais, exclusion croisée, tests A/B), tests de compatibilité et de délivrabilité, puis livraison finale.</span
                 >
               </p>
             </div>
@@ -2054,7 +1982,7 @@
                   letter-spacing: 0.6px;
                   text-transform: uppercase;
                 "
-                >3 jours</span
+                >2 jours + 7 jours</span
               >
             </div>
           </div>
@@ -2063,7 +1991,7 @@
     </section>
 
     <!-- ============================================================
-     SEÇÃO 6 — INVESTIMENTO (toggle interativo)
+     SEÇÃO 6 — INVESTIMENTO (pacote único)
      ============================================================ -->
     <section class="invest-section" id="investimento">
       <div class="wrap">
@@ -2072,36 +2000,14 @@
         <div class="invest-head" data-reveal data-reveal-delay="0.1">
           <div>
             <h2 class="h2">Investissement<br />transparent</h2>
-            <p>Sélectionnez le format qui correspond le mieux aux besoins actuels de votre entreprise.</p>
-          </div>
-          <div class="option-toggle" role="tablist" aria-label="Options d'investissement">
-            <button
-              type="button"
-              class="is-active"
-              role="tab"
-              aria-selected="true"
-              aria-controls="pane-option-1"
-              data-option="1"
-            >
-              <span>Essentielle</span>
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-controls="pane-option-2"
-              data-option="2"
-            >
-              <span>Complète</span>
-            </button>
+            <p>Le périmètre final, négocié et approuvé avec FELVÉA™.</p>
           </div>
         </div>
 
-        <!-- PANNEAU — PACK ESSENTIELLE -->
-        <div class="pricing-panel" id="pane-option-1" role="tabpanel">
+        <div class="pricing-panel" id="pane-investissement">
           <div class="pricing-pane">
             <div class="pricing-head">
-              <span class="kicker">Configuration sélectionnée</span>
+              <span class="kicker">Périmètre approuvé</span>
               <span
                 style="
                   font-family: var(--font-display);
@@ -2110,11 +2016,11 @@
                   display: block;
                   margin-bottom: 6px;
                 "
-                >Essentielle</span
+                >Landing Page &amp; Séquence d'Emails</span
               >
               <p class="desc">
                 <span
-                  >Landing page de capture et design de la séquence d'emails, prêts à configurer et activer de votre côté.</span
+                  >Landing page Shopify sur mesure et séquence complète de 12 emails dans Klaviyo, dont 1 offert en remplacement des cadeaux initialement prévus.</span
                 >
               </p>
             </div>
@@ -2143,7 +2049,7 @@
                     style="
                       font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
                     "
-                    >Design des 4 emails de la séquence (HTML prêt à l'emploi)</span
+                    >Séquence de 12 emails, dont 1 <span class="gift-badge"><span class="material-symbols-outlined" aria-hidden="true">redeem</span>Offert</span> (design + code HTML + intégration Klaviyo, sur la base du contenu fourni)</span
                   ></span
                 >
                 <span class="price"
@@ -2151,25 +2057,7 @@
                     style="
                       font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
                     "
-                    >180 $</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row is-gift">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
-                    "
-                    ><span class="gift-badge"><span class="material-symbols-outlined" aria-hidden="true">redeem</span>Cadeau</span> couverture personnalisée pour Reels</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
-                    "
-                    >Inclus</span
+                    >540 $</span
                   ></span
                 >
               </div>
@@ -2189,149 +2077,7 @@
                 </p>
               </div>
               <span class="price"
-                ><span class="edit" style="background: transparent">730 $</span></span
-              >
-            </div>
-          </div>
-          <div class="pricing-conditions">
-            <span class="icon" aria-hidden="true"
-              ><span class="material-symbols-outlined">payments</span></span
-            >
-            <p class="note">
-              <strong>Conditions de paiement :</strong> 50% au début du projet, 50% à la livraison finale. Montants en dollars américains (US$), payés via PayPal.
-            </p>
-          </div>
-        </div>
-
-        <!-- PANNEAU — PACK COMPLÈTE -->
-        <div class="pricing-panel" id="pane-option-2" role="tabpanel" hidden>
-          <div class="pricing-pane">
-            <div class="pricing-head">
-              <span class="kicker">Configuration sélectionnée</span>
-              <span
-                style="
-                  font-family: var(--font-display);
-                  font-weight: 700;
-                  font-size: 30px;
-                  display: block;
-                  margin-bottom: 6px;
-                "
-                >Complète</span
-              >
-              <p class="desc">
-                <span
-                  >Tout du Pack Essentielle, avec le flux d'emails configuré et activé par mes soins directement dans votre Klaviyo.</span
-                >
-              </p>
-            </div>
-            <div class="pricing-rows">
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
-                    "
-                    >Landing Page Shopify personnalisée (design + développement)</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
-                    "
-                    >550 $</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
-                    "
-                    >Design des 4 emails de la séquence (HTML prêt à l'emploi)</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
-                    "
-                    >180 $</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
-                    "
-                    >Configuration complète du flux automatisé dans Klaviyo</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
-                    "
-                    >220 $</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row is-gift">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
-                    "
-                    ><span class="gift-badge"><span class="material-symbols-outlined" aria-hidden="true">redeem</span>Cadeau</span> couverture personnalisée pour Reels</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
-                    "
-                    >Inclus</span
-                  ></span
-                >
-              </div>
-              <div class="pricing-row is-gift">
-                <span class="item"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase;
-                    "
-                    ><span class="gift-badge"><span class="material-symbols-outlined" aria-hidden="true">redeem</span>Cadeau</span> Linktree personnalisé en HTML (jusqu'à 5 liens, identité visuelle FELVÉA™)</span
-                  ></span
-                >
-                <span class="price"
-                  ><span
-                    style="
-                      font-family: var(--font-mono); font-weight: 700; font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap;
-                    "
-                    >Inclus</span
-                  ></span
-                >
-              </div>
-            </div>
-            <div class="pricing-total">
-              <div>
-                <p class="label">Investissement Total</p>
-                <p class="sub" style="margin: 0">
-                  <span
-                    style="
-                      font-family: var(--font-mono);
-                      font-size: 14px;
-                      color: rgba(243, 243, 243, 0.7);
-                    "
-                    >50% au début + 50% à la livraison · via PayPal</span
-                  >
-                </p>
-              </div>
-              <span class="price"
-                ><span class="edit" style="background: transparent">950 $</span></span
+                ><span class="edit" style="background: transparent">1 090 $</span></span
               >
             </div>
           </div>
@@ -2356,7 +2102,7 @@
             margin: 24px 0 0;
           "
         >
-          Cette proposition présente les détails et options du projet. La formalisation officielle et le paiement seront effectués directement via la plateforme Behance, selon le même processus déjà utilisé pour le projet de l'ebook (50% au début / 50% à la livraison, via PayPal).
+          La formalisation officielle et le paiement seront effectués directement via la plateforme Behance, selon le même processus déjà utilisé pour le projet de l'ebook (50% au début / 50% à la livraison, via PayPal).
         </p>
       </div>
     </section>
@@ -2457,67 +2203,14 @@
 
     <script>
       (function () {
-        var buttons = document.querySelectorAll('.option-toggle button');
-        var panes = {
-          1: document.getElementById('pane-option-1'),
-          2: document.getElementById('pane-option-2'),
-        };
-        var FADE_MS = 160; /* metade de --dur-2 (320ms): sai, troca, entra */
-
         var navCta = document.querySelector('.nav-cta');
         var ctaBtn = document.querySelector('.cta .btn');
-
-        function montarLinkAprovar(opcao) {
-          var textos = {
-            '1': 'Bonjour Paola ! J\'ai vu la proposition du projet Landing Page & Email Marketing et je souhaite continuer avec le Pack Essentielle (730 $). Pouvez-vous me confirmer les prochaines étapes ?',
-            '2': 'Bonjour Paola ! J\'ai vu la proposition du projet Landing Page & Email Marketing et je souhaite continuer avec le Pack Complète (950 $). Pouvez-vous me confirmer les prochaines étapes ?',
-          };
-          var texto = encodeURIComponent(textos[opcao] || textos['1']);
-          return 'https://wa.me/5511930499095?text=' + texto;
-        }
-
-        function atualizarLinksAprovar(opcao) {
-          var link = montarLinkAprovar(opcao);
-          if (navCta) navCta.setAttribute('href', link);
-          if (ctaBtn) ctaBtn.setAttribute('href', link);
-        }
-
-        atualizarLinksAprovar('1');
-
-        buttons.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var option = btn.getAttribute('data-option');
-            if (btn.classList.contains('is-active')) return;
-
-            buttons.forEach(function (b) {
-              var active = b === btn;
-              b.classList.toggle('is-active', active);
-              b.setAttribute('aria-selected', active ? 'true' : 'false');
-            });
-
-            atualizarLinksAprovar(option);
-
-            var current = Object.keys(panes)
-              .map(function (k) {
-                return panes[k];
-              })
-              .find(function (p) {
-                return !p.hidden;
-              });
-            if (current) current.style.opacity = '0';
-
-            window.setTimeout(function () {
-              Object.keys(panes).forEach(function (key) {
-                panes[key].hidden = key !== option;
-              });
-              var next = panes[option];
-              next.style.opacity = '0';
-              requestAnimationFrame(function () {
-                next.style.opacity = '1';
-              });
-            }, FADE_MS);
-          });
-        });
+        var texto = encodeURIComponent(
+          "Bonjour Paola ! J'ai vu la proposition finale du projet Landing Page & Email Marketing (1 090 $) et je souhaite démarrer. Pouvez-vous me confirmer les prochaines étapes ?",
+        );
+        var link = 'https://wa.me/5511930499095?text=' + texto;
+        if (navCta) navCta.setAttribute('href', link);
+        if (ctaBtn) ctaBtn.setAttribute('href', link);
       })();
 
       /* Scroll reveal — mesmo comportamento do portfólio (fade + translateY via
