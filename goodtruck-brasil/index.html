@@ -1872,6 +1872,30 @@
       .phase-card .pricing-row .item strong {
         font-weight: 700;
       }
+
+      .specialty-badge {
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent-2);
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        border-radius: 9999px;
+        padding: 7px 16px;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+      .specialty-badge::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: var(--accent);
+      }
     </style>
   </head>
   <body>
@@ -2591,9 +2615,9 @@
 
         <div class="team-grid">
           <div class="team-card" data-reveal data-reveal-delay="0.15">
-            <p class="eyebrow-accent">Engenheira de Software · Especialista em Front-end e UX/UI</p>
+            <span class="specialty-badge">Especialista em Front-end e UX/UI</span>
             <h3 class="h3">Paola Santos de Assis</h3>
-            <p>Engenheira de Software · 6+ anos em Angular, Java e UX/UI</p>
+            <p>Engenheira de Software · 6+ anos em desenvolvimento Angular, Java</p>
             <ul class="team-meta">
               <li>
                 LinkedIn:
@@ -2605,9 +2629,9 @@
           </div>
 
           <div class="team-card" data-reveal data-reveal-delay="0.2">
-            <p class="eyebrow-accent">Engenheiro de Software · Especialista em Back-end Java</p>
+            <span class="specialty-badge">Especialista em Back-end Java</span>
             <h3 class="h3">Renilson Picinin</h3>
-            <p>Engenheiro de Software · 6+ anos em desenvolvimento Java</p>
+            <p>Engenheiro de Software · 6+ anos em desenvolvimento Angular, Java</p>
             <ul class="team-meta">
               <li>
                 LinkedIn:
