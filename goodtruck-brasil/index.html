@@ -1865,6 +1865,13 @@
         letter-spacing: 0.3px;
         color: var(--fg-3);
       }
+
+      .scope-item p + p {
+        margin-top: 10px;
+      }
+      .phase-card .pricing-row .item strong {
+        font-weight: 700;
+      }
     </style>
   </head>
   <body>
@@ -2128,10 +2135,8 @@
                 <span class="tag">Fase 3</span>
               </div>
             </div>
-            <p>
-              Painéis de indicadores, filtros e visualizações, além de modelagem e estruturação do
-              datalake com ingestão inicial dos dados.
-            </p>
+            <p>Painéis de indicadores, filtros e visualizações.</p>
+            <p>Estruturação de base de dados para centralizar as informações geradas pela própria plataforma (cadastros, acessos, indicadores), com atualização periódica (não em tempo real). Esta fase não inclui integração com sistemas externos da GoodTruck não especificados nesta proposta, nem migração de bases de dados pré-existentes — caso a GoodTruck já possua dados estruturados em outras fontes, a integração dessas fontes será escopada e orçada separadamente após o levantamento técnico.</p>
           </div>
 
           <div class="scope-item" data-reveal data-reveal-delay="0.3">
@@ -2141,9 +2146,10 @@
                 <span class="tag">Fase 4</span>
               </div>
             </div>
+            <p>Integração com serviço de chatbot existente (não desenvolvimento de IA própria), com fluxos de atendimento pré-definidos na fase de planejamento, respondendo a perguntas frequentes e dúvidas estruturadas. Esta fase não inclui integração com WhatsApp ou outros canais de mensageria — essa integração pode ser avaliada como etapa futura, caso haja interesse.</p>
             <p>
-              Integração do chatbot, testes funcionais e de segurança, homologação, publicação,
-              documentação e capacitação da equipe.
+              Testes funcionais e de segurança, homologação, publicação, documentação e capacitação
+              da equipe.
             </p>
           </div>
         </div>
@@ -2219,86 +2225,65 @@
 
         <div class="timeline-head has-intro" data-reveal data-reveal-delay="0.1">
           <h2 class="h2">Metodologia e cronograma</h2>
-          <p class="right">Prazo total estimado: <span>16 a 24 semanas (4 a 6 meses)</span></p>
+          <p class="right">Prazo total: <span>24 semanas (6 meses)</span></p>
         </div>
 
         <p class="section-intro" data-reveal data-reveal-delay="0.1">
-          Trabalhamos com entregas organizadas por fase, cada uma validada formalmente pela
-          GoodTruck antes de seguirmos para a próxima etapa. Reuniões semanais de acompanhamento
-          garantem transparência sobre o progresso e alinhamento conjunto das decisões técnicas.
+          Trabalhamos com entregas organizadas por fase, de forma sequencial: cada fase é
+          formalmente aprovada pela GoodTruck antes do início da próxima. Esse formato garante
+          previsibilidade e evita retrabalho, com reuniões semanais de acompanhamento para
+          reportar progresso e alinhar decisões técnicas ao longo de todo o projeto.
         </p>
 
         <div class="timeline">
           <div class="step" data-reveal data-reveal-delay="0.15">
             <span class="step-num">01</span>
             <div class="step-body">
-              <h3 class="h3">Planejamento e levantamento</h3>
+              <h3 class="h3">Fase 1 — Planejamento, UX/UI e Arquitetura</h3>
             </div>
             <div class="step-time">
               <span>Período:</span>
-              <span class="step-time-value">Semanas 1-2</span>
+              <span class="step-time-value">Semanas 1 a 4</span>
             </div>
           </div>
 
-          <div class="step" data-reveal data-reveal-delay="0.2">
+          <div class="step" data-reveal data-reveal-delay="0.20">
             <span class="step-num">02</span>
             <div class="step-body">
-              <h3 class="h3">UX/UI e arquitetura</h3>
+              <h3 class="h3">Fase 2 — Portal HUB e Cadastros</h3>
             </div>
             <div class="step-time">
               <span>Período:</span>
-              <span class="step-time-value">Semanas 2-5</span>
+              <span class="step-time-value">Semanas 5 a 12</span>
             </div>
           </div>
 
           <div class="step" data-reveal data-reveal-delay="0.25">
             <span class="step-num">03</span>
             <div class="step-body">
-              <h3 class="h3">Portal, acessos e cadastros</h3>
+              <h3 class="h3">Fase 3 — Dashboards e Base de Dados</h3>
             </div>
             <div class="step-time">
               <span>Período:</span>
-              <span class="step-time-value">Semanas 4-11</span>
+              <span class="step-time-value">Semanas 13 a 20</span>
             </div>
           </div>
 
-          <div class="step" data-reveal data-reveal-delay="0.3">
+          <div class="step" data-reveal data-reveal-delay="0.30">
             <span class="step-num">04</span>
             <div class="step-body">
-              <h3 class="h3">Dashboards e datalake</h3>
+              <h3 class="h3">Fase 4 — Chatbot, Testes e Implantação</h3>
             </div>
             <div class="step-time">
               <span>Período:</span>
-              <span class="step-time-value">Semanas 7-15</span>
-            </div>
-          </div>
-
-          <div class="step" data-reveal data-reveal-delay="0.35">
-            <span class="step-num">05</span>
-            <div class="step-body">
-              <h3 class="h3">Chatbot e integrações</h3>
-            </div>
-            <div class="step-time">
-              <span>Período:</span>
-              <span class="step-time-value">Semanas 12-17</span>
-            </div>
-          </div>
-
-          <div class="step" data-reveal data-reveal-delay="0.4">
-            <span class="step-num">06</span>
-            <div class="step-body">
-              <h3 class="h3">Testes, treinamento e lançamento</h3>
-            </div>
-            <div class="step-time">
-              <span>Período:</span>
-              <span class="step-time-value">Semanas 18-24</span>
+              <span class="step-time-value">Semanas 21 a 24</span>
             </div>
           </div>
         </div>
 
         <p class="mono-value" data-reveal data-reveal-delay="0.4" style="margin: 24px 0 0">
-          As etapas podem ocorrer em paralelo. O cronograma depende da disponibilidade dos
-          responsáveis da GoodTruck, dos dados e das integrações necessárias.
+          Cada fase inicia somente após a aprovação formal da fase anterior. O cronograma depende da
+          disponibilidade dos responsáveis da GoodTruck, dos dados e das integrações necessárias.
         </p>
       </div>
     </section>
@@ -2344,7 +2329,7 @@
             <div class="phase-foot">
               <div>
                 <span class="label">Prazo estimado</span>
-                <span class="value">Semanas 1-5</span>
+                <span class="value">Semanas 1 a 4</span>
               </div>
               <div>
                 <span class="label">Valor</span>
@@ -2382,7 +2367,7 @@
             <div class="phase-foot">
               <div>
                 <span class="label">Prazo estimado</span>
-                <span class="value">Semanas 4-11</span>
+                <span class="value">Semanas 5 a 12</span>
               </div>
               <div>
                 <span class="label">Valor</span>
@@ -2410,13 +2395,13 @@
                 <span class="item">Painéis, indicadores, filtros e visualizações</span>
               </div>
               <div class="pricing-row">
-                <span class="item">Modelagem e estruturação do datalake, ingestão inicial</span>
+                <span class="item">Estruturação de base de dados para centralizar as informações geradas pela própria plataforma (cadastros, acessos, indicadores), com atualização periódica (não em tempo real). Esta fase não inclui integração com sistemas externos da GoodTruck não especificados nesta proposta, nem migração de bases de dados pré-existentes — caso a GoodTruck já possua dados estruturados em outras fontes, a integração dessas fontes será escopada e orçada separadamente após o levantamento técnico.</span>
               </div>
             </div>
             <div class="phase-foot">
               <div>
                 <span class="label">Prazo estimado</span>
-                <span class="value">Semanas 7-15</span>
+                <span class="value">Semanas 13 a 20</span>
               </div>
               <div>
                 <span class="label">Valor</span>
@@ -2441,7 +2426,7 @@
             </div>
             <div class="pricing-rows">
               <div class="pricing-row">
-                <span class="item">Integração do chatbot, configuração e testes</span>
+                <span class="item">Integração com serviço de chatbot existente (não desenvolvimento de IA própria), com fluxos de atendimento pré-definidos na fase de planejamento, respondendo a perguntas frequentes e dúvidas estruturadas. Esta fase não inclui integração com WhatsApp ou outros canais de mensageria — essa integração pode ser avaliada como etapa futura, caso haja interesse.</span>
               </div>
               <div class="pricing-row">
                 <span class="item">Testes funcionais e de segurança</span>
@@ -2455,7 +2440,7 @@
             <div class="phase-foot">
               <div>
                 <span class="label">Prazo estimado</span>
-                <span class="value">Semanas 12-24</span>
+                <span class="value">Semanas 21 a 24</span>
               </div>
               <div>
                 <span class="label">Valor</span>
@@ -2496,10 +2481,28 @@
 
         <div class="pricing-conditions" data-reveal>
           <span class="icon" aria-hidden="true"
+            ><span class="material-symbols-outlined">fact_check</span></span
+          >
+          <p class="note">
+            Os prazos de cada fase consideram a disponibilidade combinada da equipe e podem sofrer
+            ajustes pontuais por imprevistos ou pela dependência de informações e validações da
+            GoodTruck. Eventuais ajustes de cronograma serão comunicados com antecedência. Correções
+            de itens que não atendem ao especificado nesta proposta estão inclusas; solicitações de
+            novas funcionalidades fora do escopo descrito são tratadas como adicionais, orçados
+            separadamente. Os detalhes contratuais completos — incluindo propriedade intelectual do
+            código, acesso a repositórios, tratamento de dados pessoais (LGPD) e condições de
+            encerramento antecipado — serão formalizados em contrato específico após a aprovação
+            deste orçamento inicial.
+          </p>
+        </div>
+
+        <div class="pricing-conditions" data-reveal>
+          <span class="icon" aria-hidden="true"
             ><span class="material-symbols-outlined">schedule</span></span
           >
           <p class="note">
-            <strong>Prazo total estimado:</strong> 16 a 24 semanas (4 a 6 meses).
+            <strong>Prazo total:</strong> 24 semanas (6 meses), com cada fase iniciando somente após a
+            aprovação formal da fase anterior.
           </p>
         </div>
 
@@ -2543,6 +2546,34 @@
             </div>
           </div>
         </div>
+
+        <div class="phase-card" data-reveal style="margin-top: 32px">
+          <div class="phase-head">
+            <div>
+              <span class="kicker">Contratação e emissão fiscal</span>
+              <h3 class="phase-title">Dados para contratação</h3>
+            </div>
+          </div>
+          <div class="pricing-rows">
+            <div class="pricing-row">
+              <span class="item"
+                ><strong>Contratação:</strong> pessoa física (CPF), em processo de formalização como
+                ME (Microempresa), com abertura e contabilidade em andamento.</span
+              >
+            </div>
+            <div class="pricing-row">
+              <span class="item"><strong>Paola Santos de Assis</strong> — CPF 448.178.168-80</span>
+            </div>
+            <div class="pricing-row">
+              <span class="item"
+                ><strong>Emissão fiscal:</strong> nota fiscal de prestação de serviços será emitida
+                assim que a formalização como ME for concluída junto à contabilidade responsável.
+                Até lá, a contratação pode ser formalizada via CPF, conforme acordo entre as
+                partes.</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2560,9 +2591,9 @@
 
         <div class="team-grid">
           <div class="team-card" data-reveal data-reveal-delay="0.15">
-            <p class="eyebrow-accent">Full-stack · Especialista em Front-end e UX/UI</p>
+            <p class="eyebrow-accent">Engenheira de Software · Especialista em Front-end e UX/UI</p>
             <h3 class="h3">Paola Santos de Assis</h3>
-            <p>Desenvolvedora Full-Stack Sênior · 6+ anos em Angular, Java e UX/UI</p>
+            <p>Engenheira de Software · 6+ anos em Angular, Java e UX/UI</p>
             <ul class="team-meta">
               <li>
                 LinkedIn:
@@ -2574,7 +2605,7 @@
           </div>
 
           <div class="team-card" data-reveal data-reveal-delay="0.2">
-            <p class="eyebrow-accent">Full-stack · Especialista em Back-end Java</p>
+            <p class="eyebrow-accent">Engenheiro de Software · Especialista em Back-end Java</p>
             <h3 class="h3">Renilson Picinin</h3>
             <p>Engenheiro de Software · 6+ anos em desenvolvimento Java</p>
             <ul class="team-meta">
